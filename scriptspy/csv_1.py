@@ -106,7 +106,7 @@ ratio_tab = [
 ]
 
 for i in range (0,41):
-    for j in range (0,4):
+    for j in range (0,5):
         file_name =  item_name[i] + "_" + rarity[j] + ".csv"
         print(file_name)
         with open(file_name, 'w', newline='') as file:
