@@ -60,7 +60,7 @@ base_stat_tab = [
 ]
 
 
-ration_tab = [
+ratio_tab = [
     [[1.22,1.11,1.11,1.22,0.88],[2.33,2.22,2.33,2.33,2.33],[3.33,3.22,3.22,3.33,3.44],[4.33,4.33,4.33,4.33,4.77],[2.77,2.88,2.77,2.88,3.11]],#standard_cannon
     [[2,2,2,2,2.22],[4.11,4.11,4.11,4.11,4.44],[5.77,5.77,5.77,5.77,6.33],[7.88,7.88,7.77,7.77,8.44],[5.22,5.22,5.11,5.22,6]],#blast_cannon
     [[1.44,1.33,1.33,1.44,1.66],[2.88,3,2.88,3,2.88],[4,4,4,4,4.44],[5.44,5.33,5.33,5.33,6],[3.55,3.55,3.55,3.55,4.22]],#sniper_cannon
@@ -83,68 +83,71 @@ ration_tab = [
     [[0.22,0.22,0.22,0.22,0.22],[0.44,0.44,0.44,0.44,0.33],[0.55,0.55,0.44,0.55,0.55],[0.77,0.66,0.77,0.77,0.66],[0.55,0.55,0.44,0.55,0.44]],#flare_gun
     [[0.33,0.44,0.44,0.44,0.44],[0.77,0.77,0.66,0.77,0.77],[1,0.88,1,0.88,1],[1.22,1.33,1.22,1.33,1.22],[0.77,0.88,0.88,0.77,0.88]],#napalm_launcher
     [[0.22,0.22,0.22,0.22,0.22],[0.44,0.44,0.44,0.33,0.44],[0.66,0.55,0.66,0.66,0.44],[0.88,0.77,0.88,0.77,0.66],[0.44,0.55,0.55,0.55,0.44]],#fire_bomb
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#standard_shield
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#big_shield
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#turbo
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#bandage
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#big_bandage
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#overboost
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#nitro
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#tesla_bolt
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#tesla_shield
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#frost_blaster
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#frsot_launcher
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#repair_box_launcher
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#repair_pulse
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#duct_tape
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#repair_bolt
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#repair_plasma
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#defence_wall
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#defence_aura
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]],#bloster_armor
-    [[,,,,],[,,,,],[,,,,],[,,,,],[,,,,]]#cleanse_pulse
+    [[3,3,3,3,3],[6,6,6,6,6.22],[8.33,8.33,8.33,8.33,9.33],[11.22,11.22,11.22,11.22,12.33],[7.44,7.44,7.44,7.44,8.33]],#standard_shield
+    [[3.89,3.89,3.89,3.89,4.33],[7.89,7.89,7.89,7.89,8.67],[11.11,11.11,11.11,11.11,12.33],[15,15,15,15,16.56],[10,10,10,10,11]],#big_shield
+    [[0.003,0.003,0.003,0.003,0.004],[0.004,0.004,0.004,0.004,0.005],[0.005,0.005,0.005,0.005,0.005],[0.005,0.005,0.005,0.005,0.006],[0.003,0.003,0.003,0.003,0.004]],#turbo
+    [[0.33,0.33,0.44,0.33,0.22],[0.77,0.66,0.77,0.66,0.77],[1,1,1,1,0.77],[1.33,1.33,1.33,1.22,1.22],[0.88,0.88,0.77,0.88,0.88]],#bandage
+    [[0.55,0.55,0.55,0.66,0.66],[1,1.11,1,1.11,1.33],[1.66,1.66,1.55,1.66,1.77],[2.22,2.22,2.22,2.22,2.33],[1.33,1.33,1.44,1.33,1.66]],#big_bandage
+    [[0.01,0.01,0.01,0.01,0.01],[0.01,0.01,0.01,0.01,0.01],[0.01,0.01,0.01,0.01,0.01],[0.01,0.01,0.01,0.01,0.01],[0.01,0.01,0.01,0.01,0.01]],#overboost
+    [[0.03,0.03,0.03,0.03,0.03],[0.03,0.03,0.03,0.03,0.03],[0.03,0.03,0.03,0.03,0.04],[0.03,0.03,0.03,0.03,0.04],[0.02,0.02,0.02,0.02,0.02]],#nitro
+    [[0.05,0.05,0.05,0.05,0.05],[0.05,0.05,0.05,0.05,0.06],[0.06,0.06,0.06,0.06,0.06],[0.06,0.06,0.06,0.06,0.07],[0.04,0.04,0.04,0.04,0.04]],#tesla_bolt
+    [[3.22,3.22,3.22,3.22,3.22],[5.44,5.44,5.44,5.44,6],[9.56,9.56,9.56,9.56,10.22],[12.67,12.67,12.67,12.67,14],[9,9,9,9,10]],#tesla_shield
+    [[-0.004,-0.004,-0.004,-0.004,-0.004],[-0.004,-0.004,-0.004,-0.004,-0.004],[-0.004,-0.004,-0.004,-0.004,-0.005],[-0.004,-0.004,-0.004,-0.004,-0.004],[-0.002,-0.002,-0.002,-0.002,-0.003]],#frost_blaster
+    [[-0.002,-0.002,-0.002,-0.002,-0.003],[-0.003,-0.003,-0.003,-0.003,-0.003],[-0.003,-0.003,-0.003,-0.003,-0.003],[-0.003,-0.004,-0.003,-0.004,-0.004],[-0.003,-0.003,-0.003,-0.003,-0.003]],#frsot_launcher
+    [[1.88,1.88,1.88,1.88,1.66],[3.66,3.66,3.66,3.66,4],[5.11,5.11,5.11,5.11,5.77],[7,7,7,7,7.44],[4.66,4.66,4.66,4.66,4.88]],#repair_box_launcher
+    [[0.55,0.55,0.55,0.55,0.55],[0.66,0.66,0.66,0.66,0.44],[0.66,0.66,0.66,0.66,0.66],[0.88,0.88,0.88,0.88,0.88],[0.55,0.55,0.55,0.55,0.66]],#repair_pulse
+    [[0.33,0.33,0.33,0.33,0.44],[0.77,0.77,0.77,0.77,0.66],[1.11,1.11,1.11,1.11,0.88],[1.44,1.44,1.44,1.44,1.33],[1,1,1,1,0.66]],#duct_tape
+    [[2.88,2.88,2.88,2.88,2.88],[5.77,5.77,5.77,5.77,6.11],[8.11,8.11,8.11,8.11,8.66],[10.88,10.88,10.88,10.88,12],[7.22,7.22,7.22,7.22,7.88]],#repair_bolt
+    [[0.22,0.22,0.22,0.22,0.44],[0.55,0.55,0.55,0.55,0.55],[0.77,0.77,0.77,0.77,0.77],[1,1,1,1,1.22],[0.66,0.66,0.66,0.66,0.66]],#repair_plasma
+    [[7.11,7.11,7.11,7.11,8],[14.66,14.66,14.66,14.66,16.33],[20.88,20.88,20.88,20.88,23.11],[28,28,28,28,31.22],[18.66,18.66,18.66,18.66,20.44]],#defence_wall
+    [[0.001,0.001,0.001,0.001,0.001],[0.002,0.002,0.002,0.002,0.002],[0.003,0.003,0.003,0.003,0.003],[0.004,0.004,0.004,0.004,0.004],[0.002,0.002,0.002,0.002,0.003]],#defence_aura
+    [[0.001,0.001,0.001,0.001,0.001],[0.002,0.002,0.002,0.002,0.002],[0.003,0.003,0.003,0.003,0.003],[0.004,0.004,0.004,0.004,0.004],[0.002,0.002,0.002,0.002,0.003]],#bloster_armor
+    [[0.04,0.04,0.04,0.04,0.04],[0.07,0.07,0.07,0.07,0.08],[0.1,0.1,0.1,0.1,0.12],[0.14,0.14,0.14,0.14,0.16],[0.09,0.09,0.09,0.09,0.1]]#cleanse_pulse
 ]
 
-file_name = []
+for i in range (0,41):
+    for j in range (0,4):
+        file_name =  item_name[i] + "_" + rarity[j] + ".csv"
+        print(file_name)
+        with open(file_name, 'w', newline='') as file:
+            writer = csv.writer(file, delimiter=';')
+            writer.writerow(header)
 
-def create_file():
-    with open(file_name, 'w', newline='') as file:
-        writer = csv.writer(file, delimiter=';')
-        writer.writerow(header)
+            base_stat = base_stat_tab[i][j][0]
+            ratio = ratio_tab[i][j][0]
+            for level in range (1, 11):
+                rounded_base_stat = round(base_stat)
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                base_stat += ratio
 
-        base_stat = base_stat_tab[0]
-        ratio = ration_tab[0]
-        for level in range(1, 11):
-            rounded_base_stat = round(base_stat)
-            writer.writerow([level, rounded_base_stat, cool_down, range_, projectile_speed, critical_hit_chance, radius, spread, amount_of_projectiles, duration])
-            base_stat += ratio
+            base_stat = base_stat_tab[i][j][1]
+            ratio = ratio_tab[i][j][1]
+            for level in range (11, 21):
+                rounded_base_stat = round(base_stat)
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                base_stat += ratio
+            
+            base_stat = base_stat_tab[i][j][2]
+            ratio = ratio_tab[i][j][2]
+            for level in range (21, 31):
+                rounded_base_stat = round(base_stat)
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                base_stat += ratio
+            
+            base_stat = base_stat_tab[i][j][3]
+            ratio = ratio_tab[i][j][3]
+            for level in range (31, 41):
+                rounded_base_stat = round(base_stat)
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                base_stat += ratio
+            
+            base_stat = base_stat_tab[i][j][4]
+            ratio = ratio_tab[i][j][4]
+            for level in range (41, 51):
+                rounded_base_stat = round(base_stat)
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                base_stat += ratio
 
-        base_stat = base_stat_tab[1]
-        ratio = ration_tab[1]
-        for level in range(11, 21):
-            rounded_base_stat = round(base_stat)
-            writer.writerow([level, rounded_base_stat, cool_down, range_, projectile_speed, critical_hit_chance, radius, spread, amount_of_projectiles, duration])
-            base_stat += ratio
+            print("CSV file", file_name ," created successfully.")
 
-        base_stat = base_stat_tab[2]
-        ratio = ration_tab[2]
-        for level in range(21, 31):
-            rounded_base_stat = round(base_stat)
-            writer.writerow([level, rounded_base_stat, cool_down, range_, projectile_speed, critical_hit_chance, radius, spread, amount_of_projectiles, duration])
-            base_stat += ratio
-
-        base_stat = base_stat_tab[3]
-        ratio = ration_tab[3]
-        for level in range(31, 41):
-            rounded_base_stat = round(base_stat)
-            writer.writerow([level, rounded_base_stat, cool_down, range_, projectile_speed, critical_hit_chance, radius, spread, amount_of_projectiles, duration])
-            base_stat += ratio
-
-        base_stat = base_stat_tab[4]
-        ratio = ration_tab[4]
-        for level in range(41, 51):
-            rounded_base_stat = round(base_stat)
-            writer.writerow([level, rounded_base_stat, cool_down, range_, projectile_speed, critical_hit_chance, radius, spread, amount_of_projectiles, duration])
-            base_stat += ratio
-
-    print("CSV file created successfully.")
+print("all succes")
