@@ -1,0 +1,7 @@
+# ninja log v6
+9	111	7412071532973276	CMakeFiles/BattleBay_tool.dir/main.c.obj	e2a0ebd7e255145
+14	129	7412070781346168	CMakeFiles/BattleBay_tool.dir/test.c.obj	57cedc42e1c28c5
+12	251	7412072270072107	build.ninja	bb5e1e0198efc8a0
+112	190	7412071534000142	BattleBay_tool.exe	cbffbcde4aff8966
+9	162	7412072938520455	CMakeFiles/BattleBay_tool.dir/main.c.obj	e2a0ebd7e255145
+162	237	7412072940050355	BattleBay_tool.exe	cbffbcde4aff8966
