@@ -11,7 +11,7 @@ spread = [0,0,0,0,3,8,0,0,0,0,0,0,0,0,15,0,10,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 amount_of_projectiles = [1,1,1,1,15,7,1,1,1,1,1,1,1,1,3,1,5,9,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 duration = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,20,13,0,0,0,0,0,6,1,0,5,7,7,0,8.5,10,0,15,8,8,6,0]
 item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_canon','galting_gun','carronade','grenade_launcher','standard_mortar','long_range_mortar','ballpark_mortar','big_berta','standard_torpedo','big_torpedo','swift_torpedo','triple_torpedo','railgun','missile_launcher',
-             'multi_missile','mine','flare_gun','napalm_launcher','fire_bomb','standard_shield','big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield','frost_blaster','frsot_launcher','repair_box_launcher','repair_pulse','duct_tape','repair_bolt',
+             'multi_missile','mine','flare_gun','napalm_launcher','fire_bomb','standard_shield','big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield','frost_blaster','frost_launcher','repair_box_launcher','repair_pulse','duct_tape','repair_bolt',
              'repair_plasma','defence_wall','defence_aura','bloster_armor','cleanse_pulse']
 rarity = ['common','uncommon','rare','epic','legendary']
 base_stat_tab = [
