@@ -81,14 +81,14 @@ boost_value = [
     [5,5,5,5,5,5,5,5,5,5,5,5,5],#big_bandage
     [5,5,5,5,5,5,5,5],#overboost
     [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],#nitro
-    [2,5,2,5,2,5,2,5,2,H,5,5,5,5,5,5,5,5],#tesla_bolt
+    [2,5,2,5,2,5,2,5,2,100,5,5,5,5,5,5,5,5],#tesla_bolt
     [25,3,5,25,3,25,5,25,3,5,3,5,3,5,3,5,3,5,3,5,3,3,5],#tesla_shield
     [5,5,5,5,5,5,5,50,5,5,5,5,5],#frost_blaster
     [5,2,5,2,5,2,5,2,5,2,5,2,5,2,5,2],#frsot_launcher
     [10,5,5,1,5,10,1,5,10,5,5,1,5,10,5,5,10,10,1,5,5,10,5,10,5,5,1,10,10],#repair_box_launcher
     [5,5,3,5,5,3,5,5,3,5,5,3,5,5,5,5,3,5,5],#repair_pulse
     [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],#duct_tape
-    [5,5,5,5,STUN,5,5,5,5,5,5,5,5,SD,5,5,5],#repair_bolt
+    [5,5,5,5,100,5,5,5,5,5,5,5,5,100,5,5,5],#repair_bolt
     [5,5,5,10,5,10,5,10,5,10,1,10,5,5,5,5,5,5,5,2,5,5,5,5,5,10,5,5,5],#repair_plasma
     [10,10,5,5,5,5,10,5,10,5,10,10,10,5,10,10,10,5,10,10,5,10,10,10,10,5,10],#defence_wall
     [5,1,1,5,1,5,1,5,1,1,5,1,5],#defence_aura
@@ -102,41 +102,54 @@ boost_type = [
     ['DAMAGE','FIRE_DAMAGE','RANGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','CRITICAL_HIT_CHANCE','DAMAGE','DAMAGE','FIRE_DAMAGE','CRITICAL_HIT_CHANCE','RANGE','CRITICAL_HIT_DAMAGE','PROJECTILE_SPEED','CRITICAL_HIT_DAMAGE','FIRE_DAMAGE','RANGE','DAMAGE','FIRE_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','RANGE','DAMAGE','DAMAGE','FIRE_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE'],#sniper_cannon
     ['DAMAGE','FIRE_DAMAGE','RANGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FIRE_DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','FIRE_DAMAGE','RANGE','DAMAGE','FIRE_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','RANGE','DAMAGE','DAMAGE','FIRE_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE'],#explosive_canon
     ['DAMAGE','RANGE','DAMAGE','COOL_DOWN','RANGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','RANGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','COOL_DOWN','RANGE','DAMAGE','COOL_DOWN','RANGE','DAMAGE','COOL_DOWN','DAMAGE'],#galting_gun
-    ['DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','FROST','DAMAGE','RANGE','DAMAGE','TURET_ROTATION','DAMAGE','DAMAGE','FROST','RANGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','TURET_ROTATION','DAMAGE','FROST','RANGE','DAMAGE','TURET_ROTATION','DAMAGE','RANGE','RANGE','DAMAGE','TURET_ROTATION'],#carronade
+    ['DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','FROST_EFFECT','DAMAGE','RANGE','DAMAGE','TURET_ROTATION','DAMAGE','DAMAGE','FROST_EFFECT','RANGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','TURET_ROTATION','DAMAGE','FROST_EFFECT','RANGE','DAMAGE','TURET_ROTATION','DAMAGE','RANGE','RANGE','DAMAGE','TURET_ROTATION'],#carronade
     ['DAMAGE','RANGE','DAMAGE','CRITICAL_HIT_DAMAGE','DAMAGE','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','CRITICAL_HIT_CHANCE','DAMAGE','DAMAGE','CRITICAL_HIT_DAMAGE','RANGE','DAMAGE','CRITICAL_HIT_CHANCE','DAMAGE','DAMAGE','DAMAGE','CRITICAL_HIT_DAMAGE','DAMAGE','RANGE','DAMAGE','CRITICAL_HIT_DAMAGE','DAMAGE','CRITICAL_HIT_CHANCE','DAMAGE','CRITICAL_HIT_DAMAGE'],#grenade_launcher
     ['COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','RANGE','DAMAGE','FROST_DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','FROST_DAMAGE','DAMAGE','RANGE','DAMAGE','FROST_DAMAGE','COOL_DOWN','DAMAGE'],#standard_mortar
     ['DAMAGE','RANGE','FROST_DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','RANGE','DAMAGE','PROJECILE_SPEED','PROJECTILE_SPEED','FROST_DAMAGE','DAMAGE'],#long_range_mortar
     ['DAMAGE','FROST_DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE'],#ballpark_mortar
     ['DAMAGE','RANGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE'],#big_berta
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#standard_torpedo
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','',''],#big_torpedo
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#swift_torpedo
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#triple_torpedo
-    ['','','','','','','','','','','','','','','','','','','',''],#railgun
-    ['','','','','','','','','','','','','','','','','','','','','','','','','',''],#missile_launcher
-    ['','','','','','','','','','','','','','','','','','','','','','','','','',''],#multi_missile
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#mine
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#flare_gun
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#napalm_launcher
-    ['','','','','','','','','','','','','','','','','','','','','','','',''],#fire_bomb
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','',''],#standard_shield
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#big_shield
-    ['','','',''],#turbo
-    ['','','','','','','','','','','','',''],#bandage
-    ['','','','','','','','','','','','',''],#big_bandage
-    ['','','','','','','',''],#overboost
-    ['','','','','','','','','','','','','','','','','','','','','','','','',''],#nitro
-    ['','','','','','','','','','','','','','','','','',''],#tesla_bolt
-    ['','','','','','','','','','','','','','','','','','','','','','','']','#tesla_shield
-    ['','','','','','','','','','','','',''],#frost_blaster
-    ['','','','','','','','','','','','','','','',''],#frsot_launcher
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#repair_box_launcher
-    ['','','','','','','','','','','','','','','','','','',''],#repair_pulse
-    ['','','','','','','','','','','','','','',''],#duct_tape
-    ['','','','','','','','','','','','','','','','',''],#repair_bolt
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','','','',''],#repair_plasma
-    ['','','','','','','','','','','','','','','','','','','','','','','','','','',''],#defence_wall
-    ['','','','','','','','','','','','',''],#defence_aura
-    ['','','','','','','','','','','','',''],#bloster_armor
-    ['','','','']#cleanse_pulse
+    ['COOL_DOWN','DAMAGE','COOL_DOWN','PROJECTILE_SPEED','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','FROST_DAMAGE','PROJECTILE_SPEED','DAMAGE','PROJECTILE_SPEED','DAMAGE'],#standard_torpedo
+    ['DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE'],#big_torpedo
+    ['COOL_DOWN','DAMAGE','COOL_DOWN','PROJECTILE_SPEED','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','FROST_DAMAGE','PROJECTILE_SPEED','DAMAGE','PROJECTILE_SPEED','DAMAGE'],#swift_torpedo
+    ['COOL_DOWN','DAMAGE','COOL_DOWN','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','FROST_DAMAGE','DAMAGE','DAMAGE','PROJECTILE_SPEED','DAMAGE'],#triple_torpedo
+    ['DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE'],#railgun
+    ['DAMAGE','RANGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE'],#missile_launcher
+    ['DAMAGE','RANGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE'],#multi_missile
+    ['DAMAGE','COOL_DOWN','DAMAGE','COOL_DOWN','DAMAGE','COOL_DOWN','DAMAGE','COOL_DOWN','DAMAGE','RANGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE'],#mine
+    ['PROJECTILE_SPEED','DAMAGE','DURATION','DAMAGE','PROJECTILE_SPEED','DURATION','DAMAGE','DURATION','DAMAGE','PROJECTILE_SPEED','DAMAGE','HEALING_REDUCTION','DURATION','DAMAGE','PROJECTILE_SPEED','RANGE','HEALING_REDUCTION','DURATION','DAMAGE','DAMAGE','HEALING_REDUCTION','DAMAGE','DURATION','PROJECTILE_SPEED','HEALING_REDUCTION','RANGE','DAMAGE','HEALING_REDUCTION','DURATION','PROJECTILE_SPEED','DAMAGE','HEALING_REDUCTION','DAMAGE'],#flare_gun
+    ['DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE','RANGE','DAMAGE','DAMAGE','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DAMAGE','DAMAGE','DAMAGE'],#napalm_launcher
+    ['DURATION','DAMAGE','COOL_DOWN','RANGE','DAMAGE',  'DAMAGE','DAMAGE','DURATION','DAMAGE','DURATION','DAMAGE','RANGE','COOL_DOWN','DAMAGE','DURATION','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE','DURATION','DAMAGE','DAMAGE','COOL_DOWN','DAMAGE'],#fire_bomb
+    ['HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT'],#standard_shield
+    ['HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT'],#big_shield
+    ['SPEED','SPEED','SPEED','SPEED'],#turbo
+    ['HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING'],#bandage
+    ['HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING'],#big_bandage
+    ['SPEED','SPEED','SPEED','SPEED','SPEED','SPEED','SPEED','SPEED'],#overboost
+    ['SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','SPEED','COOL_DOWN','COOL_DOWN','COOL_DOWN','COOL_DOWN'],#nitro
+    ['DURATION','COOL_DOWN','DURATION','COOL_DOWN','DURATION','DURATION','DURATION','DURATION','DURATION','HEALING_BLOCK','DURATION','DURATION','DURATION','COOL_DOWN','DURATION','COOL_DOWN','DURATION','DURATION'],#tesla_bolt
+    ['HIT_POINT','DURATION','HIT_POINT','HIT_POINT','DURATION','HIT_POINT','HIT_POINT','HIT_POINT','DURATION','HIT_POINT','DURATION','HIT_POINT','DURATION','HIT_POINT','DURATION','HIT_POINT','DURATION','HIT_POINT','DURATION','HIT_POINT','DURATION','DURATION','HIT_POINT'],#tesla_shield
+    ['FROST_EFFECT','DURATION','COOL_DOWN','FROST_EFFECT','DURATION','FROST_EFFECT','COOL_DOWN','HEALING_REDUCTION','DURATION','FROST_EFFECT','COOL_DOWN','FROST_EFFECT','DURATION'],#frost_blaster
+    ['DURATION','PROJECTILE_SPEED','DURATION','PROJECTILE_SPEED','FROST_EFFECT','PROJECTILE_SPEED','FROST_EFFECT','PROJECTILE_SPEED','DURATION','PROJECTILE_SPEED','FROST_EFFECT','PROJECTILE_SPEED','DURATION','PROJECTILE_SPEED','FROST_EFFECT','PROJECTILE_SPEED'],#frsot_launcher
+    ['CRITICAL_HIT_CHANCE','HEALING','COOL_DOWN','RANGE','HEALING','CRITICAL_HIT_CHANCE','RANGE','HEALING','CRITICAL_HIT_CHANCE','CRITICAL_HIT_CHANCE','HEALING','RANGE','COOL_DOWN','CRITICAL_HIT_CHANCE','CRITICAL_HIT_CHANCE','HEALING','CRITICAL_HIT_CHANCE','CRITICAL_HIT_CHANCE','RANGE','HEALING','HEALING','CRITICAL_HIT_CHANCE','COOL_DOWN','CRITICAL_HIT_CHANCE','CRITICAL_HIT_CHANCE','HEALING','RANGE','CRITICAL_HIT_CHANCE','CRITICAL_HIT_CHANCE'],#repair_box_launcher
+    ['HEALING','HEALING','COOL_DOWN','HEALING','HEALING','COOL_DOWN','HEALING','HEALING','COOL_DOWN','HEALING','HEALING','COOL_DOWN','HEALING','HEALING','HEALING','HEALING','COOL_DOWN','HEALING','HEALING'],#repair_pulse
+    ['HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING'],#duct_tape
+    ['HEALING','HEALING','COOL_DOWN','HEALING','REMOVE_STUN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','HEALING','COOL_DOWN','REMOVE_FROST','COOL_DOWN','COOL_DOWN','HEALING'],#repair_bolt
+    ['HEALING','HEALING','COOL_DOWN','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','HEALING','RANGE','HEALING','HEALING','HEALING','COOL_DOWN','HEALING','HEALING','HEALING','HEALING','RANGE','HEALING','HEALING','HEALING','HEALING','COOL_DOWN','COOL_DOWN','COOL_DOWN','COOL_DOWN','COOL_DOWN'],#repair_plasma
+    ['HIT_POINT','HIT_POINT','HIT_POINT','COOL_DOWN','HIT_POINT','COOL_DOWN','HIT_POINT','COOL_DOWN','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','COOL_DOWN','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT','HIT_POINT'],#defence_wall
+    ['COOL_DOWN','DEFENCE','DEFENCE','COOL_DOWN','DEFENCE','COOL_DOWN','DEFENCE','COOL_DOWN','DEFENCE','DEFENCE','COOL_DOWN','DEFENCE','COOL_DOWN'],#defence_aura
+    ['COOL_DOWN','DEFENCE','COOL_DOWN','DEFENCE','COOL_DOWN','DEFENCE','COOL_DOWN','DEFENCE','COOL_DOWN','DEFENCE','DEFENCE','COOL_DOWN','DEFENCE'],#bloster_armor
+    ['COOL_DOWN','COOL_DOWN','COOL_DOWN','COOL_DOWN']#cleanse_pulse
 ]
+
+
+
+for i in range(0,42):
+    file_name = item_name[i] + "_training.csv"
+    print(file_name)
+    with open(file_name, 'w', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+        num = number_of_boosts[i]
+        writer.writerow([num])  # Convert num to a list
+        writer.writerow(header)
+        for j in range (0,num):
+            writer.writerow([j+1,boost_value[i][j],boost_type[i][j]])

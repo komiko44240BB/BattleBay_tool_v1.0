@@ -105,7 +105,7 @@ ratio_tab = [
     [[0.04,0.04,0.04,0.04,0.04],[0.07,0.07,0.07,0.07,0.08],[0.1,0.1,0.1,0.1,0.12],[0.14,0.14,0.14,0.14,0.16],[0.09,0.09,0.09,0.09,0.1]]#cleanse_pulse
 ]
 
-for i in range (0,41):
+for i in range (0,42):
     for j in range (0,5):
         file_name =  item_name[i] + "_" + rarity[j] + ".csv"
         print(file_name)
