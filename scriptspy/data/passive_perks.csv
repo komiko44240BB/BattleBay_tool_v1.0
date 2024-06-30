@@ -1,0 +1,6 @@
+RARITY;1STBONUS_VALUE;1STBONUS_NAME;2NDBONUS_VALUE;2NDBONUS_NAME;PERK_NAME;COMPATIBLE_ITEMS
+Legendary;150;HIT_POINT;12;DEFENCE;Armor_Shield_Hitpoints;All_Shields
+Legendary;150;HIT_POINT;2%;DAMAGE;Brutal_Shield_Hitpoints;All_Shields
+Legendary;20%;SPEED;2%;DAMAGE;Brutal_Turbo_Effect;Turbo
+Legendary;6%;HEALINGs;160;HIT_POINT;Vigor_Repairing_Boost;Big_Bandage
+Legendary;20%;SPEED;160;HIT_POINT;Vigor_Turbo_Effect;Turbo

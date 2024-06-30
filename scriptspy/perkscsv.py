@@ -2,7 +2,8 @@ import pandas as pd
 import csv
 
 # Load the Excel file
-file_path = 'C:/Users/Pierre-Luc/BattleBay_tool/scriptspy/data/weapons_perks.xlsx'
+file_name = 'healing_perks'
+file_path = 'C:/Users/Pierre-Luc/BattleBay_tool/scriptspy/data/'+ file_name +'.xlsx'
 df = pd.read_excel(file_path, sheet_name='Sheet1')
 
 # Function to split bonus into value and name
@@ -23,11 +24,14 @@ df.rename(columns={
     'Item': 'COMPATIBLE_ITEMS'
 }, inplace=True)
 
+
+
+
 # Select and reorder columns
 output_df = df[['RARITY', '1STBONUS_VALUE', '1STBONUS_NAME', '2NDBONUS_VALUE', '2NDBONUS_NAME', 'PERK_NAME', 'COMPATIBLE_ITEMS']]
 
 # Save the dataframe to a CSV file
-output_file_path = 'C:/Users/Pierre-Luc/BattleBay_tool/scriptspy/data/weapons_perks.csv'
+output_file_path = 'C:/Users/Pierre-Luc/BattleBay_tool/scriptspy/data/'+ file_name +'.csv'
 output_df.to_csv(output_file_path, index=False,  sep=';', quoting=csv.QUOTE_NONE)
 
 output_file_path
