@@ -85,10 +85,28 @@
 		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/objects.h">
 			<Option target="BattleBay_tool"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readobjects.c">
+			<Option target="BattleBay_tool"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readobjects.h">
+			<Option target="BattleBay_tool"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readtraining.c">
+			<Option target="BattleBay_tool"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readtraining.h">
+			<Option target="BattleBay_tool"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/ships.c">
 			<Option target="BattleBay_tool"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/ships.h">
+			<Option target="BattleBay_tool"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/training.c">
+			<Option target="BattleBay_tool"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/training.h">
 			<Option target="BattleBay_tool"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/CMakeLists.txt">

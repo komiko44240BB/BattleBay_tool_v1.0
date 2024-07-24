@@ -111,11 +111,56 @@ CMakeFiles/BattleBay_tool.dir/ships.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BattleBay_tool.dir/ships.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/ships.c -o CMakeFiles/BattleBay_tool.dir/ships.c.s
 
+CMakeFiles/BattleBay_tool.dir/readobjects.c.o: CMakeFiles/BattleBay_tool.dir/flags.make
+CMakeFiles/BattleBay_tool.dir/readobjects.c.o: /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readobjects.c
+CMakeFiles/BattleBay_tool.dir/readobjects.c.o: CMakeFiles/BattleBay_tool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BattleBay_tool.dir/readobjects.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BattleBay_tool.dir/readobjects.c.o -MF CMakeFiles/BattleBay_tool.dir/readobjects.c.o.d -o CMakeFiles/BattleBay_tool.dir/readobjects.c.o -c /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readobjects.c
+
+CMakeFiles/BattleBay_tool.dir/readobjects.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BattleBay_tool.dir/readobjects.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readobjects.c > CMakeFiles/BattleBay_tool.dir/readobjects.c.i
+
+CMakeFiles/BattleBay_tool.dir/readobjects.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BattleBay_tool.dir/readobjects.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readobjects.c -o CMakeFiles/BattleBay_tool.dir/readobjects.c.s
+
+CMakeFiles/BattleBay_tool.dir/training.c.o: CMakeFiles/BattleBay_tool.dir/flags.make
+CMakeFiles/BattleBay_tool.dir/training.c.o: /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/training.c
+CMakeFiles/BattleBay_tool.dir/training.c.o: CMakeFiles/BattleBay_tool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BattleBay_tool.dir/training.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BattleBay_tool.dir/training.c.o -MF CMakeFiles/BattleBay_tool.dir/training.c.o.d -o CMakeFiles/BattleBay_tool.dir/training.c.o -c /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/training.c
+
+CMakeFiles/BattleBay_tool.dir/training.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BattleBay_tool.dir/training.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/training.c > CMakeFiles/BattleBay_tool.dir/training.c.i
+
+CMakeFiles/BattleBay_tool.dir/training.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BattleBay_tool.dir/training.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/training.c -o CMakeFiles/BattleBay_tool.dir/training.c.s
+
+CMakeFiles/BattleBay_tool.dir/readtraining.c.o: CMakeFiles/BattleBay_tool.dir/flags.make
+CMakeFiles/BattleBay_tool.dir/readtraining.c.o: /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readtraining.c
+CMakeFiles/BattleBay_tool.dir/readtraining.c.o: CMakeFiles/BattleBay_tool.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BattleBay_tool.dir/readtraining.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BattleBay_tool.dir/readtraining.c.o -MF CMakeFiles/BattleBay_tool.dir/readtraining.c.o.d -o CMakeFiles/BattleBay_tool.dir/readtraining.c.o -c /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readtraining.c
+
+CMakeFiles/BattleBay_tool.dir/readtraining.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BattleBay_tool.dir/readtraining.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readtraining.c > CMakeFiles/BattleBay_tool.dir/readtraining.c.i
+
+CMakeFiles/BattleBay_tool.dir/readtraining.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BattleBay_tool.dir/readtraining.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/readtraining.c -o CMakeFiles/BattleBay_tool.dir/readtraining.c.s
+
 # Object files for target BattleBay_tool
 BattleBay_tool_OBJECTS = \
 "CMakeFiles/BattleBay_tool.dir/main.c.o" \
 "CMakeFiles/BattleBay_tool.dir/objects.c.o" \
-"CMakeFiles/BattleBay_tool.dir/ships.c.o"
+"CMakeFiles/BattleBay_tool.dir/ships.c.o" \
+"CMakeFiles/BattleBay_tool.dir/readobjects.c.o" \
+"CMakeFiles/BattleBay_tool.dir/training.c.o" \
+"CMakeFiles/BattleBay_tool.dir/readtraining.c.o"
 
 # External object files for target BattleBay_tool
 BattleBay_tool_EXTERNAL_OBJECTS =
@@ -123,9 +168,12 @@ BattleBay_tool_EXTERNAL_OBJECTS =
 BattleBay_tool: CMakeFiles/BattleBay_tool.dir/main.c.o
 BattleBay_tool: CMakeFiles/BattleBay_tool.dir/objects.c.o
 BattleBay_tool: CMakeFiles/BattleBay_tool.dir/ships.c.o
+BattleBay_tool: CMakeFiles/BattleBay_tool.dir/readobjects.c.o
+BattleBay_tool: CMakeFiles/BattleBay_tool.dir/training.c.o
+BattleBay_tool: CMakeFiles/BattleBay_tool.dir/readtraining.c.o
 BattleBay_tool: CMakeFiles/BattleBay_tool.dir/build.make
 BattleBay_tool: CMakeFiles/BattleBay_tool.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable BattleBay_tool"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable BattleBay_tool"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BattleBay_tool.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

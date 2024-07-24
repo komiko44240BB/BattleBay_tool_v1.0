@@ -177,6 +177,54 @@ objects.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/objects.c.s
 .PHONY : objects.c.s
 
+readobjects.o: readobjects.c.o
+.PHONY : readobjects.o
+
+# target to build an object file
+readobjects.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/readobjects.c.o
+.PHONY : readobjects.c.o
+
+readobjects.i: readobjects.c.i
+.PHONY : readobjects.i
+
+# target to preprocess a source file
+readobjects.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/readobjects.c.i
+.PHONY : readobjects.c.i
+
+readobjects.s: readobjects.c.s
+.PHONY : readobjects.s
+
+# target to generate assembly for a file
+readobjects.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/readobjects.c.s
+.PHONY : readobjects.c.s
+
+readtraining.o: readtraining.c.o
+.PHONY : readtraining.o
+
+# target to build an object file
+readtraining.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/readtraining.c.o
+.PHONY : readtraining.c.o
+
+readtraining.i: readtraining.c.i
+.PHONY : readtraining.i
+
+# target to preprocess a source file
+readtraining.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/readtraining.c.i
+.PHONY : readtraining.c.i
+
+readtraining.s: readtraining.c.s
+.PHONY : readtraining.s
+
+# target to generate assembly for a file
+readtraining.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/readtraining.c.s
+.PHONY : readtraining.c.s
+
 ships.o: ships.c.o
 .PHONY : ships.o
 
@@ -201,6 +249,30 @@ ships.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/ships.c.s
 .PHONY : ships.c.s
 
+training.o: training.c.o
+.PHONY : training.o
+
+# target to build an object file
+training.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/training.c.o
+.PHONY : training.c.o
+
+training.i: training.c.i
+.PHONY : training.i
+
+# target to preprocess a source file
+training.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/training.c.i
+.PHONY : training.c.i
+
+training.s: training.c.s
+.PHONY : training.s
+
+# target to generate assembly for a file
+training.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BattleBay_tool.dir/build.make CMakeFiles/BattleBay_tool.dir/training.c.s
+.PHONY : training.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,9 +288,18 @@ help:
 	@echo "... objects.o"
 	@echo "... objects.i"
 	@echo "... objects.s"
+	@echo "... readobjects.o"
+	@echo "... readobjects.i"
+	@echo "... readobjects.s"
+	@echo "... readtraining.o"
+	@echo "... readtraining.i"
+	@echo "... readtraining.s"
 	@echo "... ships.o"
 	@echo "... ships.i"
 	@echo "... ships.s"
+	@echo "... training.o"
+	@echo "... training.i"
+	@echo "... training.s"
 .PHONY : help
 
 

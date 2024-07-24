@@ -5,8 +5,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/BattleBay_tool.dir/main.c.o.d"
   "CMakeFiles/BattleBay_tool.dir/objects.c.o"
   "CMakeFiles/BattleBay_tool.dir/objects.c.o.d"
+  "CMakeFiles/BattleBay_tool.dir/readobjects.c.o"
+  "CMakeFiles/BattleBay_tool.dir/readobjects.c.o.d"
+  "CMakeFiles/BattleBay_tool.dir/readtraining.c.o"
+  "CMakeFiles/BattleBay_tool.dir/readtraining.c.o.d"
   "CMakeFiles/BattleBay_tool.dir/ships.c.o"
   "CMakeFiles/BattleBay_tool.dir/ships.c.o.d"
+  "CMakeFiles/BattleBay_tool.dir/training.c.o"
+  "CMakeFiles/BattleBay_tool.dir/training.c.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,0 +1,4 @@
+#ifndef READTRAINING_H
+#define READTRAINING_H
+
+#endif //READTRAINING_H
