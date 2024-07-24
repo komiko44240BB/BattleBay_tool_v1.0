@@ -8,15 +8,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Pierre-Luc/BattleBay_tool/main.c" "CMakeFiles/BattleBay_tool.dir/main.c.obj" "gcc" "CMakeFiles/BattleBay_tool.dir/main.c.obj.d"
+  "/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/main.c" "CMakeFiles/BattleBay_tool.dir/main.c.o" "gcc" "CMakeFiles/BattleBay_tool.dir/main.c.o.d"
+  "/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/objects.c" "CMakeFiles/BattleBay_tool.dir/objects.c.o" "gcc" "CMakeFiles/BattleBay_tool.dir/objects.c.o.d"
+  "/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/ships.c" "CMakeFiles/BattleBay_tool.dir/ships.c.o" "gcc" "CMakeFiles/BattleBay_tool.dir/ships.c.o.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
-  )
-
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

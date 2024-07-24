@@ -1,10 +1,12 @@
 file(REMOVE_RECURSE
-  "BattleBay_tool.exe"
-  "BattleBay_tool.exe.manifest"
+  "BattleBay_tool"
   "BattleBay_tool.pdb"
-  "CMakeFiles/BattleBay_tool.dir/main.c.obj"
-  "CMakeFiles/BattleBay_tool.dir/main.c.obj.d"
-  "libBattleBay_tool.dll.a"
+  "CMakeFiles/BattleBay_tool.dir/main.c.o"
+  "CMakeFiles/BattleBay_tool.dir/main.c.o.d"
+  "CMakeFiles/BattleBay_tool.dir/objects.c.o"
+  "CMakeFiles/BattleBay_tool.dir/objects.c.o.d"
+  "CMakeFiles/BattleBay_tool.dir/ships.c.o"
+  "CMakeFiles/BattleBay_tool.dir/ships.c.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

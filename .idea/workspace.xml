@@ -20,7 +20,322 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3d82ebf7-f24a-464f-b860-926baba03993" name="Changes" comment="" />
+    <list default="true" id="3d82ebf7-f24a-464f-b860-926baba03993" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BattleBay_tool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BattleBay_tool.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/ballpark_mortar_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/ballpark_mortar_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/bandage_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/bandage_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/big_bandage_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/big_bandage_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/big_berta_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/big_berta_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/big_shield_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/big_shield_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/big_torpedo_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/big_torpedo_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/blast_cannon_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/blast_cannon_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/bloster_armor_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/bloster_armor_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/carronade_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/carronade_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/cleanse_pulse_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/cleanse_pulse_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/defence_aura_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/defence_aura_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/defence_wall_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/defence_wall_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/duct_tape_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/duct_tape_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/explosive_canon_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/explosive_canon_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/fire_bomb_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/fire_bomb_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/flare_gun_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/flare_gun_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/frost_blaster_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/frost_blaster_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/frost_launcher_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/frost_launcher_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/galting_gun_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/galting_gun_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/grenade_launcher_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/grenade_launcher_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/long_range_mortar_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/long_range_mortar_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/mine_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/mine_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/missile_launcher_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/missile_launcher_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/multi_missile_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/multi_missile_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/napalm_launcher_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/napalm_launcher_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/nitro_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/nitro_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/overboost_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/overboost_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/railgun_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/railgun_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/repair_bolt_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/repair_bolt_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/repair_box_launcher_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/repair_box_launcher_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/repair_plasma_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/repair_plasma_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/repair_pulse_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/repair_pulse_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/sniper_cannon_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/sniper_cannon_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/standard_cannon_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/standard_cannon_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/standard_mortar_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/standard_mortar_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/standard_shield_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/standard_shield_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/standard_torpedo_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/standard_torpedo_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/swift_torpedo_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/swift_torpedo_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/tesla_bolt_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/tesla_bolt_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/tesla_shield_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/tesla_shield_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/triple_torpedo_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/triple_torpedo_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainings_data/turbo_training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trainings_data/turbo_training.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/ballpark_mortar_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bandage_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bandage_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bandage_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bandage_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bandage_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bandage_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bandage_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bandage_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bandage_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bandage_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_bandage_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_bandage_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_bandage_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_bandage_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_bandage_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_bandage_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_bandage_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_bandage_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_bandage_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_bandage_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_berta_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_berta_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_berta_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_berta_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_berta_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_berta_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_berta_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_berta_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_berta_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_berta_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_shield_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_shield_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_shield_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_shield_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_shield_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_shield_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_shield_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_shield_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_shield_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_shield_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_torpedo_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_torpedo_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_torpedo_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_torpedo_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_torpedo_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_torpedo_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_torpedo_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_torpedo_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/big_torpedo_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/big_torpedo_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/blast_cannon_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/blast_cannon_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/blast_cannon_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/blast_cannon_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/blast_cannon_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/blast_cannon_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/blast_cannon_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/blast_cannon_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/blast_cannon_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/blast_cannon_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bloster_armor_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bloster_armor_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bloster_armor_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bloster_armor_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bloster_armor_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bloster_armor_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bloster_armor_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bloster_armor_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/bloster_armor_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/bloster_armor_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/carronade_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/carronade_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/carronade_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/carronade_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/carronade_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/carronade_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/carronade_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/carronade_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/carronade_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/carronade_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_aura_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_aura_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_aura_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_aura_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_aura_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_aura_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_aura_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_aura_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_aura_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_aura_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_wall_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_wall_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_wall_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_wall_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_wall_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_wall_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_wall_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_wall_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/defence_wall_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/defence_wall_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/duct_tape_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/duct_tape_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/duct_tape_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/duct_tape_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/duct_tape_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/duct_tape_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/duct_tape_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/duct_tape_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/duct_tape_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/duct_tape_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/explosive_canon_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/explosive_canon_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/explosive_canon_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/explosive_canon_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/explosive_canon_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/explosive_canon_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/explosive_canon_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/explosive_canon_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/explosive_canon_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/explosive_canon_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/fire_bomb_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/fire_bomb_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/fire_bomb_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/fire_bomb_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/fire_bomb_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/fire_bomb_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/fire_bomb_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/fire_bomb_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/fire_bomb_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/fire_bomb_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/flare_gun_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/flare_gun_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/flare_gun_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/flare_gun_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/flare_gun_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/flare_gun_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/flare_gun_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/flare_gun_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/flare_gun_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/flare_gun_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_blaster_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_blaster_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_blaster_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_blaster_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_blaster_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_blaster_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_blaster_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_blaster_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_blaster_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_blaster_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_launcher_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_launcher_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_launcher_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_launcher_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_launcher_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_launcher_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_launcher_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_launcher_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/frost_launcher_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/frost_launcher_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/galting_gun_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/galting_gun_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/galting_gun_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/galting_gun_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/galting_gun_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/galting_gun_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/galting_gun_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/galting_gun_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/galting_gun_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/galting_gun_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/grenade_launcher_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/grenade_launcher_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/grenade_launcher_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/grenade_launcher_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/grenade_launcher_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/grenade_launcher_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/grenade_launcher_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/grenade_launcher_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/grenade_launcher_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/grenade_launcher_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/long_range_mortar_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/long_range_mortar_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/long_range_mortar_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/long_range_mortar_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/long_range_mortar_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/long_range_mortar_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/long_range_mortar_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/long_range_mortar_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/long_range_mortar_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/long_range_mortar_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/mine_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/mine_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/mine_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/mine_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/mine_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/mine_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/mine_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/mine_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/mine_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/mine_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/missile_launcher_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/missile_launcher_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/missile_launcher_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/missile_launcher_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/missile_launcher_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/missile_launcher_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/missile_launcher_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/missile_launcher_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/missile_launcher_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/missile_launcher_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/multi_missile_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/multi_missile_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/multi_missile_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/multi_missile_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/multi_missile_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/multi_missile_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/multi_missile_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/multi_missile_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/multi_missile_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/multi_missile_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/napalm_launcher_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/napalm_launcher_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/napalm_launcher_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/napalm_launcher_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/napalm_launcher_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/napalm_launcher_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/napalm_launcher_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/napalm_launcher_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/napalm_launcher_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/napalm_launcher_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/nitro_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/nitro_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/nitro_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/nitro_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/nitro_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/nitro_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/nitro_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/nitro_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/nitro_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/nitro_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/overboost_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/overboost_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/overboost_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/overboost_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/overboost_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/overboost_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/overboost_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/overboost_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/overboost_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/overboost_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/railgun_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/railgun_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/railgun_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/railgun_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/railgun_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/railgun_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/railgun_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/railgun_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/railgun_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/railgun_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_bolt_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_bolt_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_bolt_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_bolt_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_bolt_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_bolt_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_bolt_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_bolt_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_bolt_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_bolt_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_box_launcher_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_plasma_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_plasma_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_plasma_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_plasma_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_plasma_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_plasma_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_plasma_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_plasma_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_plasma_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_plasma_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_pulse_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_pulse_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_pulse_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_pulse_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_pulse_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_pulse_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_pulse_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_pulse_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/repair_pulse_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/repair_pulse_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/sniper_cannon_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/sniper_cannon_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/sniper_cannon_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/sniper_cannon_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/sniper_cannon_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/sniper_cannon_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/sniper_cannon_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/sniper_cannon_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/sniper_cannon_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/sniper_cannon_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_cannon_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_cannon_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_cannon_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_cannon_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_cannon_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_cannon_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_cannon_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_cannon_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_cannon_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_cannon_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_mortar_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_mortar_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_mortar_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_mortar_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_mortar_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_mortar_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_mortar_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_mortar_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_mortar_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_mortar_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_shield_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_shield_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_shield_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_shield_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_shield_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_shield_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_shield_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_shield_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_shield_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_shield_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_torpedo_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_torpedo_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_torpedo_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_torpedo_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_torpedo_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_torpedo_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_torpedo_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_torpedo_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/standard_torpedo_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/standard_torpedo_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/swift_torpedo_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/swift_torpedo_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/swift_torpedo_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/swift_torpedo_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/swift_torpedo_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/swift_torpedo_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/swift_torpedo_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/swift_torpedo_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/swift_torpedo_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/swift_torpedo_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_bolt_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_bolt_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_bolt_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_bolt_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_bolt_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_bolt_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_bolt_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_bolt_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_bolt_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_bolt_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_shield_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_shield_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_shield_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_shield_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_shield_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_shield_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_shield_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_shield_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/tesla_shield_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/tesla_shield_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/triple_torpedo_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/triple_torpedo_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/triple_torpedo_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/triple_torpedo_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/triple_torpedo_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/triple_torpedo_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/triple_torpedo_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/triple_torpedo_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/triple_torpedo_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/triple_torpedo_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/turbo_common.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/turbo_common.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/turbo_epic.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/turbo_epic.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/turbo_legendary.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/turbo_legendary.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/turbo_rare.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/turbo_rare.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weapons_data/turbo_uncommon.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Weapons_data/turbo_uncommon.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boats.c" beforeDir="false" afterPath="$PROJECT_DIR$/boats.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boats.h" beforeDir="false" afterPath="$PROJECT_DIR$/boats.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-e1d005d2cb00c8edc7dd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-84e7bceae61dfb655738.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a7e22980a1ee6b2fe78c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-06-27T16-13-04-0578.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-BattleBay_tool-Debug-48aff53e9c8d80ca9195.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ef96601046450f0c9299.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/BattleBay_tool.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/BattleBay_tool.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/compiler_depend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/compiler_depend.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/linkLibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/BattleBay_tool.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/csv_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/csv_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/csv_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/csv_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/data/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/data/healing_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/healing_perks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/data/passive_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/passive_perks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/data/utility_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/utility_perks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/data/weapons_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/weapons_perks.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/perkscsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/perkscsv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scriptspy/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/playground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/common_.csv" beforeDir="false" afterPath="$PROJECT_DIR$/templates/common_.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/epic_.csv" beforeDir="false" afterPath="$PROJECT_DIR$/templates/epic_.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/legendary_.csv" beforeDir="false" afterPath="$PROJECT_DIR$/templates/legendary_.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rare_.csv" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rare_.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/uncommon_.csv" beforeDir="false" afterPath="$PROJECT_DIR$/templates/uncommon_.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weapons.c" beforeDir="false" afterPath="$PROJECT_DIR$/weapons.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weapons.h" beforeDir="false" afterPath="$PROJECT_DIR$/weapons.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,27 +357,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;CMake Application.BattleBay_tool.executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-WindowsDefender&quot;: &quot;Microsoft Defender configuration&quot;,
-    &quot;Notification.DoNotAsk-WindowsDefender&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.BattleBay_tool.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender configuration",
+    "Notification.DoNotAsk-WindowsDefender": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BattleBay_tool" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BattleBay_tool" TARGET_NAME="BattleBay_tool" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BattleBay_tool" RUN_TARGET_NAME="BattleBay_tool">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -82,6 +403,7 @@
       <workItem from="1719821976769" duration="541000" />
       <workItem from="1719858723912" duration="2000" />
       <workItem from="1720125616050" duration="17000" />
+      <workItem from="1721845751534" duration="231000" />
     </task>
     <servers />
   </component>

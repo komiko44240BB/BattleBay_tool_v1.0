@@ -1,3 +1,1 @@
-"C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\BattleBay_tool.dir/objects.a
-C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\BattleBay_tool.dir/objects.a @CMakeFiles\BattleBay_tool.dir\objects1.rsp
-C:\PROGRA~1\JETBRA~1\CLION2~1.4\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\BattleBay_tool.dir/objects.a -Wl,--no-whole-archive -o BattleBay_tool.exe -Wl,--out-implib,libBattleBay_tool.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BattleBay_tool.dir\linkLibs.rsp
+/usr/bin/cc -g CMakeFiles/BattleBay_tool.dir/main.c.o CMakeFiles/BattleBay_tool.dir/objects.c.o CMakeFiles/BattleBay_tool.dir/ships.c.o -o BattleBay_tool 

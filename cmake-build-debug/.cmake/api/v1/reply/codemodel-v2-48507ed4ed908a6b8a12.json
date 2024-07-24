@@ -6,10 +6,10 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.28"
+						"string" : "3.25.1"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "BattleBay_tool::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-BattleBay_tool-Debug-48aff53e9c8d80ca9195.json",
+					"jsonFile" : "target-BattleBay_tool-Debug-5424ab7228a5cde2ad40.json",
 					"name" : "BattleBay_tool",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Pierre-Luc/BattleBay_tool/cmake-build-debug",
-		"source" : "C:/Users/Pierre-Luc/BattleBay_tool"
+		"build" : "/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug",
+		"source" : "/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 4
 	}
 }
