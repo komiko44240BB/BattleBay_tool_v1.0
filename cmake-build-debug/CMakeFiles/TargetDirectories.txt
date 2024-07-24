@@ -1,3 +1,0 @@
-/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles/BattleBay_tool.dir
-/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Pierre-Luc/Documents/GitHub/BattleBay_tool/cmake-build-debug/CMakeFiles/rebuild_cache.dir

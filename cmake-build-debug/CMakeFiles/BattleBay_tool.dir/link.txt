@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/BattleBay_tool.dir/main.c.o CMakeFiles/BattleBay_tool.dir/objects.c.o CMakeFiles/BattleBay_tool.dir/ships.c.o CMakeFiles/BattleBay_tool.dir/readobjects.c.o CMakeFiles/BattleBay_tool.dir/training.c.o CMakeFiles/BattleBay_tool.dir/readtraining.c.o -o BattleBay_tool 
