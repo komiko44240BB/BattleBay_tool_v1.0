@@ -1,21 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<stdbool.h>
 #ifndef SHIPS_H
 #define SHIPS_H
 
 struct Ship{
-    struct Object** loadout [8];
+    struct Object*** loadout [5];
+    char* name;
     float speed;
     float ship_agility;
-    float turet_agility;
+    float turret_agility;
     unsigned int gear_score;
     unsigned int hit_points;
     unsigned int defence;
-    unsigned int gear [5][4];
 };
 
-struct Ship* createShip();
+struct Ship* createShip(char* ship_name, float speed, float ship_agility, float turet_agility, unsigned int hit_points, unsigned int defence, unsigned int gear [5]);
 
 void addOject(struct Ship* s, struct Object* o);
 void removeObject(struct Ship* s, int pos);
+
+bool canAddObject(struct Ship* s,struct Object* o);
 
 void printShipStats(struct Ship* s);
 void printLoadout(struct Ship* s);

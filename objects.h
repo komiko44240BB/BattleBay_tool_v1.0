@@ -18,6 +18,9 @@ struct Object{
 
 struct Object* createObject(char rarity, unsigned int level, float base_stat, float cool_down, float range, float projectile_speed, float critical_hit_chance, float critcal_hit_multiplier, float radius, float spread, unsigned int amount_of_projectiles, float duration);
 
+char* getObjectType(struct Object* o);
+int getObjectPoints(struct Object* o);
+
 void printObject(struct Object* o);
 
 void deleteObject(struct Object* o);
