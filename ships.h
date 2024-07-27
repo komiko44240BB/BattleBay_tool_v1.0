@@ -6,7 +6,7 @@
 #define SHIPS_H
 
 struct Ship{
-    struct Object*** loadout [5];
+    struct Slots* loadout [5];
     char* name;
     float speed;
     float ship_agility;
@@ -16,11 +16,13 @@ struct Ship{
     unsigned int defence;
 };
 
-struct Ship* createShip(char* ship_name, float speed, float ship_agility, float turet_agility, unsigned int hit_points, unsigned int defence, unsigned int gear [5]);
+struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turet_agility, unsigned int hit_points, unsigned int defence);
+void setUpShip(struct Ship* s, unsigned int gear[5][2]);
 
 void addOject(struct Ship* s, struct Object* o);
 void removeObject(struct Ship* s, int pos);
 
+int* getLayout(char** arr);
 bool canAddObject(struct Ship* s,struct Object* o);
 
 void printShipStats(struct Ship* s);
