@@ -19,7 +19,7 @@
  * @return A pointer to the newly created Ship struct, or NULL on failure.
  */
 
-/*struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turret_agility, unsigned int hit_points, unsigned int defence) {
+struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turret_agility, unsigned int hit_points, unsigned int defence) {
     // Allocate memory for the Ship struct
     struct Ship* ship = malloc(sizeof(struct Ship));
     if (ship == NULL) {
@@ -126,35 +126,78 @@ void printShipName(struct Ship* s) {
         return;
     }
     if(strcmp(s->name,"shooter") == 0){
-
+        printf("    ____  _                 _            \n");
+        printf("   / ___|| |__   ___   ___ | |_ ___ _ __ \n");
+        printf("   \\___ \\| '_ \\ / _ \\ / _ \\| __/ _ \\ '__|\n");
+        printf("    ___) | | | | (_) | (_) | ||  __/ |   \n");
+        printf("   |____/|_| |_|\\___/ \\___/ \\__\\___|_|   \n");
     }
     if(strcmp(s->name,"defender") == 0){
-
+        printf(" ____        __                _           \n");
+        printf("|  _ \\  ___ / _| ___ _ __   __| | ___ _ __ \n");
+        printf("| | | |/ _ \\ |_ / _ \\ '_ \\ / _` |/ _ \\ '__|\n");
+        printf("| |_| |  __/  _|  __/ | | | (_| |  __/ |   \n");
+        printf("|____/ \\___|_|  \\___|_| |_|\\__,_|\\___|_|   \n");
     }
     if(strcmp(s->name,"speeder") == 0){
-
+        printf("    ____                      _           \n");
+        printf("  / ___| _ __   ___  ___  __| | ___ _ __ \n");
+        printf("  \\___ \\| '_ \\ / _ \\/ _ \\/ _` |/ _ \\ '__|\n");
+        printf("  ___) | |_) |  __/  __/ (_| |  __/ |   \n");
+        printf(" |____/| .__/ \\___|\\___|\\__,_|\\___|_|   \n");
+        printf("      |_|                              \n");
     }
     if(strcmp(s->name,"enfoncer") == 0){
 
+
+        printf(" _____        __                           \n");
+        printf("| ____|_ __  / _| ___  _ __   ___ ___ _ __ \n");
+        printf("|  _| | '_ \\| |_ / _ \\| '_ \\ / __/ _ \\ '__|\n");
+        printf("| |___| | | |  _| (_) | | | | (_|  __/ |   \n");
+        printf("|_____|_| |_|_|  \\___/|_| |_|\\___\\___|_|   \n");
     }
     if(strcmp(s->name,"fixer") == 0){
 
+
+       printf(" _____ _               \n");
+       printf("|  ___(_)_  _____ _ __ \n");
+       printf("| |_  | \\ \\/ / _ \\ '__|\n");
+       printf("|  _| | |>  <  __/ |   \n");
+       printf("|_|   |_/_/\\_\\___|_|   \n");
     }
     if(strcmp(s->name,"interceptor") == 0){
-
+       printf(" ___       _                          _             \n");
+       printf("|_ _|_ __ | |_ ___ _ __ ___ ___ _ __ | |_ ___  _ __ \n");
+       printf(" | || '_ \\| __/ _ \\ '__/ __/ _ \\ '_ \\| __/ _ \\| '__|\n");
+       printf(" | || | | | ||  __/ | | (_|  __/ |_) | || (_) | |   \n");
+       printf("|___|_| |_|\\__\\___|_|  \\___\\___| .__/ \\__\\___/|_|   \n");
+       printf("                               |_|                  \n");
     }
     if(strcmp(s->name,"reaper") == 0){
-
+       printf(" ____                            \n");
+       printf("|  _ \\ ___  __ _ _ __   ___ _ __ \n");
+       printf("| |_) / _ \\/ _` | '_ \\ / _ \\ '__|\n");
+       printf("|  _ <  __/ (_| | |_) |  __/ |   \n");
+       printf("|_| \\_\\___|\\__,_| .__/ \\___|_|   \n");
+       printf("                |_|              \n");
     }
     if(strcmp(s->name,"guardian") == 0){
-
+      printf("  ____                     _ _             \n");
+      printf(" / ___|_   _  __ _ _ __ __| (_) __ _ _ __  \n");
+      printf("| |  _| | | |/ _` | '__/ _` | |/ _` | '_ \\ \n");
+      printf("| |_| | |_| | (_| | | | (_| | | (_| | | | |\n");
+      printf(" \\____|\\__,_|\\__,_|_|  \\__,_|_|\\__,_|_| |_|\n");
     }
     if(strcmp(s->name,"striker") == 0){
-
+       printf(" ____  _        _ _             \n");
+       printf("/ ___|| |_ _ __(_) | _____ _ __ \n");
+       printf("\\___ \\| __| '__| | |/ / _ \\ '__|\n");
+       printf(" ___) | |_| |  | |   <  __/ |   \n");
+       printf("|____/ \\__|_|  |_|_|\\_\\___|_|   \n");
     }
 
 }
 
 void deleteShip(struct Ship* s){
 
-}*/
+}
