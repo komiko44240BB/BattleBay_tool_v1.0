@@ -19,7 +19,7 @@
  * @return A pointer to the newly created Ship struct, or NULL on failure.
  */
 
-struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turret_agility, unsigned int hit_points, unsigned int defence) {
+/*struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turret_agility, unsigned int hit_points, unsigned int defence) {
     // Allocate memory for the Ship struct
     struct Ship* ship = malloc(sizeof(struct Ship));
     if (ship == NULL) {
@@ -157,4 +157,4 @@ void printShipName(struct Ship* s) {
 
 void deleteShip(struct Ship* s){
 
-}
+}*/
