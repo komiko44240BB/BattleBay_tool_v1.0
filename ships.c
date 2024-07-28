@@ -149,7 +149,7 @@ void printShipName(struct Ship* s) {
     if(strcmp(s->name,"guardian") == 0){
 
     }
-    if(strcmp(s->name,"strikergi") == 0){
+    if(strcmp(s->name,"striker") == 0){
 
     }
 
