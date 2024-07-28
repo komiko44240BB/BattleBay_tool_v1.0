@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include<stdbool.h>
+#include "objects.h"
 #ifndef SHIPS_H
 #define SHIPS_H
 

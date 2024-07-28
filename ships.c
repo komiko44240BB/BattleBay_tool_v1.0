@@ -7,18 +7,18 @@
 #define OBJECT_TYPES "rbygt"
 
 /**
- * Creates a new Ship struct with the given parameters.
- *
- * @param ship_name The name of the ship.
- * @param speed The speed of the ship.
- * @param ship_agility The agility of the ship.
- * @param turret_agility The agility of the turret.
- * @param hit_points The base_hit points of the ship.
- * @param defence The defence of the ship.
- *
- * @return A pointer to the newly created Ship struct, or NULL on failure.
- */
-
+* Initializes a Ship struct with the given parameters.
+* Allocates memory for the Ship struct and duplicates the ship name.
+* Initializes all the fields of the Ship struct.
+*
+* @param ship_name The name of the ship
+* @param speed The speed of the ship
+* @param ship_agility The agility of the ship
+* @param turret_agility The agility of the ship's turrets
+* @param hit_points The hit points (health) of the ship
+* @param defence The defence points of the ship
+* @return Pointer to the initialized Ship struct or NULL if memory allocation fails
+*/
 struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turret_agility, unsigned int hit_points, unsigned int defence) {
     // Allocate memory for the Ship struct
     struct Ship* ship = malloc(sizeof(struct Ship));
@@ -38,12 +38,19 @@ struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, fl
     return ship;
 }
 
+/**
+* Sets up the loadout slots for a given Ship struct with the provided gear specifications.
+* Allocates memory for each Slot and initializes its fields.
+*
+* @param s Pointer to the Ship struct
+* @param gear A 2D array where each row contains the slot amount and slot points for a specific type of slot
+*/
 void setUpShip(struct Ship* s, unsigned int gear[5][2]) {
     if(s == NULL){
         return;
     }
     for (int i = 0; i < 5; i++){
-        s->loadout[i] = malloc(sizeof(struct Slots));
+        s->loadout[i] = malloc(sizeof(struct Slots));    // Allocate memory for each Slot
         if (s->loadout[i] == NULL) {
             printf("Error: Memory allocation failed\n");
             return;
@@ -57,7 +64,12 @@ void setUpShip(struct Ship* s, unsigned int gear[5][2]) {
     }
 }
 
-
+/**
+* Adds an Object to the appropriate Slot in the Ship's loadout if it can be added.
+*
+* @param s Pointer to the Ship struct
+* @param o Pointer to the Object to be added
+*/
 void addOject(struct Ship* s, struct Object* o){
     if(s == NULL){
         return;
@@ -72,6 +84,13 @@ void addOject(struct Ship* s, struct Object* o){
     }
 }
 
+/**
+* Removes an Object from the Ship's loadout based on its position.
+* Frees the memory allocated for the Object.
+*
+* @param s Pointer to the Ship struct
+* @param pos The position of the Object to be removed
+*/
 void removeObject(struct Ship* s, int pos) {
     if( s != NULL ){
        int count = 0;
@@ -96,6 +115,11 @@ void removeObject(struct Ship* s, int pos) {
     }
 }
 
+/**
+* Prints the statistics of the Ship including gear score, health, turret agility, speed, ship agility, and defense.
+*
+* @param s Pointer to the Ship struct
+*/
 void printShipStats(struct Ship* s){
     if(s == NULL){
         return;
@@ -105,6 +129,12 @@ void printShipStats(struct Ship* s){
     printf("Turret agility :    %.2f      Speed :     %.2f\n",s->turret_agility,s->speed);
     printf("Ship agility :      %.2f      Defense :   %d\n",s->ship_agility,s->defence);
 }
+
+/**
+* Prints the loadout of the Ship including all the Objects in each Slot.
+*
+* @param s Pointer to the Ship struct
+*/
 void printLoadout(struct Ship* s){
     if(s == NULL){
         return;
@@ -121,6 +151,11 @@ void printLoadout(struct Ship* s){
     }
 }
 
+/**
+* Prints the name of the Ship in a stylized ASCII art format based on the ship's name.
+*
+* @param s Pointer to the Ship struct
+*/
 void printShipName(struct Ship* s) {
     if(s == NULL){
         return;
@@ -148,8 +183,6 @@ void printShipName(struct Ship* s) {
         printf("      |_|                              \n");
     }
     if(strcmp(s->name,"enfoncer") == 0){
-
-
         printf(" _____        __                           \n");
         printf("| ____|_ __  / _| ___  _ __   ___ ___ _ __ \n");
         printf("|  _| | '_ \\| |_ / _ \\| '_ \\ / __/ _ \\ '__|\n");
@@ -157,8 +190,6 @@ void printShipName(struct Ship* s) {
         printf("|_____|_| |_|_|  \\___/|_| |_|\\___\\___|_|   \n");
     }
     if(strcmp(s->name,"fixer") == 0){
-
-
        printf(" _____ _               \n");
        printf("|  ___(_)_  _____ _ __ \n");
        printf("| |_  | \\ \\/ / _ \\ '__|\n");
@@ -198,6 +229,27 @@ void printShipName(struct Ship* s) {
 
 }
 
+/**
+* Frees the memory allocated for a Ship struct and its associated fields.
+*
+* @param s Pointer to the Ship struct to be deleted
+*/
 void deleteShip(struct Ship* s){
-
+    if (s == NULL) {
+        return;
+    }
+    // Free the ship's name
+    free(s->name);
+    // Free each slot's objects and the slot itself
+    for (int i = 0; i < 5; i++) {
+        struct Object* iter = s->loadout[i]->head;
+        while (iter != NULL) {
+            struct Object* next = iter->next;
+            deleteObject(iter);
+            iter = next;
+        }
+        free(s->loadout[i]);
+    }
+    // Free the ship struct itself
+    free(s);
 }
