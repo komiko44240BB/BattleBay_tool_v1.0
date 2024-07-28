@@ -64,9 +64,10 @@ void addOject(struct Ship* s, struct Object* o){
     }
     if(canAddObject(s,o)){
         int type = getObjectType(o);
-        struct Object* iter = ;
-        iter = s->loadout[type]->head;
-        while(iter->next != NULL){iter = iter->next;}
+        struct Object* iter = s->loadout[type]->head;
+        while(iter->next != NULL){
+            iter = iter->next;
+        }
             iter->next = o;
     }
 }
@@ -96,9 +97,61 @@ void removeObject(struct Ship* s, int pos) {
 }
 
 void printShipStats(struct Ship* s){
-
+    if(s == NULL){
+        return;
+    }
+    printShipName(s);
+    printf("Gear score :    unsuported    Health :    %d\n",s->hit_points);
+    printf("Turret agility :    %.2f      Speed :     %.2f\n",s->turret_agility,s->speed);
+    printf("Ship agility :      %.2f      Defense :   %d\n",s->ship_agility,s->defence);
 }
 void printLoadout(struct Ship* s){
+    if(s == NULL){
+        return;
+    }
+    int count = 0;
+    for(int i = 0; i < 5; i++){
+        struct Object* iter = s->loadout[i]->head;
+        while (iter->next != NULL){
+            printObject(iter);
+            if(count%4 == 0){
+                printf("\n");
+            }
+        }
+    }
+}
+
+void printShipName(struct Ship* s) {
+    if(s == NULL){
+        return;
+    }
+    if(strcmp(s->name,"shooter") == 0){
+
+    }
+    if(strcmp(s->name,"defender") == 0){
+
+    }
+    if(strcmp(s->name,"speeder") == 0){
+
+    }
+    if(strcmp(s->name,"enfoncer") == 0){
+
+    }
+    if(strcmp(s->name,"fixer") == 0){
+
+    }
+    if(strcmp(s->name,"interceptor") == 0){
+
+    }
+    if(strcmp(s->name,"reaper") == 0){
+
+    }
+    if(strcmp(s->name,"guardian") == 0){
+
+    }
+    if(strcmp(s->name,"strikergi") == 0){
+
+    }
 
 }
 

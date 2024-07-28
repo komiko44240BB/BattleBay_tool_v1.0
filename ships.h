@@ -22,11 +22,11 @@ void setUpShip(struct Ship* s, unsigned int gear[5][2]);
 void addOject(struct Ship* s, struct Object* o);
 void removeObject(struct Ship* s, int pos);
 
-int* getLayout(char** arr);
 bool canAddObject(struct Ship* s,struct Object* o);
 
 void printShipStats(struct Ship* s);
 void printLoadout(struct Ship* s);
+void printShipName(struct Ship* s);
 
 void deleteShip(struct Ship* s);
 

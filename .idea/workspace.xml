@@ -290,12 +290,9 @@
       <change beforePath="$PROJECT_DIR$/scriptspy/csv_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/csv_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/data/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/Readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/data/healing_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/healing_perks.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptspy/data/healing_perks.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/healing_perks.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/data/passive_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/passive_perks.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptspy/data/passive_perks.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/passive_perks.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/data/utility_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/utility_perks.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/data/weapons_perks.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/weapons_perks.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scriptspy/data/weapons_perks.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/data/weapons_perks.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/perkscsv.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/perkscsv.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scriptspy/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/scriptspy/playground.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ships.c" beforeDir="false" afterPath="$PROJECT_DIR$/ships.c" afterDir="false" />
@@ -550,7 +547,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "CMake Application.BattleBay_tool.executor": "Debug",
+    "CMake Application.BattleBay_tool.executor": "Run",
     "Notification.DisplayName-DoNotAsk-WindowsDefender": "Microsoft Defender configuration",
     "Notification.DoNotAsk-WindowsDefender": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
@@ -566,7 +563,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C++",
+    "settings.editor.selected.configurable": "CPPToolchains",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -593,6 +590,9 @@
       <workItem from="1721845751534" duration="231000" />
       <workItem from="1721846152607" duration="16130000" />
       <workItem from="1722073801714" duration="9372000" />
+      <workItem from="1722153415499" duration="638000" />
+      <workItem from="1722154291628" duration="1915000" />
+      <workItem from="1722157915891" duration="2828000" />
     </task>
     <servers />
   </component>
@@ -609,7 +609,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/main.c</url>
-          <line>12</line>
+          <line>13</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
