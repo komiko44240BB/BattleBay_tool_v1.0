@@ -15,6 +15,7 @@ struct Object {
     float spread;
     unsigned int amount_of_projectiles;
     float duration;
+    float combo_dmg_boost;
     unsigned int slot_points;
     struct Object* next;
 };
@@ -29,7 +30,7 @@ struct Slots {
     struct Object* head;
 };
 
-struct Object* createObject(char rarity, unsigned int level, float base_stat, float cool_down, float range, float projectile_speed, float critical_hit_chance, float critcal_hit_multiplier, float radius, float spread, unsigned int amount_of_projectiles, float duration, unsigned int slot_points);
+struct Object* createObject(char rarity, unsigned int level, float base_stat, float cool_down, float range, float projectile_speed, float critical_hit_chance, float critcal_hit_multiplier, float radius, float spread, unsigned int amount_of_projectiles, float duration, unsigned int slot_points, float combo_dmg_boost);
 
 int getObjectType(struct Object* o);
 int getObjectPoints(struct Object* o);
