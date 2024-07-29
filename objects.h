@@ -3,6 +3,7 @@
 
 struct Object {
     char* rarity;
+    chat* name;
     unsigned int level;
     unsigned int training_level;
     float base_stat;
