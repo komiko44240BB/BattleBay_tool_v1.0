@@ -92,8 +92,6 @@ void printObject(struct Object* o) {
     if(o->duration != 0){
         printf("%.2f",o->duration);
     }
-
-
 }
 
 void deleteObject(struct Object* o) {
