@@ -1,3 +1,4 @@
+#include "perks.h"
 #ifndef OBJECTS_H
 #define OBJECTS_H
 
@@ -18,6 +19,8 @@ struct Object {
     float duration;
     float combo_dmg_boost;
     unsigned int slot_points;
+    unsigned int amount_of_perks;
+    struct Perk* perk_list [4];
     struct Object* next;
 };
 

@@ -9,4 +9,5 @@ add_executable(BattleBay_tool main.c
         readobjects.c
         training.c
         readtraining.c
+        perks.c
 )
