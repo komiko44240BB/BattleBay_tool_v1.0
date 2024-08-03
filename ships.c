@@ -33,7 +33,6 @@ struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, fl
     ship->gear_score = 0; // Initialize gear score to 0
     ship->hit_points = hit_points;
     ship->defence = defence;
-
     return ship;
 }
 

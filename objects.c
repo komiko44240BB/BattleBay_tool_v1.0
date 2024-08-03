@@ -25,6 +25,9 @@ struct Object* createObject(char* rarity, char* name, unsigned int level, float 
     o->duration = duration;
     o->combo_dmg_boost = combo_dmg_boost;
     o->slot_points = slot_points;
+    for(int i = 0 ; i<4; i++){
+        o->perk_list[i] = NULL;
+    }
     o->next = NULL;
     return o;
 }
@@ -60,37 +63,38 @@ void printObject(struct Object* o) {
         return;
     }
     if(o->level != 0){
+        printf("%s",o->name);
         printf("%d",o->level);
-    }
-    if(o->base_stat != 0){
-        printf("%.2f",o->base_stat);
-    }
-    if(o->cool_down != 0){
-        printf("%.2f",o->cool_down);
-    }
-    if(o->range != 0){
-        printf("%.2f",o->range);
-    }
-    if(o->projectile_speed != 0){
-        printf("%.2f",o->projectile_speed);
-    }
-    if(o->critical_hit_chance != 0){
-        printf("%.2f",o->critical_hit_chance);
-    }
-    if(o->critcal_hit_multiplier != 0){
-        printf("%.2f",o->critcal_hit_multiplier);
-    }
-    if(o->radius != 0){
-        printf("%.2f",o->radius);
-    }
-    if(o->spread != 0){
-        printf("%.2f",o->spread);
-    }
-    if(o->amount_of_projectiles != 1){
-        printf("%d",o->amount_of_projectiles);
-    }
-    if(o->duration != 0){
-        printf("%.2f",o->duration);
+        if(o->base_stat != 0){
+            printf("%.2f",o->base_stat);
+        }
+        if(o->cool_down != 0){
+            printf("%.2f",o->cool_down);
+        }
+        if(o->range != 0){
+            printf("%.2f",o->range);
+        }
+        if(o->projectile_speed != 0){
+            printf("%.2f",o->projectile_speed);
+        }
+        if(o->critical_hit_chance != 0){
+            printf("%.2f",o->critical_hit_chance);
+        }
+        if(o->critcal_hit_multiplier != 0){
+            printf("%.2f",o->critcal_hit_multiplier);
+        }
+        if(o->radius != 0){
+            printf("%.2f",o->radius);
+        }
+        if(o->spread != 0){
+            printf("%.2f",o->spread);
+        }
+        if(o->amount_of_projectiles != 1){
+            printf("%d",o->amount_of_projectiles);
+        }
+        if(o->duration != 0){
+            printf("%.2f",o->duration);
+        }
     }
 }
 

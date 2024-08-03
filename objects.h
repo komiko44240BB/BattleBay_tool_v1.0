@@ -43,5 +43,6 @@ void printObject(struct Object* o);
 
 void deleteObject(struct Object* o);
 
+struct Slots* createSlots();
 
 #endif
