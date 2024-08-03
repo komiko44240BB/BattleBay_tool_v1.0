@@ -113,6 +113,11 @@ void removeObject(struct Ship* s, int pos) {
     }
 }
 
+
+bool canAddObject(struct Ship* s,struct Object* o) {
+
+}
+
 /**
 * Prints the statistics of the Ship including gear score, health, turret agility, speed, ship agility, and defense.
 *

@@ -25,7 +25,7 @@ struct Object* createObject(char* rarity, char* name, unsigned int level, float 
     o->duration = duration;
     o->combo_dmg_boost = combo_dmg_boost;
     o->slot_points = slot_points;
-    for(int i = 0 ; i<4; i++){
+    for(int i = 0 ; i < 4; i++){
         o->perk_list[i] = NULL;
     }
     o->next = NULL;
