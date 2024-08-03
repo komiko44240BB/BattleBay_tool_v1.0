@@ -10,4 +10,5 @@ add_executable(BattleBay_tool main.c
         training.c
         readtraining.c
         perks.c
+        menu.c
 )
