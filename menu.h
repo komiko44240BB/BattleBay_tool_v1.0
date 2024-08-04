@@ -10,6 +10,13 @@ void changeObjectStats();
 void changeShipType();
 void changeObject();
 void saveShipAs();
-void addObject();
+void addObjects(struct Ship* s);
+char* chooseWeapon(struct Ship* s);
+char* choosePasive(struct Ship* s);
+char* chooseUtility(struct Ship* s);
+char* chooseHealing(struct Ship* s);
+char* chooseTeal(struct Ship* s);
+char* chooseRarity();
+
 
 #endif
