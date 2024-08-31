@@ -307,7 +307,7 @@ void editingShip() {
                 changeObject();
                 break;
             case 3:
-                editCurentShip(s);
+                saveShip(s);
                 break;
             case 4:
                 saveShipAs();
