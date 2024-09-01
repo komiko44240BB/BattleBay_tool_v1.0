@@ -74,14 +74,17 @@ void startMenu() {
 
 void creatingShip() {
     clearInputBuffer();
-    bool valid3 = true;
+    bool createShip = true;
     char* ship_name = "";
     float speed = 0;
     float ship_agility = 0;
     float turret_agility = 0;
     unsigned int hit_points = 0;
     unsigned int defence = 0;
-    while (valid3){
+    unsigned int gear [5][2] = {0};
+    unsigned int k = 0;
+    unsigned int y = 0;
+    while (createShip){
         printf("what ship do you want to use ?\n");
         printf("------------------------\n");
         printf("1. Shooter\n");
@@ -93,6 +96,7 @@ void creatingShip() {
         printf("7. Reaper\n");
         printf("8. Guardian\n");
         printf("9. Striker\n");
+        printf("10. Cancel\n");
         printf("------------------------\n");
         printf("Your choice: ");
         int choice = 0;
@@ -105,7 +109,18 @@ void creatingShip() {
             turret_agility = 70;
             hit_points = 1950;
             defence = 10;
-            valid3 = false;
+            unsigned int shooter_setup[10] = {5,8,3,4,0,0,0,0,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = shooter_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 2:
             ship_name = "Defender";
@@ -114,7 +129,18 @@ void creatingShip() {
             turret_agility = 60;
             hit_points = 2700;
             defence = 20;
-            valid3 = false;
+            unsigned int defender_setup[10] = {3,5,4,6,0,0,0,0,1,1};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = defender_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 3:
             ship_name = "Speeder";
@@ -123,7 +149,18 @@ void creatingShip() {
             turret_agility = 90;
             hit_points = 1650;
             defence = 0;
-            valid3 = false;
+            unsigned int speeder_setup[10] = {2,3,3,4,3,4,0,0,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = speeder_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 4:
             ship_name = "Enfoncer";
@@ -132,7 +169,18 @@ void creatingShip() {
             turret_agility = 110;
             hit_points = 2300;
             defence = 5;
-            valid3 = false;
+            unsigned int enfoncer_setup[10] = {3,3,2,3,3,5,0,0,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = enfoncer_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 5:
             ship_name = "Fixer";
@@ -141,7 +189,18 @@ void creatingShip() {
             turret_agility = 90;
             hit_points = 2250;
             defence = 0;
-            valid3 = false;
+            unsigned int fixer_setup[10] = {2,3,2,2,1,1,3,5,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = fixer_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 6:
             ship_name = "Interceptor";
@@ -150,7 +209,18 @@ void creatingShip() {
             turret_agility = 90;
             hit_points = ;
             defence = 5;
-            valid3 = false;
+            unsigned int interceptor_setup[10] = {4,6,3,4,1,1,0,0,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = interceptor_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 7:
             ship_name = "Reaper";
@@ -159,7 +229,18 @@ void creatingShip() {
             turret_agility = 100;
             hit_points = ;
             defence = 0;
-            valid3 = false;
+            unsigned int reaper_setup[10] = {2,4,2,2,2,2,2,3,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = reaper_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 8:
             ship_name = "Guardian";
@@ -168,7 +249,18 @@ void creatingShip() {
             turret_agility = 75;
             hit_points = 2700;
             defence = 10;
-            valid3 = false;
+            unsigned int guardian_setup[10] = {2,3,3,4,0,0,0,0,3,4};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = guardian_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
         case 9:
             ship_name = "Striker";
@@ -177,8 +269,21 @@ void creatingShip() {
             turret_agility = 100;
             hit_points = 1944;
             defence = 5;
-            valid3 = false;
+            unsigned int striker_setup[10] = {3,4,3,4,2,3,0,0,0,0};
+            for(int i = 0; i < 10; i++){
+                if(i%2 == 1){
+                    y = 1;
+                    k--;
+                }else{
+                    y = 0;
+                }
+                gear[k][y] = striker_setup[i];
+                k++;
+            }
+            createShip = false;
             break;
+        case 10:
+            return;
         default:
             printf("Invalid choice, please try again\n");
             clearInputBuffer();
@@ -266,8 +371,6 @@ void addObjects(struct Ship* s) {
         }
     }
 }
-
-
 
 void editingShip() {
     clearInputBuffer();
