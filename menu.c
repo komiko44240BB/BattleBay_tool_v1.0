@@ -291,7 +291,7 @@ void creatingShip() {
     }
     struct Ship* s = initialiseShip(ship_name,speed,ship_agility,turret_agility,hit_points,defence);
     setUpShip(s,gear);
-    addObjects(s);// il faut ajouter un menu avant de faire rajouter les objets
+    addObjects(s);
 }
 
 void addObjects(struct Ship* s) {
@@ -350,6 +350,7 @@ void addObjects(struct Ship* s) {
             break;
         case 6:
             saveShipAs(s);
+            return;
         case 7:
             add_objects = false;
             read_file = false;
@@ -361,7 +362,7 @@ void addObjects(struct Ship* s) {
     if(read_file){
         char* object_file_name = malloc(strlen(object_name) + strlen(rarity) + 5 + 1);
         sprintf(object_file_name, "%s_%s.csv", object_name, rarity);
-        struct Object* o = readWeaponFile(object_file_name, object_type);
+        struct Object* o = readObjectFile(object_file_name, object_type);
 
         printf("------------------------\n");
         printf("What is the level of training of your object ?\n");
@@ -375,6 +376,7 @@ void addObjects(struct Ship* s) {
             sprintf(training_file_name, "%s_training.csv", object_name);
             readAndApplyTraining(o,training_file_name, training_lvl);
         }
+        addOject(s,o);
     }
 }
 
