@@ -5,6 +5,7 @@
 struct Object {
     char* rarity;
     char* name;
+    int type;
     unsigned int level;
     unsigned int training_level;
     float base_stat;

@@ -11,6 +11,7 @@ struct Object* createObject(char* rarity, char* name, unsigned int level, float 
     }
     o->name = strdup(name);
     o->rarity = strdup(rarity);
+    o->type = -1;
     o->level = level;
     o->training_level = 0;
     o->base_stat = base_stat;

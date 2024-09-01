@@ -295,11 +295,12 @@ void creatingShip() {
 }
 
 void addObjects(struct Ship* s) {
+    clearInputBuffer();
     bool add_objects = true;
     bool read_file = false;
     char* object_name = "";
     char* rarity = "";
-    int object_type = -1;
+    int object_type = 0;
     while(add_objects){
         printf("It doesn't matter which type of object you add first\n");
         printf("What type of object do you want to add ?\n");
@@ -309,49 +310,47 @@ void addObjects(struct Ship* s) {
         printf("3. Yellow (utility)\n");
         printf("4. Green (healing)\n");
         printf("5. Teal (guardian's type)\n");
-        printf("6. Cancel adding an object\n");
+        printf("6. Save ship\n");
+        printf("7. Cancel adding an object\n");
         printf("------------------------\n");
         printf("Your choice: ");
-        int choice = 0;
-        scanf("%d", &choice);
-        switch (choice){
+        object_type = 0;
+        clearInputBuffer();
+        scanf("%d", &object_type);
+        switch (object_type){
         case 1:
             object_name = strdup(chooseWeapon(s));
             rarity = strdup(chooseRarity());
-            object_type = 0;
             add_objects = false;
             read_file = true;
             break;
         case 2:
             object_name = strdup(choosePasive(s));
             rarity = strdup(chooseRarity());
-            object_type = 1;
             add_objects = false;
             read_file = true;
             break;
         case 3:
             object_name = strdup(chooseUtility(s));
             rarity = strdup(chooseRarity());
-            object_type = 2;
             add_objects = false;
             read_file = true;
             break;
         case 4:
             object_name = strdup(chooseHealing(s));
             rarity = strdup(chooseRarity());
-            object_type = 3;
             add_objects = false;
             read_file = true;
             break;
         case 5:
             object_name = strdup(chooseTeal(s));
             rarity = strdup(chooseRarity());
-            object_type = 4;
             add_objects = false;
             read_file = true;
             break;
         case 6:
-            deleteShip(s);
+            saveShipAs(s);
+        case 7:
             add_objects = false;
             read_file = false;
         default:
@@ -362,19 +361,19 @@ void addObjects(struct Ship* s) {
     if(read_file){
         char* object_file_name = malloc(strlen(object_name) + strlen(rarity) + 5 + 1);
         sprintf(object_file_name, "%s_%s.csv", object_name, rarity);
-        struct Object* o = readWeaponFile(object_file_name);
+        struct Object* o = readWeaponFile(object_file_name, object_type);
 
         printf("------------------------\n");
         printf("What is the level of training of your object ?\n");
         printf("------------------------\n");
         printf("Your choice: ");
         clearInputBuffer();
-        int choice = 0;
-        scanf("%d", &choice);
-        if(choice > 0){
+        int training_lvl = 0;
+        scanf("%d", &training_lvl);
+        if(training_lvl > 0){
             char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
             sprintf(training_file_name, "%s_training.csv", object_name);
-            readAndApplyTraining(o,training_file_name, choice);
+            readAndApplyTraining(o,training_file_name, training_lvl);
         }
     }
 }
@@ -383,7 +382,7 @@ void editingShip() {
     clearInputBuffer();
     printf("\nRead CSV file\n");
     printf("------------------------\n");
-    printf("Enter CSV file name: ");
+    printf("Enter CSV file name (without the \".csv\"): ");
     clearInputBuffer();
     char filename[FILENAME_SIZE] = "";
     fgets(filename, FILENAME_SIZE, stdin);
@@ -391,7 +390,7 @@ void editingShip() {
     struct Ship* s = readShipFile();
     if(s == NULL){
         printf("Ship fille is empty or there was an error reading the file\n");
-        printf("If this message is persistent please make inform me on the Battle Bay discort server\n");
+        printf("If this message is persistent please inform me on the Battle Bay discord server\n");
         return;
     }
     printf("\nFile \"%s\" read successfully!\n\n", filename);
