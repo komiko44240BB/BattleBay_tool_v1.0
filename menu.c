@@ -299,6 +299,7 @@ void addObjects(struct Ship* s) {
     bool read_file = false;
     char* object_name = "";
     char* rarity = "";
+    int object_type = -1;
     while(add_objects){
         printf("It doesn't matter which type of object you add first\n");
         printf("What type of object do you want to add ?\n");
@@ -317,34 +318,40 @@ void addObjects(struct Ship* s) {
         case 1:
             object_name = strdup(chooseWeapon(s));
             rarity = strdup(chooseRarity());
+            object_type = 0;
             add_objects = false;
             read_file = true;
             break;
         case 2:
             object_name = strdup(choosePasive(s));
             rarity = strdup(chooseRarity());
+            object_type = 1;
             add_objects = false;
             read_file = true;
             break;
         case 3:
             object_name = strdup(chooseUtility(s));
             rarity = strdup(chooseRarity());
+            object_type = 2;
             add_objects = false;
             read_file = true;
             break;
         case 4:
             object_name = strdup(chooseHealing(s));
             rarity = strdup(chooseRarity());
+            object_type = 3;
             add_objects = false;
             read_file = true;
             break;
         case 5:
             object_name = strdup(chooseTeal(s));
             rarity = strdup(chooseRarity());
+            object_type = 4;
             add_objects = false;
             read_file = true;
             break;
         case 6:
+            deleteShip(s);
             add_objects = false;
             read_file = false;
         default:
