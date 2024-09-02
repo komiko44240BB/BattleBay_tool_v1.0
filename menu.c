@@ -207,7 +207,7 @@ void creatingShip() {
             speed = 0.99;
             ship_agility = 80;
             turret_agility = 90;
-            hit_points = ;
+            hit_points = 2100;
             defence = 5;
             unsigned int interceptor_setup[10] = {4,6,3,4,1,1,0,0,0,0};
             for(int i = 0; i < 10; i++){
@@ -227,7 +227,7 @@ void creatingShip() {
             speed = 1;
             ship_agility = 85;
             turret_agility = 100;
-            hit_points = ;
+            hit_points = 2150;
             defence = 0;
             unsigned int reaper_setup[10] = {2,4,2,2,2,2,2,3,0,0};
             for(int i = 0; i < 10; i++){
@@ -267,7 +267,7 @@ void creatingShip() {
             speed = 1.01;
             ship_agility = 90;
             turret_agility = 100;
-            hit_points = 1944;
+            hit_points = 2000;
             defence = 5;
             unsigned int striker_setup[10] = {3,4,3,4,2,3,0,0,0,0};
             for(int i = 0; i < 10; i++){
