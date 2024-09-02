@@ -383,6 +383,24 @@ void addObjects(struct Ship* s) {
     }
 }
 
+char* chooseWeapon(struct Ship* s) {
+
+}
+char* choosePasive(struct Ship* s) {
+
+}
+char* chooseUtility(struct Ship* s) {
+
+}
+char* chooseHealing(struct Ship* s) {
+
+}
+char* chooseTeal(struct Ship* s) {
+    
+}
+
+
+
 void editingShip() {
     clearInputBuffer();
     printf("\nRead CSV file\n");
