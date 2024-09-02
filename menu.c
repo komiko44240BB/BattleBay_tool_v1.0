@@ -292,6 +292,7 @@ void creatingShip() {
     struct Ship* s = initialiseShip(ship_name,speed,ship_agility,turret_agility,hit_points,defence);
     setUpShip(s,gear);
     addObjects(s);
+    return;
 }
 
 void addObjects(struct Ship* s) {
