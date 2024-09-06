@@ -83,7 +83,7 @@ void creatingShip() {
     unsigned int defence = 0;
     unsigned int gear [5][2] = {0};
     unsigned int k = 0;
-    unsigned int y = 0;
+    unsigned int y;
     while (createShip){
         printf("what ship do you want to use ?\n");
         printf("------------------------\n");
@@ -321,33 +321,43 @@ void addObjects(struct Ship* s) {
             scanf("%d", &object_type);
             switch (object_type){
             case 1:
-                object_name = strdup(chooseWeapon(s));
-                rarity = strdup(chooseRarity());
-                add_objects = false;
+                object_name = strdup(chooseWeapon());
+                if(strcmp(object_name,"cancel") != 0){
+                    rarity = strdup(chooseRarity());
+                    add_objects = false;
+                }
                 read_file = true;
                 break;
             case 2:
-                object_name = strdup(choosePasive(s));
-                rarity = strdup(chooseRarity());
-                add_objects = false;
+                object_name = strdup(choosePasive());
+                if(strcmp(object_name,"cancel") != 0){
+                    rarity = strdup(chooseRarity());
+                    add_objects = false;
+                }
                 read_file = true;
                 break;
             case 3:
-                object_name = strdup(chooseUtility(s));
-                rarity = strdup(chooseRarity());
-                add_objects = false;
+                object_name = strdup(chooseUtility());
+                if(strcmp(object_name,"cancel") != 0){
+                    rarity = strdup(chooseRarity());
+                    add_objects = false;
+                }
                 read_file = true;
                 break;
             case 4:
-                object_name = strdup(chooseHealing(s));
-                rarity = strdup(chooseRarity());
-                add_objects = false;
+                object_name = strdup(chooseHealing());
+                if(strcmp(object_name,"cancel") != 0){
+                    rarity = strdup(chooseRarity());
+                    add_objects = false;
+                }
                 read_file = true;
                 break;
             case 5:
-                object_name = strdup(chooseTeal(s));
-                rarity = strdup(chooseRarity());
-                add_objects = false;
+                object_name = strdup(chooseTeal());
+                if(strcmp(object_name,"cancel") != 0){
+                    rarity = strdup(chooseRarity());
+                    add_objects = false;
+                }
                 read_file = true;
                 break;
             case 6:
@@ -365,7 +375,6 @@ void addObjects(struct Ship* s) {
             char* object_file_name = malloc(strlen(object_name) + strlen(rarity) + 5 + 1);
             sprintf(object_file_name, "%s_%s.csv", object_name, rarity);
             struct Object* o = readObjectFile(object_file_name, object_type);
-
             printf("------------------------\n");
             printf("What is the level of training of your object ?\n");
             printf("------------------------\n");
@@ -383,23 +392,194 @@ void addObjects(struct Ship* s) {
     }
 }
 
-char* chooseWeapon(struct Ship* s) {
-
+char* chooseWeapon() {
+    while(true){
+        printf("What do you want to do\n");
+        printf("------------------------\n");
+        printf("1.standard cannon\t2.blast cannon\n");
+        printf("3.sniper cannon\t\t4.explosive cannon\n");
+        printf("5.galting gun\t\t6.carronade\n");
+        printf("7.grenade launcher\t8.standard mortar\n");
+        printf("9.long range mortar\t10.ballpark mortar\n");
+        printf("11.big berta\t\t12.standard torpedo\n");
+        printf("13.big torpedo\t\t14.swift torpedo\n");
+        printf("15.triple torpedo\t16.railgun\n");
+        printf("17.missile launcher\t18.multi missile\n");
+        printf("19.mine\t\t\t20.flare gun\n");
+        printf("21.napalm launcher\t22.fire bomb\n");
+        printf("0.Cancel, change item type\n");
+        printf("------------------------\n");
+        printf("Your choice: ");
+        int choice = 0;
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:return "standard_cannon";
+            case 2:return "blast_cannon";
+            case 3:return "sniper_cannon";
+            case 4:return "explosive_cannon";
+            case 5:return "galting_gun";
+            case 6:return "carronade";
+            case 7:return "grenade_launcher";
+            case 8:return "standard_mortar";
+            case 9:return "long_range_mortar";
+            case 10:return "ballpark_mortar";
+            case 11:return "big_berta";
+            case 12:return "standard_torpedo";
+            case 13:return "big_torpedo";
+            case 14:return "swift_torpedo";
+            case 15:return "triple_torpedo";
+            case 16:return "railgun";
+            case 17:return "missile_launcher";
+            case 18:return "multi_missile";
+            case 19:return "mine";
+            case 20:return "flare_gun";
+            case 21:return "napalm_launcher";
+            case 22:return "fire_bomb";
+            case 0:return "cancel";
+            default:
+                printf("Invalid choice, please try again\n");
+                clearInputBuffer();
+        }
+    }
 }
-char* choosePasive(struct Ship* s) {
 
+char* choosePasive() {
+    while(true){
+        printf("What do you want to do\n");
+        printf("------------------------\n");
+        printf("1.standard_shield\n");
+        printf("2.big_shield\n");
+        printf("3.turbo\n");
+        printf("4.bandage\n");
+        printf("5.big_bandage\n");
+        printf("0.Cancel, change item type\n");
+        printf("------------------------\n");
+        printf("Your choice: ");
+        int choice = 0;
+        scanf("%d", &choice);
+        switch (choice){
+        case 1: return "standard_shield";
+        case 2: return "big_shield";
+        case 3: return "turbo";
+        case 4: return "bandage";
+        case 5: return "big_bandage";
+        case 0:return "cancel";
+        default:
+            printf("Invalid choice, please try again\n");
+            clearInputBuffer();
+        }
+    }
 }
-char* chooseUtility(struct Ship* s) {
 
+char* chooseUtility() {
+    while(true){
+        printf("What do you want to do\n");
+        printf("------------------------\n");
+        printf("1.overboost\n");
+        printf("2.nitro\n");
+        printf("3.tesla_bolt\n");
+        printf("4.tesla_shield\n");
+        printf("5.frost_blaster\n");
+        printf("6.frost_launcher\n");
+        printf("0.Cancel, change item type\n");
+        printf("------------------------\n");
+        printf("Your choice: ");
+        int choice = 0;
+        scanf("%d", &choice);
+        switch (choice){
+        case 1: return "overboost";
+        case 2: return "nitro";
+        case 3: return "tesla_bolt";
+        case 4: return "tesla_shield";
+        case 5: return "frost_blaster";
+        case 6: return "frost_launcher";
+        case 0:return "cancel";
+        default:
+            printf("Invalid choice, please try again\n");
+            clearInputBuffer();
+        }
+    }
 }
-char* chooseHealing(struct Ship* s) {
 
+char* chooseHealing() {
+    while(true){
+        printf("What do you want to do\n");
+        printf("------------------------\n");
+        printf("1.repair_box_launcher\n");
+        printf("2.repair_pulse\n");
+        printf("3.duct_tape\n");
+        printf("4.repair_bolt\n");
+        printf("5.repair_plasma\n");
+        printf("0.Cancel, change item type\n");
+        printf("------------------------\n");
+        printf("Your choice: ");
+        int choice = 0;
+        scanf("%d", &choice);
+        switch (choice){
+        case 1: return "repair_box_launcher";
+        case 2: return "repair_pulse";
+        case 3: return "duct_tape";
+        case 4: return "repair_bolt";
+        case 5: return "repair_plasma";
+        case 0:return "cancel";
+        default:
+            printf("Invalid choice, please try again\n");
+            clearInputBuffer();
+        }
+    }
 }
-char* chooseTeal(struct Ship* s) {
-    
+
+char* chooseTeal() {
+    while(true){
+        printf("What do you want to do\n");
+        printf("------------------------\n");
+        printf("1.defence_wall\n");
+        printf("2.defence_aura\n");
+        printf("3.bloster_armor\n");
+        printf("4.cleanse_pulse\n");
+        printf("0.Cancel, change item type\n");
+        printf("------------------------\n");
+        printf("Your choice: ");
+        int choice = 0;
+        scanf("%d", &choice);
+        switch (choice){
+        case 1: return "defence_wall";
+        case 2: return "defence_aura";
+        case 3: return "bloster_armor";
+        case 4: return "cleanse_pulse";
+        case 0:return "cancel";
+        default:
+            printf("Invalid choice, please try again\n");
+            clearInputBuffer();
+        }
+    }
 }
 
-
+char* chooseRarity() {
+    while(true){
+        printf("What do you want to do\n");
+        printf("------------------------\n");
+        printf("1.Common\n");
+        printf("2.Uncommon\n");
+        printf("3.Rare\n");
+        printf("4.Epic\n");
+        printf("5.Legendary\n");
+        printf("------------------------\n");
+        printf("Your choice: ");
+        int choice = 0;
+        scanf("%d", &choice);
+        switch (choice){
+        case 1: return "common";
+        case 2: return "uncommon";
+        case 3: return "rare";
+        case 4: return "epic";
+        case 5: return "legendary";
+        default:
+            printf("Invalid choice, please try again\n");
+            clearInputBuffer();
+        }
+    }
+}
 
 void editingShip() {
     clearInputBuffer();

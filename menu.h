@@ -12,11 +12,11 @@ void changeObject();
 void saveShipAs();
 void saveShip(struct Ship* s);
 void addObjects(struct Ship* s);
-char* chooseWeapon(struct Ship* s);
-char* choosePasive(struct Ship* s);
-char* chooseUtility(struct Ship* s);
-char* chooseHealing(struct Ship* s);
-char* chooseTeal(struct Ship* s);
+char* chooseWeapon();
+char* choosePasive();
+char* chooseUtility();
+char* chooseHealing();
+char* chooseTeal();
 char* chooseRarity();
 
 
