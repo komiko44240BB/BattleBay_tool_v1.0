@@ -5,6 +5,8 @@
 #include <unistd.h>
 #include "ships.h"
 #include "menu.h"
+#include "readobjects.h"
+#include "readtraining.h"
 
 #define FILENAME_SIZE 40
 
@@ -48,8 +50,8 @@ void startMenu() {
         printf("What do you want to do\n");
         printf("------------------------\n");
         printf("1. Start a new ship\n");
-        printf("2. Read a ship file");
-        printf("3. Exit program\n");
+        //printf("2. Read a ship file");
+        printf("0. Exit program\n");
         printf("------------------------\n");
         printf("Your choice: ");
         int exitOrRead = 0;
@@ -58,10 +60,10 @@ void startMenu() {
             case 1:
                 creatingShip();
                 break;
-            case 2:
-                //editingShip();
-                break;
-            case 3:
+            /*case 2:
+                editingShip();
+                break;*/
+            case 0:
                 valid1 = false;  // Quitter l'application
                 break;
             default:
@@ -97,7 +99,7 @@ void creatingShip() {
         printf("7. Reaper\n");
         printf("8. Guardian\n");
         printf("9. Striker\n");
-        printf("10. Cancel\n");
+        printf("0. Cancel\n");
         printf("------------------------\n");
         printf("Your choice: ");
         int choice = 0;
@@ -283,7 +285,7 @@ void creatingShip() {
             }
             createShip = false;
             break;
-        case 10:
+        case 0:
             return;
         default:
             printf("Invalid choice, please try again\n");
@@ -303,7 +305,7 @@ void addObjects(struct Ship* s) {
         bool read_file = false;
         char* object_name = "";
         char* rarity = "";
-        int object_type = 0;
+        unsigned int object_type = 0;
         while(add_objects){
             printf("It doesn't matter which type of object you add first\n");
             printf("What type of object do you want to add ?\n");
@@ -314,7 +316,7 @@ void addObjects(struct Ship* s) {
             printf("4. Green (healing)\n");
             printf("5. Teal (guardian's type)\n");
             printf("6. Save ship\n");
-            printf("7. Cancel ship\n");
+            printf("0. Cancel ship\n");
             printf("------------------------\n");
             printf("Your choice: ");
             object_type = 0;
@@ -361,13 +363,16 @@ void addObjects(struct Ship* s) {
                 read_file = true;
                 break;
             case 6:
-                //saveShipAs(s);
+                saveShipAs(s);
+                read_file = false;
                 return;
-            case 7:
+            case 0:
                 deleteShip(s);
+                read_file = false;
                 return;
             default:
                 printf("Invalid choice, please try again\n");
+                read_file = false;
                 clearInputBuffer();
             }
         }
@@ -588,6 +593,7 @@ char* chooseRarity() {
     }
 }
 
+/*
 void editingShip() {
     clearInputBuffer();
     printf("\nRead CSV file\n");
@@ -639,4 +645,4 @@ void editingShip() {
                 clearInputBuffer();
         }
     }
-}
+}*/
