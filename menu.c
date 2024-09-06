@@ -29,9 +29,10 @@ void start(){
     printf("                           | \\____| |_| | | | | | | | |_| | | | | | |_| |_| |  | | | ( ( | ( (_| ( (/ /                                           \n");
     printf("                            \\______)___/|_|_|_|_|_|_|\\____|_| |_|_|\\___)__  |  |_|_|_|\\_||_|\\____|\\____)                                     \n");
     printf("                                                                      (____/                                                                       \n");
-    printf("Made by #VWHSGMZR aka Komiko44240");
+    printf("Made by #VWHSGMZR aka komiko44240\n");
     printf("Special thanks to #FGZNGMWK aka TheregoesURboat\n");
-    sleep(5);
+    sleep(1);
+    printf("Press enter\n");
     startMenu();
 }
 
@@ -58,7 +59,7 @@ void startMenu() {
                 creatingShip();
                 break;
             case 2:
-                editingShip();
+                //editingShip();
                 break;
             case 3:
                 valid1 = false;  // Quitter l'application
@@ -361,7 +362,7 @@ void addObjects(struct Ship* s) {
                 read_file = true;
                 break;
             case 6:
-                saveShipAs(s);
+                //saveShipAs(s);
                 return;
             case 7:
                 deleteShip(s);
@@ -374,7 +375,7 @@ void addObjects(struct Ship* s) {
         if(read_file){
             char* object_file_name = malloc(strlen(object_name) + strlen(rarity) + 5 + 1);
             sprintf(object_file_name, "%s_%s.csv", object_name, rarity);
-            struct Object* o = readObjectFile(object_file_name, object_type);
+            //struct Object* o = readObjectFile(object_file_name, object_type);
             printf("------------------------\n");
             printf("What is the level of training of your object ?\n");
             printf("------------------------\n");
@@ -385,14 +386,16 @@ void addObjects(struct Ship* s) {
             if(training_lvl > 0){
                 char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
                 sprintf(training_file_name, "%s_training.csv", object_name);
-                readAndApplyTraining(o,training_file_name, training_lvl);
+                //readAndApplyTraining(o,training_file_name, training_lvl);
+                printf("Training aplied succesfully");
             }
-            addOject(s,o);
+            //addOject(s,o);
         }
     }
 }
 
 char* chooseWeapon() {
+    clearInputBuffer();
     while(true){
         printf("What do you want to do\n");
         printf("------------------------\n");
@@ -435,7 +438,7 @@ char* chooseWeapon() {
             case 20:return "flare_gun";
             case 21:return "napalm_launcher";
             case 22:return "fire_bomb";
-            case 0:return "cancel";
+            case 0: return "cancel";
             default:
                 printf("Invalid choice, please try again\n");
                 clearInputBuffer();
@@ -444,6 +447,7 @@ char* chooseWeapon() {
 }
 
 char* choosePasive() {
+    clearInputBuffer();
     while(true){
         printf("What do you want to do\n");
         printf("------------------------\n");
@@ -463,7 +467,7 @@ char* choosePasive() {
         case 3: return "turbo";
         case 4: return "bandage";
         case 5: return "big_bandage";
-        case 0:return "cancel";
+        case 0: return "cancel";
         default:
             printf("Invalid choice, please try again\n");
             clearInputBuffer();
@@ -472,6 +476,7 @@ char* choosePasive() {
 }
 
 char* chooseUtility() {
+    clearInputBuffer();
     while(true){
         printf("What do you want to do\n");
         printf("------------------------\n");
@@ -493,7 +498,7 @@ char* chooseUtility() {
         case 4: return "tesla_shield";
         case 5: return "frost_blaster";
         case 6: return "frost_launcher";
-        case 0:return "cancel";
+        case 0: return "cancel";
         default:
             printf("Invalid choice, please try again\n");
             clearInputBuffer();
@@ -502,6 +507,7 @@ char* chooseUtility() {
 }
 
 char* chooseHealing() {
+    clearInputBuffer();
     while(true){
         printf("What do you want to do\n");
         printf("------------------------\n");
@@ -521,7 +527,7 @@ char* chooseHealing() {
         case 3: return "duct_tape";
         case 4: return "repair_bolt";
         case 5: return "repair_plasma";
-        case 0:return "cancel";
+        case 0: return "cancel";
         default:
             printf("Invalid choice, please try again\n");
             clearInputBuffer();
@@ -530,6 +536,7 @@ char* chooseHealing() {
 }
 
 char* chooseTeal() {
+    clearInputBuffer();
     while(true){
         printf("What do you want to do\n");
         printf("------------------------\n");
@@ -547,7 +554,7 @@ char* chooseTeal() {
         case 2: return "defence_aura";
         case 3: return "bloster_armor";
         case 4: return "cleanse_pulse";
-        case 0:return "cancel";
+        case 0: return "cancel";
         default:
             printf("Invalid choice, please try again\n");
             clearInputBuffer();
@@ -556,6 +563,7 @@ char* chooseTeal() {
 }
 
 char* chooseRarity() {
+    clearInputBuffer();
     while(true){
         printf("What do you want to do\n");
         printf("------------------------\n");
@@ -580,7 +588,7 @@ char* chooseRarity() {
         }
     }
 }
-
+/*
 void editingShip() {
     clearInputBuffer();
     printf("\nRead CSV file\n");
@@ -632,4 +640,4 @@ void editingShip() {
                 clearInputBuffer();
         }
     }
-}
+}*/
