@@ -374,7 +374,7 @@ void addObjects(struct Ship* s) {
         if(read_file){
             char* object_file_name = malloc(strlen(object_name) + strlen(rarity) + 5 + 1);
             sprintf(object_file_name, "%s_%s.csv", object_name, rarity);
-            //struct Object* o = readObjectFile(object_file_name, object_type);
+            struct Object* o = readObjectFile(object_file_name, object_type);
             printf("------------------------\n");
             printf("What is the level of training of your object ?\n");
             printf("------------------------\n");
@@ -385,10 +385,10 @@ void addObjects(struct Ship* s) {
             if(training_lvl > 0){
                 char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
                 sprintf(training_file_name, "%s_training.csv", object_name);
-                //readAndApplyTraining(o,training_file_name, training_lvl);
+                readAndApplyTraining(o,training_file_name, training_lvl);
                 printf("Training aplied succesfully\n");
             }
-            //addOject(s,o);
+            addOject(s,o);
         }
     }
 }
@@ -587,7 +587,7 @@ char* chooseRarity() {
         }
     }
 }
-/*
+
 void editingShip() {
     clearInputBuffer();
     printf("\nRead CSV file\n");
@@ -639,4 +639,4 @@ void editingShip() {
                 clearInputBuffer();
         }
     }
-}*/
+}
