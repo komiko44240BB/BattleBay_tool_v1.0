@@ -318,7 +318,6 @@ void addObjects(struct Ship* s) {
             printf("------------------------\n");
             printf("Your choice: ");
             object_type = 0;
-            clearInputBuffer();
             scanf("%d", &object_type);
             switch (object_type){
             case 1:
@@ -387,7 +386,7 @@ void addObjects(struct Ship* s) {
                 char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
                 sprintf(training_file_name, "%s_training.csv", object_name);
                 //readAndApplyTraining(o,training_file_name, training_lvl);
-                printf("Training aplied succesfully");
+                printf("Training aplied succesfully\n");
             }
             //addOject(s,o);
         }
