@@ -5,4 +5,4 @@ Ask me the invite link in DM.
 
 Good Luck
 
-Krypt (on discord)
+kr_ypt (on discord)
