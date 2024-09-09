@@ -105,6 +105,13 @@ void deleteObject(struct Object* o) {
     }
     // free the rarity string
     free(o->rarity);
+    free(o->name);
     // free the current object
     free(o);
+}
+
+void editObjectType(struct Object* o, unsigned int type) {
+    type--;
+    o->type = type;
+
 }

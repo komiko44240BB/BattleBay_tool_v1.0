@@ -27,7 +27,7 @@ struct Object {
 
 
 struct Slots {
-    char type;
+    int type;
     unsigned int slot_amount;
     unsigned int occipied_slots;
     unsigned int slot_points;
@@ -39,6 +39,8 @@ struct Object* createObject(char* rarity,char* name ,unsigned int level, float b
 
 int getObjectType(struct Object* o);
 int getObjectPoints(struct Object* o);
+
+void editObjectType(struct Object* o, unsigned int type);
 
 void printObject(struct Object* o);
 

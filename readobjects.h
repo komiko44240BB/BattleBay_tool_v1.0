@@ -1,6 +1,6 @@
 #ifndef READOBJECTS_H
 #define READOBJECTS_H
 
-struct Object* readObjectFile(char* object_file_name, unsigned int object_type);
+struct Object* readObjectFile(unsigned int object_type, char* object_name, char* rarity);
 
 #endif

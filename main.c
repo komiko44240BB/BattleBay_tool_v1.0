@@ -5,10 +5,12 @@
 #include <unistd.h>
 
 #include "menu.h"
+#include "readobjects.h"
 
 int main() {
 
-    start();
 
+    //readObjectFile(1,"standard_cannon","legendary");
+    start();
     return 0;
 }
