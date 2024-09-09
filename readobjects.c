@@ -24,15 +24,13 @@
 struct Object* readObjectFile(unsigned int object_type, char* object_name, char* rarity) {
     // Loop to prompt user for object level until a valid input is provided
     while (true){
-        printf("------------------------\n");
         printf("What level is the object ?\n");
         printf("(Between 1 and 50)\n");
         printf("------------------------\n");
         printf("Your choice: ");
         clearInputBuffer();  // Clear any leftover input from previous user inputs
         int object_lvl = 0;
-        scanf("%d", &object_lvl);  // Get user input for object level
-
+        scanf(" %d", &object_lvl);  // Get user input for object level
         // Validate the level input
         if(object_lvl < 0 || object_lvl > 50){
             printf("Invalid choice, please try again\n");
@@ -100,15 +98,15 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
             token = strtok(NULL, ";");
             float critical_hit_chance= atof(token);  // Critical hit chance percentage
             token = strtok(NULL, ";");
-            float critcal_hit_multiplier= atof(token);  // Critical hit damage multiplier
-            token = strtok(NULL, ";");
+            float critcal_hit_multiplier=1;// atof(token);  // Critical hit damage multiplier
+            //token = strtok(NULL, ";");
             float radius = atof(token);  // Radius of effect
             token = strtok(NULL, ";");
             float spread = atof(token);  // Spread of the projectiles
             token = strtok(NULL, ";");
             float amount_of_projectiles = atof(token);  // Number of projectiles
             printf("test2\n");
-            token = strtok(NULL, "\n");
+            token = strtok(NULL, "\r");
             float duration= atof(token);  // Duration of the effect
             printf("test3\n");
             // Create a new Object instance using the parsed data
