@@ -1,19 +1,21 @@
 import csv
 
-header = ["LEVEL", "BASE_STAT", "COOL_DOWN", "RANGE", "PROJECTILE_SPEED","CRITICAL_HIT_CHANCE", "RADIUS", "SPREAD", "AMOUNT_OF_PROJECTILES", "DURATION"]
+header = ["LEVEL", "BASE_STAT", "COOL_DOWN", "RANGE", "PROJECTILE_SPEED","CRITICAL_HIT_CHANCE","CRITICAL_HIT_MULTIPLIER","RADIUS", "SPREAD", "AMOUNT_OF_PROJECTILES", "DURATION"]
 slot_points = [1,1,1,2,1,1,1,1,1,1,2,1,2,1,2,2,2,2,1,1,2,2,1,2,1,1,2,1,1,1,2,1,2,1,2,1,1,2,2,1,2,1]
 cool_down = [5.6,11.1,11.1,14.4,10,8.5,11.1,11,10,10,15.6,6.1,13.3,10,15,22.2,12.8,12.8,15,11.1,13.3,16.5,0,0,0,0,0,12,12,20,20,11.1,13.3,11.1,14.7,17,15,17,18,20,20,20]
 range_ = [25,22,40,22,25,12,12,25,35,25,25,0,0,0,0,0,30,30,7,22,22,27,0,0,0,0,0,0,0,0,0,0,30,7,0,0,0,22,0,0,0,0]
 projectile_speed = [34.7,17.8,39.6,14.9,38.5,33,0,0,0,0,0,4,3.3,5,3.7,39.6,0,0,0,19.3,0,0,0,0,0,0,0,0,0,14.9,0,55,0,0,0,0,16.5,0,0,0,0,0]
 critical_hit_chance = [1.0,1.0,5.0,1.0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-critical_hit_multiplier = [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]
+                           #red                                        #blue     #yel        #green    #teal
+critical_hit_multiplier = [2,2,2,2,0,0,2,0,0,0,0,2,2,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0]
 radius = [0,0,0,2,0,0,2.2,3,3,4.2,3.3,3,3.5,3,2,0,1.5,1.5,2,0,4,3.6,0,0,0,0,0,0,0,0.3,1,0,6,1,5,0,0.3,4,0,7,0,7]
 spread = [0,0,0,0,3,8,0,0,0,0,0,0,0,0,15,0,10,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,140,0,0,0]
 amount_of_projectiles = [1,1,1,1,15,7,1,1,1,1,1,1,1,1,3,1,5,9,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 duration = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,20,13,0,0,0,0,0,6,1,0,5,7,7,0,8.5,10,0,15,8,8,6,0]
-item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_canon','galting_gun','carronade','grenade_launcher','standard_mortar','long_range_mortar','ballpark_mortar','big_berta','standard_torpedo','big_torpedo','swift_torpedo','triple_torpedo','railgun','missile_launcher',
-             'multi_missile','mine','flare_gun','napalm_launcher','fire_bomb','standard_shield','big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield','frost_blaster','frost_launcher','repair_box_launcher','repair_pulse','duct_tape','repair_bolt',
-             'repair_plasma','defence_wall','defence_aura','bloster_armor','cleanse_pulse']
+item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_canon','galting_gun','carronade','grenade_launcher','standard_mortar','long_range_mortar','ballpark_mortar','big_berta',
+             'standard_torpedo','big_torpedo','swift_torpedo','triple_torpedo','railgun','missile_launcher','multi_missile','mine','flare_gun','napalm_launcher','fire_bomb','standard_shield',
+             'big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield','frost_blaster','frost_launcher','repair_box_launcher','repair_pulse','duct_tape',
+             'repair_bolt','repair_plasma','defence_wall','defence_aura','bloster_armor','cleanse_pulse']
 rarity = ['common','uncommon','rare','epic','legendary']
 base_stat_tab = [
     [[138,150,161,172,184],[147,170,192,215,238],[155,188,220,252,285],[170,212,255,298,341],[319,347,376,404,433]],#standard_cannon
@@ -111,7 +113,7 @@ for i in range (0,42):
         print(file_name)
         with open(file_name, 'w', newline='') as file:
 
-            writer = csv.writer(file, delimiter=';')
+            writer = csv.writer(file, delimiter=',')
             slots = slot_points[i]
             writer.writerow([slots])
             writer.writerow(header)
@@ -120,35 +122,35 @@ for i in range (0,42):
             ratio = ratio_tab[i][j][0]
             for level in range (1, 11):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             base_stat = base_stat_tab[i][j][1]
             ratio = ratio_tab[i][j][1]
             for level in range (11, 21):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
             
             base_stat = base_stat_tab[i][j][2]
             ratio = ratio_tab[i][j][2]
             for level in range (21, 31):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
             
             base_stat = base_stat_tab[i][j][3]
             ratio = ratio_tab[i][j][3]
             for level in range (31, 41):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
             
             base_stat = base_stat_tab[i][j][4]
             ratio = ratio_tab[i][j][4]
             for level in range (41, 51):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             print("CSV file", file_name ," created successfully.")

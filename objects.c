@@ -37,22 +37,7 @@ int getObjectType(struct Object* o) {
     if(o == NULL){
         return -1;
     }
-    if (strcmp(o->rarity, "r")){
-        return 0;
-    }
-    if (strcmp(o->rarity, "b")){
-        return 1;
-    }
-    if (strcmp(o->rarity, "y")){
-        return 2;
-    }
-    if (strcmp(o->rarity, "g")){
-        return 3;
-    }
-    if (strcmp(o->rarity, "t")){
-        return 4;
-    }
-    return -1;
+    return o->type;
 }
 
 int getObjectPoints(struct Object* o) {
@@ -67,34 +52,34 @@ void printObject(struct Object* o) {
         printf("%s",o->name);
         printf("%d",o->level);
         if(o->base_stat != 0){
-            printf("%.2f",o->base_stat);
+            printf("Base stat: %.2f",o->base_stat);
         }
         if(o->cool_down != 0){
-            printf("%.2f",o->cool_down);
+            printf("Cooldown: %.2f",o->cool_down);
         }
         if(o->range != 0){
-            printf("%.2f",o->range);
+            printf("Range :%.2f",o->range);
         }
         if(o->projectile_speed != 0){
-            printf("%.2f",o->projectile_speed);
+            printf("Proj speed :%.2f",o->projectile_speed);
         }
         if(o->critical_hit_chance != 0){
-            printf("%.2f",o->critical_hit_chance);
+            printf("crit hit chance :%.2f",o->critical_hit_chance);
         }
         if(o->critcal_hit_multiplier != 0){
-            printf("%.2f",o->critcal_hit_multiplier);
+            printf("Crit hit mult :%.2f",o->critcal_hit_multiplier);
         }
         if(o->radius != 0){
-            printf("%.2f",o->radius);
+            printf("Radius :%.2f",o->radius);
         }
         if(o->spread != 0){
-            printf("%.2f",o->spread);
+            printf("Spread :%.2f",o->spread);
         }
         if(o->amount_of_projectiles != 1){
-            printf("%d",o->amount_of_projectiles);
+            printf("Amnt of proj :%d",o->amount_of_projectiles);
         }
         if(o->duration != 0){
-            printf("%.2f",o->duration);
+            printf("Duration :%.2f",o->duration);
         }
     }
 }

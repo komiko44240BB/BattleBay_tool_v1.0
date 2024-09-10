@@ -69,7 +69,7 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
             free(copiedline);  // Free allocated memory after use
 
             // Skip lines to reach the desired object level
-            for(int i = 0; i < object_lvl; i++){
+            for(int i = 0; i <= object_lvl; i++){
                 if (fgets(line, sizeof(line), file) == NULL) {
                     fclose(file);
                     return NULL;  // Return NULL if reading the next line fails
@@ -98,23 +98,19 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
             token = strtok(NULL, ";");
             float critical_hit_chance= atof(token);  // Critical hit chance percentage
             token = strtok(NULL, ";");
-            float critcal_hit_multiplier=1;// atof(token);  // Critical hit damage multiplier
-            //token = strtok(NULL, ";");
+            float critcal_hit_multiplier= atof(token);  // Critical hit damage multiplier
+            token = strtok(NULL, ";");
             float radius = atof(token);  // Radius of effect
             token = strtok(NULL, ";");
             float spread = atof(token);  // Spread of the projectiles
             token = strtok(NULL, ";");
             float amount_of_projectiles = atof(token);  // Number of projectiles
-            printf("test2\n");
             token = strtok(NULL, "\r");
             float duration= atof(token);  // Duration of the effect
-            printf("test3\n");
             // Create a new Object instance using the parsed data
             struct Object* o = createObject(rarity,object_name,level,base_stat,cool_down,range,projectile_speed,critical_hit_chance,critcal_hit_multiplier,radius,spread,amount_of_projectiles,duration,slot_points,1);
-
             // Edit the object's type based on the provided object_type parameter
             editObjectType(o,object_type);
-
             // Return the newly created object
             return o;
         }

@@ -327,6 +327,8 @@ void addObjects(struct Ship* s) {
                 if(strcmp(object_name,"cancel") != 0){
                     rarity = strdup(chooseRarity());
                     add_objects = false;
+                }else{
+                    i--;
                 }
                 read_file = true;
                 break;
@@ -335,6 +337,8 @@ void addObjects(struct Ship* s) {
                 if(strcmp(object_name,"cancel") != 0){
                     rarity = strdup(chooseRarity());
                     add_objects = false;
+                }else{
+                    i--;
                 }
                 read_file = true;
                 break;
@@ -343,6 +347,8 @@ void addObjects(struct Ship* s) {
                 if(strcmp(object_name,"cancel") != 0){
                     rarity = strdup(chooseRarity());
                     add_objects = false;
+                }else{
+                    i--;
                 }
                 read_file = true;
                 break;
@@ -351,6 +357,8 @@ void addObjects(struct Ship* s) {
                 if(strcmp(object_name,"cancel") != 0){
                     rarity = strdup(chooseRarity());
                     add_objects = false;
+                }else{
+                    i--;
                 }
                 read_file = true;
                 break;
@@ -359,6 +367,8 @@ void addObjects(struct Ship* s) {
                 if(strcmp(object_name,"cancel") != 0){
                     rarity = strdup(chooseRarity());
                     add_objects = false;
+                }else{
+                    i--;
                 }
                 read_file = true;
                 break;
@@ -378,20 +388,24 @@ void addObjects(struct Ship* s) {
         }
         if(read_file){
             struct Object* o = readObjectFile(object_type,object_name,rarity);
-            printf("------------------------\n");
-            printf("What is the level of training of your object ?\n");
-            printf("------------------------\n");
-            printf("Your choice: ");
-            clearInputBuffer();
-            int training_lvl = 0;
-            scanf("%d", &training_lvl);
-            if(training_lvl > 0){
-                char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
-                sprintf(training_file_name, "%s_training.csv", object_name);
-                //readAndApplyTraining(o,training_file_name, training_lvl);
-                printf("Training aplied succesfully\n");
+            while(true){
+                printf("------------------------\n");
+                printf("What is the level of training of your object ?\n");
+                printf("------------------------\n");
+                printf("Your choice: ");
+                clearInputBuffer();
+                int training_lvl = 0;
+                scanf("%d", &training_lvl);
+                if(training_lvl >= 0){
+                    char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
+                    sprintf(training_file_name, "%s_training.csv", object_name);
+                    readAndApplyTraining(o,training_file_name, training_lvl);
+                    printf("Training aplied succesfully\n");
+                    break;
+                }
             }
             addOject(s,o);
+            printf("Object added sucesfuly\n");
         }
     }
 }
@@ -399,7 +413,7 @@ void addObjects(struct Ship* s) {
 char* chooseWeapon() {
     clearInputBuffer();
     while(true){
-        printf("What do you want to do\n");
+        printf("What weapon do you want to add ?\n");
         printf("------------------------\n");
         printf("1.standard cannon\t2.blast cannon\n");
         printf("3.sniper cannon\t\t4.explosive cannon\n");
@@ -451,7 +465,7 @@ char* chooseWeapon() {
 char* choosePasive() {
     clearInputBuffer();
     while(true){
-        printf("What do you want to do\n");
+        printf("What passive object do you want to add ?\n");
         printf("------------------------\n");
         printf("1.standard_shield\n");
         printf("2.big_shield\n");
@@ -480,7 +494,7 @@ char* choosePasive() {
 char* chooseUtility() {
     clearInputBuffer();
     while(true){
-        printf("What do you want to do\n");
+        printf("What utility object do you want to add ?\n");
         printf("------------------------\n");
         printf("1.overboost\n");
         printf("2.nitro\n");
@@ -511,7 +525,7 @@ char* chooseUtility() {
 char* chooseHealing() {
     clearInputBuffer();
     while(true){
-        printf("What do you want to do\n");
+        printf("What repair object do you want to add ?\n");
         printf("------------------------\n");
         printf("1.repair_box_launcher\n");
         printf("2.repair_pulse\n");
@@ -540,7 +554,7 @@ char* chooseHealing() {
 char* chooseTeal() {
     clearInputBuffer();
     while(true){
-        printf("What do you want to do\n");
+        printf("What teal object item do you want to add ?\n");
         printf("------------------------\n");
         printf("1.defence_wall\n");
         printf("2.defence_aura\n");
@@ -617,7 +631,7 @@ void editingShip() {
         printf("2. Change an object\n");
         printf("3. Save modifications (will overwrite current file)\n");
         printf("4. Save under a new name (will generate a second file)\n");
-        printf("5. Go back to principal menu\n");
+        printf("5. Go back to main menu\n");
         printf("------------------------\n");
         printf("Your choice: ");
         int choice = 0;

@@ -72,13 +72,19 @@ void addOject(struct Ship* s, struct Object* o){
     if(s == NULL){
         return;
     }
+
     if(canAddObject(s,o)){
         int type = getObjectType(o);
         struct Object* iter = s->loadout[type]->head;
-        while(iter->next != NULL){
-            iter = iter->next;
-        }
+        if(s->loadout[type]->head == NULL){
+            s->loadout[type]->head = o;
+            return;
+        }else{
+            while(iter->next != NULL){
+                iter = iter->next;
+            }
             iter->next = o;
+        }
     }
 }
 
@@ -115,7 +121,16 @@ void removeObject(struct Ship* s, int pos) {
 
 
 bool canAddObject(struct Ship* s,struct Object* o) {
-
+    if(s == NULL){
+        return false;
+    }
+    unsigned int type = getObjectType(o);
+    if(s->loadout[type]->occipied_slots<s->loadout[type]->slot_amount){
+        if(s->loadout[type]->slot_points-s->loadout[type]->used_points >= o->slot_points){
+            return true;
+        }
+    }
+    return false;
 }
 
 /**
