@@ -1,7 +1,7 @@
 #ifndef READTRAINING_H
 #define READTRAINING_H
 
-void readAndApplyTraining(struct Object* o,char* training_file_name, unsigned int training_lvl);
+void readAndApplyTraining(struct Object* o,char* object_name);
 
 
 #endif

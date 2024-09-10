@@ -1,13 +1,13 @@
-    #include<stdio.h>
-    #include<stdlib.h>
-    #include<string.h>
-    #include<stdbool.h>
-    #include <unistd.h>
-    #include "readobjects.h"
-    #include "menu.h"
-    #include "objects.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<stdbool.h>
+#include <unistd.h>
+#include "readobjects.h"
+#include "menu.h"
+#include "objects.h"
 
-    #define MAX_LINE_SIZE 4096
+#define MAX_LINE_SIZE 4096
 /**
  * Reads object data from a CSV file based on the provided object type, name, and rarity.
  *
@@ -85,25 +85,25 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
             }
             strcpy(copiedline, line);  // Copy the line
             // Parse the CSV line, using semicolon ';' as the delimiter
-            char* token = strtok(copiedline, ";");
+            char* token = strtok(copiedline, ",");
             unsigned int level = atoi(token);  // Object level
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float base_stat = atof(token);  // Base stat of the object
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float cool_down = atof(token);  // Cooldown time
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float range = atof(token);  // Object's range
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float projectile_speed = atof(token);  // Speed of the projectile
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float critical_hit_chance= atof(token);  // Critical hit chance percentage
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float critcal_hit_multiplier= atof(token);  // Critical hit damage multiplier
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float radius = atof(token);  // Radius of effect
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float spread = atof(token);  // Spread of the projectiles
-            token = strtok(NULL, ";");
+            token = strtok(NULL, ",");
             float amount_of_projectiles = atof(token);  // Number of projectiles
             token = strtok(NULL, "\r");
             float duration= atof(token);  // Duration of the effect

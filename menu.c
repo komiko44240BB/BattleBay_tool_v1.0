@@ -318,7 +318,7 @@ void addObjects(struct Ship* s) {
             printf("6. Save ship\n");
             printf("0. Cancel ship\n");
             printf("------------------------\n");
-            printf("Your choice: ");
+            printf("Your choice: \n");
             object_type = 0;
             scanf("%d", &object_type);
             switch (object_type){
@@ -388,22 +388,6 @@ void addObjects(struct Ship* s) {
         }
         if(read_file){
             struct Object* o = readObjectFile(object_type,object_name,rarity);
-            while(true){
-                printf("------------------------\n");
-                printf("What is the level of training of your object ?\n");
-                printf("------------------------\n");
-                printf("Your choice: ");
-                clearInputBuffer();
-                int training_lvl = 0;
-                scanf("%d", &training_lvl);
-                if(training_lvl >= 0){
-                    char* training_file_name = malloc(strlen(object_name) + 8 + 5 + 1);
-                    sprintf(training_file_name, "%s_training.csv", object_name);
-                    readAndApplyTraining(o,training_file_name, training_lvl);
-                    printf("Training aplied succesfully\n");
-                    break;
-                }
-            }
             addOject(s,o);
             printf("Object added sucesfuly\n");
         }
