@@ -7,7 +7,7 @@
 #include "menu.h"
 #include "objects.h"
 
-#define MAX_LINE_SIZE 4096
+#define MAX_LINE_SIZE 1024
 /**
  * Reads object data from a CSV file based on the provided object type, name, and rarity.
  *
@@ -22,34 +22,36 @@
  *                      object's properties, or NULL if an error occurs.
  */
 struct Object* readObjectFile(unsigned int object_type, char* object_name, char* rarity) {
+    if(object_name == NULL || rarity == NULL) {
+        printf("object_name or rarity is NULL\n");
+        return NULL;
+    }
     // Loop to prompt user for object level until a valid input is provided
     while (true){
         printf("What level is the object ?\n");
         printf("(Between 1 and 50)\n");
         printf("------------------------\n");
         printf("Your choice: ");
-        clearInputBuffer();  // Clear any leftover input from previous user inputs
         int object_lvl = 0;
         scanf(" %d", &object_lvl);  // Get user input for object level
+        clearInputBuffer();  // Clear any leftover input from previous user inputs
         // Validate the level input
         if(object_lvl < 0 || object_lvl > 50){
             printf("Invalid choice, please try again\n");
         }else{
              // Allocate memory for the filename using object name and rarity
-            char* object_file_name = malloc(strlen(object_name) + strlen(rarity) + 16 + 5 + 1);
+            char* object_file_name = malloc(sizeof(char)*(strlen(object_name) + strlen(rarity) + 16 + 1 + 5 + 1));
             if(object_file_name == NULL){
                 printf("error malloc object_file_name\n");
                 return NULL;
             }
             sprintf(object_file_name, "../Weapons_data/%s_%s.csv", object_name, rarity);  // Create filename in the format: "<object_name>_<rarity>.csv"
-
             // Try to open the CSV file for reading
             FILE* file = fopen(object_file_name, "r");
             if (file == NULL) {
                 printf("Error opening \"%s\", file does not exist\n", object_file_name);
                 return NULL;  // Return NULL if the file cannot be opened
             }
-
             char line[MAX_LINE_SIZE];
             char* copiedline = NULL;
 
@@ -67,7 +69,6 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
             strcpy(copiedline, line);  // Copy the line
             unsigned int slot_points = atoi(copiedline);  // Convert the line to an integer for slot points
             free(copiedline);  // Free allocated memory after use
-
             // Skip lines to reach the desired object level
             for(int i = 0; i <= object_lvl; i++){
                 if (fgets(line, sizeof(line), file) == NULL) {
@@ -75,7 +76,6 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
                     return NULL;  // Return NULL if reading the next line fails
                 }
             }
-
             // Process the line containing the object's attributes for the specified level
             copiedline = malloc(strlen(line) + 1);
             if (copiedline == NULL) {
