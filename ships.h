@@ -20,7 +20,7 @@ struct Ship{
 struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turet_agility, unsigned int hit_points, unsigned int defence);
 void setUpShip(struct Ship* s, unsigned int gear[5][2]);
 
-void addOject(struct Ship* s, struct Object* o);
+bool addOject(struct Ship* s, struct Object* o);
 void removeObject(struct Ship* s, int pos);
 
 bool canAddObject(struct Ship* s,struct Object* o);

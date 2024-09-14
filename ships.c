@@ -68,24 +68,26 @@ void setUpShip(struct Ship* s, unsigned int gear[5][2]) {
 * @param s Pointer to the Ship struct
 * @param o Pointer to the Object to be added
 */
-void addOject(struct Ship* s, struct Object* o){
-    if(s == NULL){
-        return;
+bool addOject(struct Ship* s, struct Object* o){
+    if(s == NULL || o == NULL){
+        return false;
     }
-
     if(canAddObject(s,o)){
         int type = getObjectType(o);
         struct Object* iter = s->loadout[type]->head;
         if(s->loadout[type]->head == NULL){
             s->loadout[type]->head = o;
-            return;
         }else{
             while(iter->next != NULL){
                 iter = iter->next;
             }
             iter->next = o;
         }
+        s->loadout[type]->occipied_slots += 1;
+        s->loadout[type]->used_points += o->slot_points;
+        return true;
     }
+    return false;
 }
 
 /**
@@ -125,8 +127,8 @@ bool canAddObject(struct Ship* s,struct Object* o) {
         return false;
     }
     unsigned int type = getObjectType(o);
-    if(s->loadout[type]->occipied_slots<s->loadout[type]->slot_amount){
-        if(s->loadout[type]->slot_points-s->loadout[type]->used_points >= o->slot_points){
+    if(s->loadout[type]->occipied_slots < s->loadout[type]->slot_amount){
+        if(s->loadout[type]->slot_points - s->loadout[type]->used_points >= o->slot_points){
             return true;
         }
     }

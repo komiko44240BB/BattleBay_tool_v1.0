@@ -1,4 +1,7 @@
 import csv
+import tkinter as tk
+from tkinter import filedialog
+import os
 
 header = ["LEVEL", "BASE_STAT", "COOL_DOWN", "RANGE", "PROJECTILE_SPEED","CRITICAL_HIT_CHANCE","CRITICAL_HIT_MULTIPLIER","RADIUS", "SPREAD", "AMOUNT_OF_PROJECTILES", "DURATION"]
 slot_points = [1,1,1,2,1,1,1,1,1,1,2,1,2,1,2,2,2,2,1,1,2,2,1,2,1,1,2,1,1,1,2,1,2,1,2,1,1,2,2,1,2,1]
@@ -12,7 +15,7 @@ radius = [0,0,0,2,0,0,2.2,3,3,4.2,3.3,3,3.5,3,2,0,1.5,1.5,2,0,4,3.6,0,0,0,0,0,0,
 spread = [0,0,0,0,3,8,0,0,0,0,0,0,0,0,15,0,10,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,140,0,0,0]
 amount_of_projectiles = [1,1,1,1,15,7,1,1,1,1,1,1,1,1,3,1,5,9,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
 duration = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,20,13,0,0,0,0,0,6,1,0,5,7,7,0,8.5,10,0,15,8,8,6,0]
-item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_canon','galting_gun','carronade','grenade_launcher','standard_mortar','long_range_mortar','ballpark_mortar','big_berta',
+item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_cannon','galting_gun','carronade','grenade_launcher','standard_mortar','long_range_mortar','ballpark_mortar','big_berta',
              'standard_torpedo','big_torpedo','swift_torpedo','triple_torpedo','railgun','missile_launcher','multi_missile','mine','flare_gun','napalm_launcher','fire_bomb','standard_shield',
              'big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield','frost_blaster','frost_launcher','repair_box_launcher','repair_pulse','duct_tape',
              'repair_bolt','repair_plasma','defence_wall','defence_aura','bloster_armor','cleanse_pulse']
@@ -107,12 +110,26 @@ ratio_tab = [
     [[0.04,0.04,0.04,0.04,0.04],[0.07,0.07,0.07,0.07,0.08],[0.1,0.1,0.1,0.1,0.12],[0.14,0.14,0.14,0.14,0.16],[0.09,0.09,0.09,0.09,0.1]]#cleanse_pulse
 ]
 
-for i in range (0,42):
-    for j in range (0,5):
-        file_name =  item_name[i] + "_" + rarity[j] + ".csv"
-        print(file_name)
-        with open(file_name, 'w', newline='') as file:
+# Create a Tkinter root window (it will not be shown)
+root = tk.Tk()
+root.withdraw()  # Hide the root window
 
+# Open a folder selection dialog
+output_folder = filedialog.askdirectory(title="Select Output Folder")
+
+# Check if a folder was selected
+if not output_folder:
+    print("No folder selected. Exiting.")
+    exit()
+
+# Loop to generate and write to CSV files
+for i in range(0, 42):
+    for j in range(0, 5):
+        file_name = item_name[i] + "_" + rarity[j] + ".csv"
+        file_path = os.path.join(output_folder, file_name)  # Full path to save the file
+        
+        print(file_name)
+        with open(file_path, 'w', newline='') as file:
             writer = csv.writer(file, delimiter=',')
             slots = slot_points[i]
             writer.writerow([slots])
@@ -120,39 +137,39 @@ for i in range (0,42):
 
             base_stat = base_stat_tab[i][j][0]
             ratio = ratio_tab[i][j][0]
-            for level in range (1, 11):
+            for level in range(1, 11):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             base_stat = base_stat_tab[i][j][1]
             ratio = ratio_tab[i][j][1]
-            for level in range (11, 21):
+            for level in range(11, 21):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
-            
+
             base_stat = base_stat_tab[i][j][2]
             ratio = ratio_tab[i][j][2]
-            for level in range (21, 31):
+            for level in range(21, 31):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
-            
+
             base_stat = base_stat_tab[i][j][3]
             ratio = ratio_tab[i][j][3]
-            for level in range (31, 41):
+            for level in range(31, 41):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
-            
+
             base_stat = base_stat_tab[i][j][4]
             ratio = ratio_tab[i][j][4]
-            for level in range (41, 51):
+            for level in range(41, 51):
                 rounded_base_stat = round(base_stat)
-                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i],critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
+                writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
-            print("CSV file", file_name ," created successfully.")
+            print("CSV file", file_name, "created successfully.")
 
-print("all succes")
+print("All files created successfully.")

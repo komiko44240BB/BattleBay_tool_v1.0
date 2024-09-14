@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include "menu.h"
 #include "objects.h"
-#include "readtraining.h"
+//#include "readtraining.h"
 #define MAX_LINE_SIZE 1024
 
 
@@ -77,36 +77,33 @@ void readTraining(struct Object* o,char* object_name) {
     token = strtok(NULL, "\r");
     boost_type[iter] = strdup(token);
 
+    free(copiedline);
+
     while(level < training_lvl){
         if (fgets(line, sizeof(line), file) == NULL) {
             fclose(file);
             return;
         }
-        copiedline = malloc(strlen(line) + 1);
-        if (copiedline == NULL) {
-            printf("Malloc copied line failed(2)\n");
-            fclose(file);
-            return;
-        }
-        strcpy(copiedline, line);
         iter++;
+        copiedline = strdup(line);
         token = strtok(copiedline, ",");
         level = atoi(token);
         token = strtok(NULL, ",");
         boost_value[iter] = atof(token);
         token = strtok(NULL, "\r");
-        boost_type[iter] = malloc(sizeof(char)*(strlen(token)+1));
-        strcpy(boost_type[iter],token);
+        boost_type[iter] = strdup(token);
+
+        free(copiedline);
     }
 
-    applyTraining(o,boost_type,boost_value,training_lvl);
-
+    //applyTraining(o,boost_type,boost_value,training_lvl);
+    fclose(file);
     free(boost_type);
     free(boost_value);
     return;
 }
-
-void applyTraining(struct Object* o,char** boost_type,float* boost_value, int training_lvl) {
+/*
+void applyTraining(struct Object* o,const char** boost_type,const float* boost_value,const int training_lvl) {
     if(o == NULL || boost_type == NULL || boost_value == NULL){
         return;
     }
@@ -125,7 +122,7 @@ void applyTraining(struct Object* o,char** boost_type,float* boost_value, int tr
     float p_turret_rotation = 1;
     float p_healing_block = 1;
     float p_rmv_stun = 1;
-    float p_rmv_frost = 1;*/ //No implementation, see a bit lower in the swich case
+    float p_rmv_frost = 1; //No implementation, see a bit lower in the swich case
 
     int flat_base_stat = 0;
     int flat_range = 0;
@@ -224,4 +221,6 @@ void applyTraining(struct Object* o,char** boost_type,float* boost_value, int tr
         }
         free(boost_type_cpy);
     }
+
 }
+*/
