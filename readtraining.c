@@ -15,6 +15,7 @@ void readTraining(struct Object* o,char* object_name) {
     }
     char* training_file_name = malloc(strlen(object_name) + 17 +13 + 1);
     sprintf(training_file_name, "../Training_data/%s_training.csv", object_name);
+
     FILE* file = fopen(training_file_name, "r");
     if (file == NULL) {
         printf("Error opening \" %s \", file does not exist\n", training_file_name);
@@ -28,15 +29,11 @@ void readTraining(struct Object* o,char* object_name) {
         fclose(file);
         return ;
     }
-    copiedline = malloc(strlen(line) + 1);
-    if (copiedline == NULL) {
-        fclose(file);
-        printf("Malloc copied line failed\n");
-        return ;
-    }
-    strcpy(copiedline, line);
+
+    copiedline = strdup(line);
     unsigned int max_training_lvl = atoi(copiedline);
     free(copiedline);
+
     int training_lvl = 0;
     while(true){
         printf("------------------------\n");
@@ -48,6 +45,7 @@ void readTraining(struct Object* o,char* object_name) {
         clearInputBuffer();
         if(training_lvl<= 0 || training_lvl > max_training_lvl){
             if(training_lvl == 0){
+                fclose(file);
                 return;
             }
             printf("Wrong training input level\n");
@@ -55,33 +53,29 @@ void readTraining(struct Object* o,char* object_name) {
             break;
         }
     }
-    if (fgets(line, sizeof(line), file) == NULL) {
-        fclose(file);
-        return;
-    }
-    if (fgets(line, sizeof(line), file) == NULL) {
-        fclose(file);
-        return;
-    }
 
-    copiedline = malloc(strlen(line) + 1);
-    if (copiedline == NULL) {
-        printf("Malloc copied line failed(2)\n");
+    if (fgets(line, sizeof(line), file) == NULL) {
         fclose(file);
-        return ;
-    }
+        return;
+    } // skip the line of information
+
+    if (fgets(line, sizeof(line), file) == NULL) {
+        fclose(file);
+        return;
+    } // get the first line of training
+
+    copiedline = strdup(line);
 
     char** boost_type = malloc(sizeof(char*) * training_lvl);
     float* boost_value = malloc(sizeof(float)* training_lvl);
     int iter = 0;
-    strcpy(copiedline, line);
+
     char* token = strtok(copiedline, ",");
     unsigned int level = atoi(token);
     token = strtok(NULL, ",");
     boost_value[iter] = atof(token);
     token = strtok(NULL, "\r");
-    boost_type[iter] = malloc(sizeof(char)*(strlen(token)+1));
-    strcpy(boost_type[iter],token);
+    boost_type[iter] = strdup(token);
 
     while(level < training_lvl){
         if (fgets(line, sizeof(line), file) == NULL) {
@@ -126,12 +120,12 @@ void applyTraining(struct Object* o,char** boost_type,float* boost_value, int tr
     float p_crit_hit_dmg = 1;
     float p_frost_dmg = 1;
     float p_duration = 1;
-    float p_heal_reduction = 1;
+    /*float p_heal_reduction = 1;
     float p_frost = 1;
     float p_turret_rotation = 1;
     float p_healing_block = 1;
     float p_rmv_stun = 1;
-    float p_rmv_frost = 1;
+    float p_rmv_frost = 1;*/ //No implementation, see a bit lower in the swich case
 
     int flat_base_stat = 0;
     int flat_range = 0;
@@ -216,7 +210,7 @@ void applyTraining(struct Object* o,char** boost_type,float* boost_value, int tr
             case 'HEALING_BLOCK':       //
                 break;                  //
             case 'REMOVE_STUN':         //
-                break;                  //Not implemented and won't until I find it usefull
+                break;                  // Not implemented and won't until I find it usefull
             case 'REMOVE_FROST':        //
                 break;                  //
             case 'FROST_EFFECT':        //
@@ -228,5 +222,6 @@ void applyTraining(struct Object* o,char** boost_type,float* boost_value, int tr
             default:
                 printf("The training type: %s is unknown\n", boost_type_cpy);
         }
+        free(boost_type_cpy);
     }
 }
