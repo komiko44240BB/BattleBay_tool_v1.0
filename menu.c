@@ -77,8 +77,8 @@ void creatingShip() {
     bool createShip = true;
     char* ship_name = "";
     float speed = 0;
-    float ship_agility = 0;
-    float turret_agility = 0;
+    int ship_agility = 0;
+    int turret_agility = 0;
     unsigned int hit_points = 0;
     unsigned int defence = 0;
     unsigned int gear [5][2] = {0};
@@ -305,6 +305,7 @@ void addObjects(struct Ship* s) {
         unsigned int object_type = 0;
         if(i == 8){
             printf("You can only save the ship, all slots are full\n");
+            i--;
         }
         while(add_objects){
             printf("It doesn't matter which type of object you add first\n");
@@ -316,6 +317,7 @@ void addObjects(struct Ship* s) {
             printf("4. Green (healing)\n");
             printf("5. Teal (guardian's type)\n");
             printf("6. Save ship\n");
+            printf("7. Display ship\n");
             printf("0. Cancel ship\n");
             printf("------------------------\n");
             printf("Your choice: ");
@@ -377,6 +379,12 @@ void addObjects(struct Ship* s) {
                 //saveShipAs(s);
                 read_file = false;
                 return;
+            case 7:
+                printShipStats(s);
+                printLoadout(s);
+                add_objects = true;
+                read_file = false;
+                break;
             case 0:
                 deleteShip(s);
                 read_file = false;
@@ -390,10 +398,11 @@ void addObjects(struct Ship* s) {
             struct Object* o = readObjectFile(object_type,object_name,rarity);
             bool isAdded = addOject(s,o);
             if(!isAdded){
-                printf("Could not add objects, not enought slot points or slots\n");
-                i++;
+                printf("Could not add object, not enought slot points or slots\n");
+                i--;
             }else{
-                printf("Object added sucesfuly\n");
+                struct Training* t = readTraining(o,object_name);
+
             }
         }
     }

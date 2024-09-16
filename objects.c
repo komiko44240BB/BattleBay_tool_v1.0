@@ -75,7 +75,7 @@ void printObject(struct Object* o) {
         if(o->spread != 0){
             printf("Spread :%.2f",o->spread);
         }
-        if(o->amount_of_projectiles != 1){
+        if(o->amount_of_projectiles > 1){
             printf("Amnt of proj :%d",o->amount_of_projectiles);
         }
         if(o->duration != 0){

@@ -18,7 +18,7 @@
 * @param defence The defence points of the ship
 * @return Pointer to the initialized Ship struct or NULL if memory allocation fails
 */
-struct Ship* initialiseShip(char* ship_name, float speed, float ship_agility, float turret_agility, unsigned int hit_points, unsigned int defence) {
+struct Ship* initialiseShip(char* ship_name, float speed, int ship_agility, int turret_agility, unsigned int hit_points, unsigned int defence) {
     // Allocate memory for the Ship struct
     struct Ship* ship = malloc(sizeof(struct Ship));
     if (ship == NULL) {
@@ -146,8 +146,8 @@ void printShipStats(struct Ship* s){
     }
     printShipName(s);
     printf("Gear score :    unsuported    Health :    %d\n",s->hit_points);
-    printf("Turret agility :    %.2f      Speed :     %.2f\n",s->turret_agility,s->speed);
-    printf("Ship agility :      %.2f      Defense :   %d\n",s->ship_agility,s->defence);
+    printf("Turret agility :    %.d      Speed :     %.2f\n",s->turret_agility,s->speed);
+    printf("Ship agility :      %.d      Defense :   %d\n",s->ship_agility,s->defence);
 }
 
 /**
@@ -162,11 +162,12 @@ void printLoadout(struct Ship* s){
     int count = 0;
     for(int i = 0; i < 5; i++){
         struct Object* iter = s->loadout[i]->head;
-        while (iter->next != NULL){
+        while (iter != NULL){
             printObject(iter);
             if(count%4 == 0){
                 printf("\n");
             }
+            iter = iter->next;
         }
     }
 }

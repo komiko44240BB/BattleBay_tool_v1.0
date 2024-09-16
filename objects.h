@@ -1,4 +1,3 @@
-#include "perks.h"
 #ifndef OBJECTS_H
 #define OBJECTS_H
 
@@ -27,7 +26,7 @@ struct Object {
 
 
 struct Slots {
-    int type;
+    char type;
     unsigned int slot_amount;
     unsigned int occipied_slots;
     unsigned int slot_points;
