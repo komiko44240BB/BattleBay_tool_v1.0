@@ -18,12 +18,6 @@ char* chooseUtility();
 char* chooseHealing();
 char* chooseTeal();
 char* chooseRarity();
-
-
-
-
-
-
-
+struct Perk* chosePerks();
 
 #endif

@@ -402,7 +402,6 @@ void addObjects(struct Ship* s) {
                 i--;
             }else{
                 struct Training* t = readTraining(o,object_name);
-
             }
         }
     }

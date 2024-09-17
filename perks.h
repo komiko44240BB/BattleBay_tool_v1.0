@@ -14,4 +14,6 @@ struct Perk {
     unsigned int second_boost_type;
 };
 
+struct Perk* createPerk();
+
 #endif

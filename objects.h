@@ -39,6 +39,7 @@ struct Object* createObject(char* rarity,char* name ,unsigned int level, float b
 int getObjectType(struct Object* o);
 int getObjectPoints(struct Object* o);
 
+void applyTrainingAndPerks(struct Object* o, struct Training* t, struct Perk* p);
 void editObjectType(struct Object* o, unsigned int type);
 
 void printObject(struct Object* o);
