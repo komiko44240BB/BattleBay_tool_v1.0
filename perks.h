@@ -8,12 +8,14 @@
 
 struct Perk {
     bool is_event;
-    float first_boost_value;
-    unsigned int first_boost_type;
-    float second_boost_value;
-    unsigned int second_boost_type;
+    unsigned int first_boost_value;
+    char* first_boost_type;
+    unsigned int second_boost_value;
+    char* second_boost_type;
 };
 
-struct Perk* createPerk();
+struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int first_boost_value,int second_boost_value);
+
+void addPerks(struct Object* o);
 
 #endif

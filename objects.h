@@ -45,6 +45,7 @@ void editObjectType(struct Object* o, unsigned int type);
 void printObject(struct Object* o);
 
 void deleteObject(struct Object* o);
+void addPerk(struct Perk* p, struct Object* o);
 
 struct Slots* createSlots();
 

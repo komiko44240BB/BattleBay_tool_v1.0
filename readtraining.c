@@ -77,7 +77,7 @@ struct Training* readTraining(struct Object* o, char* object_name) {
     }
     // Convert the first line to an unsigned integer for the max training level
     unsigned int max_training_lvl = atoi(line);
-    int training_lvl = 0;
+    int training_lvl = 10;
     // Prompt the user to input a valid training level
     while (true) {
         printf("------------------------\n");

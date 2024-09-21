@@ -401,7 +401,9 @@ void addObjects(struct Ship* s) {
                 printf("Could not add object, not enought slot points or slots\n");
                 i--;
             }else{
+                printf("Object has been added\n");
                 struct Training* t = readTraining(o,object_name);
+                addPerks(o);
             }
         }
     }

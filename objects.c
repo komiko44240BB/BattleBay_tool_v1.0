@@ -100,3 +100,18 @@ void editObjectType(struct Object* o, unsigned int type) {
     o->type = type;
 
 }
+
+
+void addPerk(struct Perk* p, struct Object* o) {
+    if(o == NULL || p == NULL){
+        return;
+    }
+    for(int i = 0; i<4; i++){
+        if(o->perk_list[i]== NULL){
+            o->perk_list[i] = p;
+            printf("Perk was added succesfully\n");
+            return;
+        }
+    }
+    printf("Perk could not be  added, what did you try to bypass ?\n");
+}
