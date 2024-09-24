@@ -17,5 +17,6 @@ struct Perk {
 struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int first_boost_value,int second_boost_value);
 
 void addPerks(struct Object* o);
+char** displayPerks(struct Object* o);
 
 #endif
