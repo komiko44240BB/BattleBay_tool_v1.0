@@ -9,17 +9,52 @@ struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int firs
     p->second_boost_type = strdup(second_boost_type);
     p->first_boost_value = first_boost_value;
     p->second_boost_value = second_boost_value;
+    p->is_event = false;
     return p;
+}
+
+int numberOfPerks(struct Object* o) {
+
 }
 
 void addPerks(struct Object* o) {
     if(o == NULL){
         return;
     }
-    char** perk_files_names = displayPerks(o);
+    bool perk_choice =  true;
+    bool is_event = false;
+    int number_of_perks = numberOfPerks(o);
+    for(int i = 0; i<number_of_perks; i++){
+        while(perk_choice){
+            printf("Is the perk an event perk\n");
+            printf("\n");
+            printf("1. Yes\n");
+            printf("2. No\n");
+            printf("0. Don't add more perks\n");
+            printf("\n");
+            printf("Your choice :\n");
+            int choice = 0;
+            scanf("%d",&choice);
+            switch (choice){
+                case 1 :
+                    is_event = true;
+                    perk_choice = false;
+                    break;
+                case 2:
+                    is_event = false;
+                    perk_choice = false;
+                    break;
+                case 0:
+                    return;
+                default:
+                    printf("Wrong input\n");
+            }
+            
+        }
+    }
 }
 
-char** displayPerks(struct Object* o) {
+char** perkLists(struct Object* o) {
     char** files_names = malloc(sizeof(char*) * 2);
     if(o->type == 0){
         if(strcmp(o->name, "standard_cannon") == 0){
