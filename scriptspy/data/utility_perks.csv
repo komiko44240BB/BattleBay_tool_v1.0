@@ -1,6 +1,0 @@
-RARITY;1STBONUS_VALUE;1STBONUS_NAME;2NDBONUS_VALUE;2NDBONUS_NAME;PERK_NAME;COMPATIBLE_ITEMS
-Legendary;6%;COOL_DOWN;13%;PROJECTILE_SPEED;Speedy_Frost_Blaster_Cooldown;Frost_Blaster
-Legendary;0.6s;DURATION;75;Shield HIT_POINT;Vigor_Shield_Duration;Tesla_Shield
-Legendary;0.8s;Stun DURATION;13%;PROJECTILE_SPEED;Speedy_Stun_Duration;Tesla_Bolt
-Legendary;1s;DURATION;8%;COOL_DOWN;Quickshot_Freeze_Duration;Freeze_Items
-Legendary;0.6s;DURATION;75;Shield HIT_POINT;Vigor_Shield_Duration;Tesla_Shield

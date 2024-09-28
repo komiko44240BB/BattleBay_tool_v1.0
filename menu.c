@@ -7,6 +7,7 @@
 #include "menu.h"
 #include "readobjects.h"
 #include "readtraining.h"
+#include "perks.h"
 
 #define FILENAME_SIZE 40
 

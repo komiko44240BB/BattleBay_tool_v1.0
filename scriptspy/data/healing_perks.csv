@@ -1,9 +1,0 @@
-RARITY;1STBONUS_VALUE;1STBONUS_NAME;2NDBONUS_VALUE;2NDBONUS_NAME;PERK_NAME;COMPATIBLE_ITEMS
-Legendary;7.5%;HEALING;8%;COOL_DOWN;Rapid_Healing_Boost;All_Repair_Items
-Legendary;10%;PROJECTILE_SPEED;25%;INVULNERABILITY;Cover_Repair_Bolt_Speed;Repair_Bolt
-Legendary;4%;COOL_DOWN;10%;CRITICAL_HIT_CHANCE;Surge_Repairing_Cooldown;Repair_Box
-Legendary;7.5%;HEALING;12%;RANGE;Reach_Healing_Boost;Repair_Box
-Legendary;7.5%;HEALING;12%;RANGE;Reach_Healing_Boost;Repair_Plasma
-Legendary;7.5%;HEALING;160;HIT_POINT;Vigor_Repairing_Boost;Duct_Tape
-Legendary;6%;COOL_DOWN;160;HIT_POINT;Vigor_Area_Heal_Cooldown;Repair_Pulse
-Legendary;4%;COOL_DOWN;13%;PROJECTILE_SPEED;Speedy_Repairing_Cooldown;Repair_Bolt

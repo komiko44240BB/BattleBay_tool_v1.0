@@ -19,5 +19,6 @@ struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int firs
 int numberOfPerks(struct Object* o);
 void addPerks(struct Object* o);
 char** perkLists(struct Object* o);
+void displayAvailablePerks(char** perk_list, bool is_event);
 
 #endif

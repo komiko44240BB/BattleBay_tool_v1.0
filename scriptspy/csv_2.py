@@ -5,7 +5,7 @@ from tkinter import filedialog
 
 
 header = ["LEVEL", "BOOST_VALUE", "BOOST_TYPE"]
-item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_canon','galting_gun','carronade','grenade_launcher',
+item_name = ['standard_cannon','blast_cannon','sniper_cannon','explosive_cannon','galting_gun','carronade','grenade_launcher',
              'standard_mortar','long_range_mortar','ballpark_mortar','big_berta','standard_torpedo','big_torpedo','swift_torpedo',
              'triple_torpedo','railgun','missile_launcher','multi_missile','mine','flare_gun','napalm_launcher','fire_bomb',
              'standard_shield','big_shield','turbo','bandage','big_bandage','overboost','nitro','tesla_bolt','tesla_shield',
