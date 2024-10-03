@@ -3,17 +3,13 @@ project(BattleBay_tool C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(BattleBay_tool main.c
-        objects.h
-        ships.h
-        readobjects.h
-        readtraining.h
-        perks.h
-        menu.h
-        objects.c
-        ships.c
-        readobjects.c
-        readtraining.c
-        perks.c
+add_executable(BattleBay_tool
+        main.c
         menu.c
+        objects.c
+        perks.c
+        readobjects.c
+        ships.c
+        readtraining.c
+        clear_input.c
 )

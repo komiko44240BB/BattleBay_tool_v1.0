@@ -1,8 +1,7 @@
 #ifndef SHIPS_H
 #define SHIPS_H
-
 #include<stdbool.h>
-#include "objects.h"
+
 
 struct Ship{
     struct Slots* loadout [5];

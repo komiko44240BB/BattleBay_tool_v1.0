@@ -1,9 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stdbool.h>
 #ifndef PERKS_H
 #define PERKS_H
+#include<stdbool.h>
 
 
 struct Perk {
@@ -19,7 +16,7 @@ struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int firs
 int numberOfPerks(struct Object* o);
 void addPerks(struct Object* o);
 char** perkLists(struct Object* o);
-struct Perk* displayAndChoseAvailablePerks(char** perk_list, bool is_event);
+struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event);
 
 void updateEvent(struct Perk* p,bool is_event);
 

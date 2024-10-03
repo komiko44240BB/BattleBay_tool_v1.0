@@ -3,9 +3,9 @@
 #include<string.h>
 #include<stdbool.h>
 #include <unistd.h>
-#include "menu.h"
 #include "objects.h"
 #include "readtraining.h"
+#include "clear_input.h"
 #define MAX_LINE_SIZE 1024
 
 /**

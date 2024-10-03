@@ -1,8 +1,8 @@
-#include "ships.h"
-#include "objects.h"
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include "objects.h"
+#include "ships.h"
 #define OBJECT_TYPES "rbygt"
 
 /**

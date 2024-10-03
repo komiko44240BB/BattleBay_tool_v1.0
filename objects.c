@@ -1,8 +1,8 @@
-#include "objects.h"
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include<stdbool.h>
+#include "objects.h"
+
 
 struct Object* createObject(char* rarity, char* name, unsigned int level, float base_stat, float cool_down, float range, float projectile_speed, float critical_hit_chance, float critcal_hit_multiplier, float radius, float spread, unsigned int amount_of_projectiles, float duration, unsigned int slot_points, float combo_dmg_boost) {
     struct Object* o = malloc(sizeof(struct Object));

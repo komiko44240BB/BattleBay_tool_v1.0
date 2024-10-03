@@ -1,6 +1,9 @@
-#include "perks.h"
-#include "menu.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 #include "objects.h"
+#include "perks.h"
+#include "clear_input.h"
 #define MAX_LINE_SIZE 1024
 
 struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int first_boost_value,int second_boost_value) {
@@ -15,38 +18,42 @@ struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int firs
 
 int numberOfPerks(struct Object* o) {
     if(strcmp(o->rarity, "common") == 0){
-        if(o->level>20){
+        if(o->level > 20){
             return 1;
         }
         return 0;
     }
     if(strcmp(o->rarity, "uncommon") == 0){
-        switch (o->level){
-        case o->level > 30: return 2;
-        case o->level > 10: return 1;
-        default: return 0;
+        if(o->level > 30){
+            return 2;
+        } if(o->level > 10){
+            return 1;
         }
+        return 0;
     }
     if(strcmp(o->rarity, "rare") == 0){
-        switch (o->level){
-        case o->level > 20: return 3;
-        case o->level > 10: return 2;
-        default: return 1;
+        if(o->level > 20){
+            return 3;
+        } if(o->level > 10){
+            return 2;
         }
+        return 1;
     }
     if(strcmp(o->rarity, "epic") == 0){
-        switch (o->level){
-        case o->level > 30: return 4;
-        case o->level > 10: return 3;
-        default: return 2;
+        if(o->level > 30){
+            return 4;
+        } if(o->level > 10){
+            return 3;
         }
+        return 2;
     }
     if(strcmp(o->rarity, "legendary") == 0){
-        if(o->level>20){
+        if(o->level > 20){
             return 4;
         }
         return 3;
     }
+    printf("Error handeling your item, please report it to @komiko\n");
     return 0;
 }
 
@@ -85,12 +92,12 @@ void addPerks(struct Object* o) {
             }
         }
         char** perk_list = perkLists(o);
-        o->perk_list[i] = displayAndChoseAvailablePerks(perk_list, is_event);
+        o->perk_list[i] = displayAndChooseAvailablePerks(perk_list, is_event);
     }
     return;
 }
 
-struct Perk* displayAndChoseAvailablePerks(char** perk_list, bool is_event) {
+struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
     if(perk_list == NULL){
         return NULL;
     }
@@ -331,9 +338,7 @@ void updateEvent(struct Perk* p,bool is_event) {
     p->is_event = is_event;
 }
 
-
-
-char** perkLists(const struct Object* o) {
+char** perkLists(struct Object* o) {
     char** files_names = malloc(sizeof(char*) * 2);
     if (files_names == NULL) {
         return NULL;

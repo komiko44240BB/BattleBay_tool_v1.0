@@ -2,7 +2,6 @@
 #define MENU_H
 
 void start();
-void clearInputBuffer();
 void startMenu();
 void creatingShip();
 void editingShip();

@@ -1,13 +1,15 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-#include<stdbool.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 #include <unistd.h>
 #include "ships.h"
-#include "menu.h"
 #include "readobjects.h"
 #include "readtraining.h"
 #include "perks.h"
+#include "clear_input.h"
+#include "menu.h"
+
+
 
 #define FILENAME_SIZE 40
 
@@ -38,10 +40,7 @@ void start(){
     startMenu();
 }
 
-void clearInputBuffer() {
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
-}
+
 
 void startMenu() {
     bool valid1 = true;
@@ -397,8 +396,7 @@ void addObjects(struct Ship* s) {
         }
         if(read_file){
             struct Object* o = readObjectFile(object_type,object_name,rarity);
-            bool isAdded = addOject(s,o);
-            if(!isAdded){
+            if(!addOject(s,o)){
                 printf("Could not add object, not enought slot points or slots\n");
                 i--;
             }else{
