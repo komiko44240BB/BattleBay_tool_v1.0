@@ -27,7 +27,7 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
         return NULL;
     }
     // Loop to prompt user for object level until a valid input is provided
-    while (true){
+    /*while (true){
         printf("What level is the object ?\n");
         printf("(Between 1 and 50)\n");
         printf("------------------------\n");
@@ -38,8 +38,8 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
         // Validate the level input
         if(object_lvl < 0 || object_lvl > 50){
             printf("Invalid choice, please try again\n");
-        }else{
-    //int object_lvl = 10;
+        }else{*/
+    int object_lvl = 10;
              // Allocate memory for the filename using object name and rarity
             char* object_file_name = malloc(sizeof(char)*(strlen(object_name) + strlen(rarity) + 16 + 1 + 5 + 1));
             if(object_file_name == NULL){
@@ -115,5 +115,5 @@ struct Object* readObjectFile(unsigned int object_type, char* object_name, char*
             // Return the newly created object
             return o;
         }
-    }
-}
+    /*}
+}*/

@@ -1,9 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include "ships.h"
+#include "readobjects.h"
+#include "readtraining.h"
+#include "objects.h"
+#include "perks.h"
 #include "menu.h"
 
 // Formula to calculate stat and combo stat : ( base stat + flat train stat + flat perk stat ) * ( 1 + % perk stat + % train stat ) * ( 1 + % combo train stat + % combo perk stat )
 
 int main() {
-    /*
+
     int gear[5][2] = {{5,8},{3,4},{0,0},{0,0},{0,0}};
     struct Ship* s = initialiseShip("defender",1.2,0.9,0.5,1596,5);
     setUpShip(s,gear);
@@ -16,14 +25,10 @@ int main() {
     }else{
         printf("Object added sucesfuly\n");
     }
-    struct Training* t = readTraining(o,object_name);
-    for(int i = 0; i < t->size; i++){
-        int y = i+1;
-        printf("%d, %.2f, %s\n", y, t->value[i], t->type[i]);
-    }
+    addPerks(o);
     printf("\n");
     printLoadout(s);
-    printObject(o);*/
-    start();
+    printObject(o);
+    //start();
     return 0;
 }

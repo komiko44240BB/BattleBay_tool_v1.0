@@ -62,7 +62,7 @@ void addPerks(struct Object* o) {
         return;
     }
     bool perk_choice =  true;
-    bool is_event = false;
+    bool is_event = true;
     int number_of_perks = numberOfPerks(o);
     for(int i = 0; i<number_of_perks; i++){
         while(perk_choice){
@@ -94,6 +94,7 @@ void addPerks(struct Object* o) {
         char** perk_list = perkLists(o);
         o->perk_list[i] = displayAndChooseAvailablePerks(perk_list, is_event);
     }
+
     return;
 }
 
@@ -141,7 +142,6 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
                 printf("Invalid choice, please try again\n");
         }
     }
-
     if(is_event){
         char* event_perks_file_name_self = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
         char* event_perks_file_name_group = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
@@ -170,8 +170,7 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
                 }
                 while(!feof(file)){
                     if (fgets(line, sizeof(line), file) == NULL) {
-                        fclose(file);
-                        return NULL;
+                        break;
                     }
                     char* copiedline = strdup(line);
                     perk_iter++;
@@ -182,7 +181,6 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
                 }else{
                     perk_choice[i] = perk_iter;
                 }
-
                 fclose(file);
             }
         }
