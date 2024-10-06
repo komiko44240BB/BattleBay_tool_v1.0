@@ -62,7 +62,7 @@ void addPerks(struct Object* o) {
         return;
     }
     bool perk_choice =  true;
-    bool is_event = true;
+    bool is_event = false;
     int number_of_perks = numberOfPerks(o);
     for(int i = 0; i<number_of_perks; i++){
         while(perk_choice){
@@ -94,17 +94,17 @@ void addPerks(struct Object* o) {
         char** perk_list = perkLists(o);
         o->perk_list[i] = displayAndChooseAvailablePerks(perk_list, is_event);
     }
-
     return;
 }
 
 struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
-    if(perk_list == NULL){
-        return NULL;
+    if (perk_list == NULL) {
+        return NULL; // Return NULL if perk_list is NULL
     }
-    char* perk_rarity = "" ;
+
+    char* perk_rarity = NULL;
     bool perk_rarity_choice = true;
-    while(perk_rarity_choice){
+    while (perk_rarity_choice) {
         printf("What do you want to do\n");
         printf("------------------------\n");
         printf("1.Common\n");
@@ -117,7 +117,7 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
         int choice = 0;
         scanf("%d", &choice);
         clearInputBuffer();
-        switch (choice){
+        switch (choice) {
             case 1:
                 perk_rarity = strdup("common");
                 perk_rarity_choice = false;
@@ -142,193 +142,121 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
                 printf("Invalid choice, please try again\n");
         }
     }
-    if(is_event){
-        char* event_perks_file_name_self = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
-        char* event_perks_file_name_group = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
-        if (event_perks_file_name_self == NULL || event_perks_file_name_group == NULL) {
+
+    char* perks_full_path[3] = {NULL, NULL, NULL}; // Array to store file paths
+    int num_files = 0;
+
+    if (is_event) {
+        // Allocate memory for event perk file paths
+        perks_full_path[0] = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
+        perks_full_path[1] = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
+        if (perks_full_path[0] == NULL || perks_full_path[1] == NULL) {
             free(perk_rarity);
-            free(event_perks_file_name_self);
-            free(event_perks_file_name_group);
-            return NULL;
+            free(perks_full_path[0]);
+            free(perks_full_path[1]);
+            return NULL; // Return NULL if memory allocation fails
         }
-        sprintf(event_perks_file_name_self, "../Perk_data/event_%s_%s.csv", perk_rarity, perk_list[0]);
-        sprintf(event_perks_file_name_group, "../Perk_data/event_%s_%s.csv", perk_rarity, perk_list[1]);
-        char* perks_full_path[2] = {event_perks_file_name_self, event_perks_file_name_group};
-        char line[MAX_LINE_SIZE];
-        int perk_iter = 0;
-        int perk_choice[2] = {0};
-        printf("What do you want to do\n");
-        printf("------------------------\n");
-        for(int i =0; i < 2; i++){
-            FILE* file = fopen(perks_full_path[i], "r");
-            if (file == NULL) {
-                printf("Error opening \"%s\", file does not exist\n", perks_full_path[i]);
-            }else{
-                if (fgets(line, sizeof(line), file) == NULL) {
-                    fclose(file);
-                    return NULL;
-                }
-                while(!feof(file)){
-                    if (fgets(line, sizeof(line), file) == NULL) {
-                        break;
-                    }
-                    char* copiedline = strdup(line);
-                    perk_iter++;
-                    printf("%d. %s\n", perk_iter,copiedline);
-                }
-                if(i>0){
-                    perk_choice[i] = perk_iter - perk_choice[i-1];
-                }else{
-                    perk_choice[i] = perk_iter;
-                }
-                fclose(file);
-            }
-        }
-        printf("------------------------\n");
-        printf("Your choice: ");
-        int choice_perk = 0;
-        scanf("%d",&choice_perk);
-        clearInputBuffer();
-        int file_number = -1;
-        if(choice_perk <= perk_choice[0]){
-            file_number = 0;
-        } else{
-            file_number = 1;
-        }
-
-        FILE* file = fopen(perks_full_path[file_number], "r");
-        if (file == NULL) {
-            printf("Error opening \"%s\", file does not exist\n", perks_full_path[file_number]);
-        }else{
-            if (fgets(line, sizeof(line), file) == NULL) {
-                fclose(file);
-                return NULL;
-            }
-            perk_iter = 1;
-            while(choice_perk<perk_iter){
-                if (fgets(line, sizeof(line), file) == NULL) {
-                    fclose(file);
-                    return NULL;
-                }
-                perk_iter++;
-            }
-            if (fgets(line, sizeof(line), file) == NULL) {
-                fclose(file);
-                return NULL;
-            }
-            char* copiedline = strdup(line);
-            char* token = strtok(copiedline, ",");
-            float first_boost_value = atof(token);
-            token = strtok(NULL, ",");
-            char* first_boost_type = strdup(token);
-            token = strtok(NULL, ",");
-            float second_boost_value = atof(token);
-            token = strtok(NULL, "\r");
-            char* second_boost_type = strdup(token);
-            struct Perk* p = createPerk(first_boost_type,second_boost_type,first_boost_value,second_boost_value);
-            updateEvent(p,is_event);
-            return p;
-        }
-
-    } else{
-
-        char* normal_perks_file_name_self = malloc(20 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
-        char* normal_perks_file_name_group = malloc(20 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
-        char* all_items_perk_file_name = malloc(20 + strlen(perk_rarity) + 14 + 1);
-        if (normal_perks_file_name_self == NULL || normal_perks_file_name_group == NULL) {
+        sprintf(perks_full_path[0], "../Perk_data/event_%s_%s.csv", perk_rarity, perk_list[0]);
+        sprintf(perks_full_path[1], "../Perk_data/event_%s_%s.csv", perk_rarity, perk_list[1]);
+        num_files = 2;
+    } else {
+        // Allocate memory for normal perk file paths
+        perks_full_path[0] = malloc(20 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
+        perks_full_path[1] = malloc(20 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
+        perks_full_path[2] = malloc(20 + strlen(perk_rarity) + 14 + 1);
+        if (perks_full_path[0] == NULL || perks_full_path[1] == NULL || perks_full_path[2] == NULL) {
             free(perk_rarity);
-            free(normal_perks_file_name_self);
-            free(normal_perks_file_name_group);
-            return NULL;
+            free(perks_full_path[0]);
+            free(perks_full_path[1]);
+            free(perks_full_path[2]);
+            return NULL; // Return NULL if memory allocation fails
         }
-        sprintf(normal_perks_file_name_self, "../Perk_data/normal_%s_%s.csv", perk_rarity, perk_list[0]);
-        sprintf(normal_perks_file_name_group, "../Perk_data/normal_%s_%s.csv", perk_rarity, perk_list[1]);
-        sprintf(all_items_perk_file_name, "../Perk_data/normal_%s_all_items.csv", perk_rarity);
-        char* perks_full_path[3] = {normal_perks_file_name_self, normal_perks_file_name_group,all_items_perk_file_name};
-        char line[MAX_LINE_SIZE];
-        int perk_iter = 0;
-        int perk_choice[3] = {0};
-        printf("What do you want to do\n");
-        printf("------------------------\n");
-        for(int i = 0; i < 3; i++){
-            FILE* file = fopen(perks_full_path[i], "r");
-            if (file == NULL) {
-                printf("Error opening \"%s\", file does not exist\n", perks_full_path[i]);
-            }else{
-                if (fgets(line, sizeof(line), file) == NULL) {
-                    fclose(file);
-                    return NULL;
-                }
-                while(!feof(file)){
-                    if (fgets(line, sizeof(line), file) == NULL) {
-                        fclose(file);
-                        return NULL;
-                    }
-                    char* copiedline = strdup(line);
-                    perk_iter++;
-                    printf("%d. %s\n", perk_iter,copiedline);
-                }
-                if(i>0){
-                    perk_choice[i] = perk_iter - perk_choice[i-1];
-                }else{
-                    perk_choice[i] = perk_iter;
-                }
-                fclose(file);
-            }
-        }
-        printf("------------------------\n");
-        printf("Your choice: ");
-        int choice_perk = 0;
-        scanf("%d",&choice_perk);
-        clearInputBuffer();
-        if(choice_perk <= perk_choice[0]){
+        sprintf(perks_full_path[0], "../Perk_data/normal_%s_%s.csv", perk_rarity, perk_list[0]);
+        sprintf(perks_full_path[1], "../Perk_data/normal_%s_%s.csv", perk_rarity, perk_list[1]);
+        sprintf(perks_full_path[2], "../Perk_data/normal_%s_all_items.csv", perk_rarity);
+        num_files = 3;
+    }
 
-        }
-        int file_number = -1;
-        if(choice_perk <= perk_choice[0]){
-            file_number = 0;
-        } else{
-            if((choice_perk - perk_choice[0])<= perk_choice[1]){
-                file_number = 1;
-            }else{
-                file_number = 2;
-            }
-        }
-
-        FILE* file = fopen(perks_full_path[file_number], "r");
+    char line[MAX_LINE_SIZE];
+    int perk_iter = 0;
+    int perk_choice[3] = {0}; // Array to store the number of perks in each file
+    printf("What do you want to do\n");
+    printf("------------------------\n");
+    for (int i = 0; i < num_files; i++) {
+        FILE* file = fopen(perks_full_path[i], "r");
         if (file == NULL) {
-            printf("Error opening \"%s\", file does not exist\n", perks_full_path[file_number]);
-        }else{
+            printf("Error opening \"%s\", file does not exist\n", perks_full_path[i]);
+        } else {
             if (fgets(line, sizeof(line), file) == NULL) {
                 fclose(file);
-                return NULL;
+                continue; // Continue to the next file if reading the first line fails
             }
-            perk_iter = 1;
-            while(choice_perk<perk_iter){
+            while (!feof(file)) {
                 if (fgets(line, sizeof(line), file) == NULL) {
                     fclose(file);
-                    return NULL;
+                    continue; // Continue to the next file if reading a line fails
                 }
+                char* copiedline = strdup(line);
                 perk_iter++;
+                printf("%d. %s\n", perk_iter, copiedline);
             }
-            if (fgets(line, sizeof(line), file) == NULL) {
-                fclose(file);
-                return NULL;
+            if (i > 0) {
+                perk_choice[i] = perk_iter - perk_choice[i - 1]; // Calculate the number of perks in the current file
+            } else {
+                perk_choice[i] = perk_iter;
             }
-            char* copiedline = strdup(line);
-            char* token = strtok(copiedline, ",");
-            float first_boost_value = atof(token);
-            token = strtok(NULL, ",");
-            char* first_boost_type = strdup(token);
-            token = strtok(NULL, ",");
-            float second_boost_value = atof(token);
-            token = strtok(NULL, "\r");
-            char* second_boost_type = strdup(token);
-            struct Perk* p = createPerk(first_boost_type,second_boost_type,first_boost_value,second_boost_value);
-            updateEvent(p,is_event);
-            return p;
+            fclose(file); // Close the file after reading
         }
     }
+    printf("------------------------\n");
+    printf("Your choice: ");
+    int choice_perk = 0;
+    scanf("%d", &choice_perk);
+    clearInputBuffer();
+    int file_number = -1;
+    if (choice_perk <= perk_choice[0]) {
+        file_number = 0;
+    } else if (choice_perk <= perk_choice[0] + perk_choice[1]) {
+        file_number = 1;
+    } else {
+        file_number = 2;
+    }
+
+    FILE* file = fopen(perks_full_path[file_number], "r");
+    if (file == NULL) {
+        printf("Error opening \"%s\", file does not exist\n", perks_full_path[file_number]);
+    } else {
+        if (fgets(line, sizeof(line), file) == NULL) {
+            fclose(file);
+            return NULL; // Return NULL if reading the first line fails
+        }
+        perk_iter = 1;
+        while (choice_perk > perk_iter) {
+            if (fgets(line, sizeof(line), file) == NULL) {
+                fclose(file);
+                return NULL; // Return NULL if reading a line fails
+            }
+            perk_iter++;
+        }
+        if (fgets(line, sizeof(line), file) == NULL) {
+            fclose(file);
+            return NULL; // Return NULL if reading the chosen perk line fails
+        }
+        char* copiedline = strdup(line);
+        char* token = strtok(copiedline, ",");
+        float first_boost_value = atof(token);
+        token = strtok(NULL, ",");
+        char* first_boost_type = strdup(token);
+        token = strtok(NULL, ",");
+        float second_boost_value = atof(token);
+        token = strtok(NULL, "\r");
+        char* second_boost_type = strdup(token);
+        struct Perk* p = createPerk(first_boost_type, second_boost_type, first_boost_value, second_boost_value);
+        updateEvent(p, is_event);
+        fclose(file); // Close the file after reading
+        return p;
+    }
+
     return NULL;
 }
 
