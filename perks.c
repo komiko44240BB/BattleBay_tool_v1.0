@@ -6,7 +6,7 @@
 #include "clear_input.h"
 #define MAX_LINE_SIZE 1024
 
-struct Perk* createPerk(char* first_boost_type,char* second_boost_type, int first_boost_value,int second_boost_value) {
+struct Perk* createPerk(char* first_boost_type,char* second_boost_type, float first_boost_value,float second_boost_value) {
     struct Perk* p = malloc(sizeof(struct Perk));
     p->first_boost_type = strdup(first_boost_type);
     p->second_boost_type = strdup(second_boost_type);
@@ -62,17 +62,17 @@ void addPerks(struct Object* o) {
         return;
     }
     bool perk_choice =  true;
-    bool is_event = false;
+    bool is_event = true;
     int number_of_perks = numberOfPerks(o);
     for(int i = 0; i<number_of_perks; i++){
         while(perk_choice){
             printf("Is the perk an event perk\n");
-            printf("\n");
+            printf("------------------------\n");
             printf("1. Yes\n");
             printf("2. No\n");
             printf("0. Don't add more perks\n");
-            printf("\n");
-            printf("Your choice :\n");
+            printf("------------------------\n");
+            printf("Your choice : ");
             int choice = 0;
             scanf("%d",&choice);
             clearInputBuffer();
@@ -108,11 +108,10 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
     while (perk_rarity_choice) {
         printf("What do you want to do\n");
         printf("------------------------\n");
-        printf("1.Common\n");
-        printf("2.Uncommon\n");
-        printf("3.Rare\n");
-        printf("4.Epic\n");
-        printf("5.Legendary\n");
+        printf("1.Uncommon\n");
+        printf("2.Rare\n");
+        printf("3.Epic\n");
+        printf("4.Legendary\n");
         printf("------------------------\n");
         printf("Your choice: ");
         int choice = 0;
@@ -120,22 +119,18 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
         clearInputBuffer();
         switch (choice) {
             case 1:
-                perk_rarity = strdup("common");
-                perk_rarity_choice = false;
-                break;
-            case 2:
                 perk_rarity = strdup("uncommon");
                 perk_rarity_choice = false;
                 break;
-            case 3:
+            case 2:
                 perk_rarity = strdup("rare");
                 perk_rarity_choice = false;
                 break;
-            case 4:
+            case 3:
                 perk_rarity = strdup("epic");
                 perk_rarity_choice = false;
                 break;
-            case 5:
+            case 4:
                 perk_rarity = strdup("legendary");
                 perk_rarity_choice = false;
                 break;
@@ -193,12 +188,12 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
             continue;
         }
 
-        if (fgets(line, sizeof(line), file) == NULL) {
+        /*if (fgets(line, sizeof(line), file) == NULL) {
             printf("Error reading first line from file \"%s\"\n", perks_full_path[i]);
             fclose(file);
             file = NULL;
             continue;
-        }
+        }*/
 
         while (!feof(file)) {
             if (fgets(line, sizeof(line), file) == NULL) {
@@ -226,16 +221,19 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
     }
     printf("------------------------\n");
     printf("Your choice: ");
-    int choice_perk = 0;
+    int choice_perk = 2;
     scanf("%d", &choice_perk);
     clearInputBuffer();
     int file_number = -1;
     if (choice_perk <= perk_choice[0]) {
         file_number = 0;
-    } else if (choice_perk <= perk_choice[0] + perk_choice[1]) {
+        choice_perk = choice_perk - 1;
+    } else if (choice_perk <= (perk_choice[0] + perk_choice[1])) {
         file_number = 1;
+        choice_perk = choice_perk - perk_choice[0] - 1;
     } else {
         file_number = 2;
+        choice_perk = choice_perk - (perk_choice[0] + perk_choice[1]) - 1;
     }
 
     FILE* file = fopen(perks_full_path[file_number], "r");
@@ -244,13 +242,13 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
         return NULL;
     }
 
-    if (fgets(line, sizeof(line), file) == NULL) {
+    /*if (fgets(line, sizeof(line), file) == NULL) {
         printf("Error reading first line from file \"%s\"\n", perks_full_path[file_number]);
         fclose(file);
         return NULL;
-    }
+    }*/
 
-    perk_iter = 1;
+    perk_iter = 0;
     while (choice_perk > perk_iter) {
         if (fgets(line, sizeof(line), file) == NULL) {
             printf("Error reading line from file \"%s\"\n", perks_full_path[file_number]);
@@ -259,12 +257,14 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
         }
         perk_iter++;
     }
+    fgets(line, sizeof(line), file);
 
-    if (fgets(line, sizeof(line), file) == NULL) {
+    if (line == NULL) {
         printf("Error reading chosen perk line from file \"%s\"\n", perks_full_path[file_number]);
         fclose(file);
         return NULL;
     }
+    printf("\n %s \n",line);
 
     char* copiedline = strdup(line);
     char* token = strtok(copiedline, ",");
@@ -286,7 +286,7 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
     for (int i = 0; i < num_files; i++) {
         free(perks_full_path[i]);
     }
-
+    displayPerk(*p);
     return p;
 }
 
@@ -365,4 +365,13 @@ char** perkLists(struct Object* o) {
            }
     }
     return files_names;
+}
+
+
+void displayPerk(struct Perk p ) {
+    printf("Is Event: %s\n", p.is_event ? "True" : "False");
+    printf("First Boost Value: %.2f\n", p.first_boost_value);
+    printf("First Boost Type: %s\n", p.first_boost_type);
+    printf("Second Boost Value: %.2f\n", p.second_boost_value);
+    printf("Second Boost Type: %s\n", p.second_boost_type);
 }

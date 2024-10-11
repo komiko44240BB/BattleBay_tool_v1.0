@@ -17,15 +17,15 @@ link_directories(${XLSXWRITER_LIBRARY_DIRS})
 
 
 add_executable(BattleBay_tool
-        #main.c
-        #menu.c
-        #objects.c
-        #perks.c
-        #readobjects.c
-        #ships.c
-        #readtraining.c
-        #clear_input.c
-        scriptspy/perks_.c
+        main.c
+        menu.c
+        objects.c
+        perks.c
+        readobjects.c
+        ships.c
+        readtraining.c
+        clear_input.c
+        #scriptspy/perks_.c
 )
 
 include_directories("/usr/local/include/xlsxio")

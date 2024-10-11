@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include <xlsxio_read.h>
 #include <dirent.h>
 
@@ -149,20 +150,37 @@ void parse_bonus(const char *bonus, char *value, char *name) {
 
 void write_to_csv(const char *output_path, ItemNode* head) {
     ItemNode* current = head;
+    char filename[MAX_PATH];
+    char current_filename[MAX_PATH] = "";
+    FILE *fp = NULL;
+
     while (current != NULL) {
-        char filename[MAX_PATH];
         snprintf(filename, sizeof(filename), "%sevent_%s_%s.csv", output_path, current->item.rarity, current->item.object_name);
 
-        FILE *fp = fopen(filename, "a");
-        if (fp == NULL) {
-            perror("fopen");
-            return;
+        if (strcmp(filename, current_filename) != 0) {
+            if (fp != NULL) {
+                fclose(fp);
+            }
+            strcpy(current_filename, filename);
+            fp = fopen(filename, "a");
+            if (fp == NULL) {
+                perror("fopen");
+                return;
+            }
         }
 
-        fprintf(fp, "%s,%s,%s,%s\n", current->item.first_bonus_value, current->item.first_bonus_name, current->item.second_bonus_value, current->item.second_bonus_name);
-
-        fclose(fp);
+        if (ftell(fp) == 0) {
+            // File is empty, don't write newline
+            fprintf(fp, "%s,%s,%s,%s", current->item.first_bonus_value, current->item.first_bonus_name, current->item.second_bonus_value, current->item.second_bonus_name);
+        } else {
+            // File is not empty, write newline
+            fprintf(fp, "\n%s,%s,%s,%s", current->item.first_bonus_value, current->item.first_bonus_name, current->item.second_bonus_value, current->item.second_bonus_name);
+        }
 
         current = current->next;
+    }
+
+    if (fp != NULL) {
+        fclose(fp);
     }
 }
