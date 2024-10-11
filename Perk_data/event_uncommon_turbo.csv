@@ -1,3 +1,2 @@
-1st Boost Value,1st Boost Type,2nd Boost Value,2nd Boost Type
-0.1,SPEED,0.005,DAMAGE
-0.1,SPEED,40,HIT_POINT
+0.10,SPEED,0.01,DAMAGE
+0.10,SPEED,40,HIT_POINT

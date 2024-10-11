@@ -1,2 +1,1 @@
-1st Boost Value,1st Boost Type,2nd Boost Value,2nd Boost Type
-0.5s,Stun DURATION,0.13,PROJECTILE_SPEED
+0.5,STUN_DURATION,0.13,PROJECTILE_SPEED

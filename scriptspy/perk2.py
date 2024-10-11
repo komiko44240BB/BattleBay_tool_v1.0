@@ -42,7 +42,18 @@ def process_xlsx_file(file_path, output_folder):
         group_csv = group[['1st Boost Value', '1st Boost Type', '2nd Boost Value', '2nd Boost Type']]
         
         # Save to CSV without index
-        group_csv.to_csv(output_filepath, index=False)
+        temp_filepath = output_filepath + '.tmp'
+        group_csv.to_csv(temp_filepath, index=False)
+        
+        # Post-process to remove any extra newlines
+        with open(temp_filepath, 'r') as f_in, open(output_filepath, 'w', newline='\r') as f_out:
+            for line in f_in:
+                if line.strip():  # Avoid writing empty lines
+                    f_out.write(line)
+
+        os.remove(temp_filepath)  # Clean up temporary file
+
+
 
 def process_all_files(input_folder, output_folder):
     """Process all xlsx files in the input folder."""
