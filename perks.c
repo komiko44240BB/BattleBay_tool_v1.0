@@ -93,6 +93,7 @@ void addPerks(struct Object* o) {
         }
         char** perk_list = perkLists(o);
         o->perk_list[i] = displayAndChooseAvailablePerks(perk_list, is_event);
+        perk_choice =  true;
     }
     return;
 }
@@ -286,7 +287,7 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event) {
     for (int i = 0; i < num_files; i++) {
         free(perks_full_path[i]);
     }
-    displayPerk(*p);
+    //displayPerk(*p);
     return p;
 }
 
