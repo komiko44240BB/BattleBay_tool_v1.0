@@ -13,7 +13,7 @@
 
 int main() {
 
-    int gear[5][2] = {{5,8},{3,4},{0,0},{0,0},{0,0}};
+    /*int gear[5][2] = {{5,8},{3,4},{0,0},{0,0},{0,0}};
     struct Ship* s = initialiseShip("defender",1.2,0.9,0.5,1596,5);
     setUpShip(s,gear);
     char* object_name= "swift_torpedo";
@@ -28,7 +28,7 @@ int main() {
     addPerks(o);
     printf("\n");
     printLoadout(s);
-    printObject(o);
-    //start();
+    printObject(o);*/
+    start();
     return 0;
 }
