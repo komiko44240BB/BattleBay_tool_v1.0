@@ -256,32 +256,44 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
     }
     char* copiedline = strdup(line);
     struct Perk* p = NULL;
-    if(perk_already_fited(is_event,o,copiedline) == false){
-        printf("\n %s \n",line);
 
-        char* token = strtok(copiedline, ",");
-        float first_boost_value = atof(token);
-        token = strtok(NULL, ",");
-        char* first_boost_type = strdup(token);
-        token = strtok(NULL, ",");
-        float second_boost_value = atof(token);
-        token = strtok(NULL, "\r");
-        char* second_boost_type = strdup(token);
-        free(copiedline); // Free the copied line
+    printf("\n %s \n",line);
+
+    char* token = strtok(copiedline, ",");
+    float first_boost_value = atof(token);
+    token = strtok(NULL, ",");
+    char* first_boost_type = strdup(token);
+    token = strtok(NULL, ",");
+    float second_boost_value = atof(token);
+    token = strtok(NULL, "\r");
+    char* second_boost_type = strdup(token);
+
+    free(copiedline); // Free the copied line
+    fclose(file); // Close the file after reading
+
+    char* selected_perk = malloc((strlen(first_boost_type) + strlen(second_boost_type)) * sizeof(char));
+
+    snprintf(selected_perk, strlen(first_boost_type) + strlen(second_boost_type), "%s,%s",first_boost_type,second_boost_type);
+
+    if(perk_already_fited(is_event,o,selected_perk) == false){
 
         p = createPerk(first_boost_type, second_boost_type, first_boost_value, second_boost_value);
+
         updateEvent(p, is_event);
-        fclose(file); // Close the file after reading
+
     } else{
         printf("You can't have multiple of the same event perks on an object");
         p = displayAndChooseAvailablePerks(perk_list,is_event,o);
     }
+    free(selected_perk);
+
     // Free the memory allocated for perk_rarity and perks_full_path
     free(perk_rarity);
+
     for (int i = 0; i < num_files; i++) {
         free(perks_full_path[i]);
     }
-    //displayPerk(*p);
+    
     return p;
 }
 
@@ -366,13 +378,13 @@ char** perkLists(struct Object* o) {
     return files_names;
 }
 
-bool perk_already_fited(bool is_event, struct Object* o, char* line) {
+bool perk_already_fited(bool is_event, struct Object* o, char* selected_perk) {
     bool is_fited = false;
     if(is_event){
         for(int i = 0; i<4;i++){
             if(o->perk_list[i] != NULL){
                 char* perk = perk_to_string(o->perk_list[i]);
-                if(strcasecmp(perk,line)==0){
+                if(strcasecmp(perk,selected_perk)==0){
                     is_fited = true;
                 }
                 free(perk);
@@ -383,11 +395,11 @@ bool perk_already_fited(bool is_event, struct Object* o, char* line) {
 }
 
 char* perk_to_string(struct Perk* p) {
-    char* perk = malloc(45 * sizeof(char));
+    char* perk = malloc((strlen(p->first_boost_type) + strlen(p->second_boost_type)) * sizeof(char));
     if (perk == NULL) {
         return NULL;
     }
-    snprintf(perk, 45, "%.2f,%s,%.2f,%s",p->first_boost_value,p->first_boost_type,p->second_boost_value,p->second_boost_type);
+    snprintf(perk, strlen(p->first_boost_type) + strlen(p->second_boost_type), "%s,%s",p->first_boost_type,p->second_boost_type);
     return perk;
 }
 
