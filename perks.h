@@ -16,8 +16,9 @@ struct Perk* createPerk(char* first_boost_type,char* second_boost_type, float fi
 int numberOfPerks(struct Object* o);
 void addPerks(struct Object* o);
 char** perkLists(struct Object* o);
-struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event);
-
+struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, struct Object* o);
+bool perk_already_fited(bool is_event, struct Object* o, char* line);
+char* perk_to_string(struct Perk* p);
 void updateEvent(struct Perk* p,bool is_event);
 void displayPerk(struct Perk p );
 #endif
