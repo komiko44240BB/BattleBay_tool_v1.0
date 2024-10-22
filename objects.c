@@ -49,37 +49,37 @@ void printObject(struct Object* o) {
         return;
     }
     if(o->level != 0){
-        printf("%s",o->name);
-        printf("%d",o->level);
+        printf("%s :",o->name);
+        printf(" level %d\n",o->level);
         if(o->base_stat != 0){
-            printf("Base stat: %.2f",o->base_stat);
+            printf("Base stat: %.2f\n",o->base_stat);
         }
         if(o->cool_down != 0){
-            printf("Cooldown: %.2f",o->cool_down);
+            printf("Cooldown: %.2f\n",o->cool_down);
         }
         if(o->range != 0){
-            printf("Range :%.2f",o->range);
+            printf("Range :%.2f\n",o->range);
         }
         if(o->projectile_speed != 0){
-            printf("Proj speed :%.2f",o->projectile_speed);
+            printf("Proj speed :%.2f\n",o->projectile_speed);
         }
         if(o->critical_hit_chance != 0){
-            printf("crit hit chance :%.2f",o->critical_hit_chance);
+            printf("crit hit chance :%.2f\n",o->critical_hit_chance);
         }
         if(o->critical_hit_multiplier != 0){
-            printf("Crit hit mult :%.2f",o->critical_hit_multiplier);
+            printf("Crit hit mult :%.2f\n",o->critical_hit_multiplier);
         }
         if(o->radius != 0){
-            printf("Radius :%.2f",o->radius);
+            printf("Radius :%.2f\n",o->radius);
         }
         if(o->spread != 0){
-            printf("Spread :%.2f",o->spread);
+            printf("Spread :%.2f\n",o->spread);
         }
         if(o->amount_of_projectiles > 1){
-            printf("Amnt of proj :%d",o->amount_of_projectiles);
+            printf("Amnt of proj :%d\n",o->amount_of_projectiles);
         }
         if(o->duration != 0){
-            printf("Duration :%.2f",o->duration);
+            printf("Duration :%.2f\n",o->duration);
         }
     }
 }
