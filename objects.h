@@ -12,7 +12,7 @@ struct Object {
     float range;
     float projectile_speed;
     float critical_hit_chance;
-    float critcal_hit_multiplier;
+    float critical_hit_multiplier;
     float radius;
     float spread;
     unsigned int amount_of_projectiles;

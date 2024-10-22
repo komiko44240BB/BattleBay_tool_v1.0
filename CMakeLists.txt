@@ -25,6 +25,8 @@ add_executable(BattleBay_tool
         ships.c
         readtraining.c
         clear_input.c
+        apply_training_and_perks.c
+        apply_training_and_perks.h
         #scriptspy/perks_.c
 )
 

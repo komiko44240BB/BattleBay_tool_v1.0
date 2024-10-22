@@ -21,6 +21,13 @@ struct Training* createTraining(unsigned int training_lvl) {
     if (t == NULL) {
         return NULL;
     }
+    // Handle the case when training_lvl is 0
+    if (training_lvl == 0) {
+        t->type = NULL; // No type array needed
+        t->value = NULL; // No value array needed
+        t->size = 0; // Set size to 0
+        return t; // Return the initialized struct
+    }
     // Allocate memory for the 'type' array, which holds 'training_lvl' number of char pointers
     t->type = malloc(sizeof(char*) * training_lvl);
     // If memory allocation for 'type' fails, free the allocated Training struct and return NULL
@@ -92,6 +99,7 @@ struct Training* readTraining(struct Object* o, char* object_name) {
             if (training_lvl == 0) {
                 fclose(file); // Close file if the user chooses level 0
                 struct Training* t0 = createTraining(0); // Create a training struct with level 0
+                t0->type = NULL;
                 return t0;
             }
             printf("Wrong training input level\n"); // Inform the user of invalid input

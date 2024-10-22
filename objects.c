@@ -19,7 +19,7 @@ struct Object* createObject(char* rarity, char* name, unsigned int level, float 
     o->range = range;
     o->projectile_speed = projectile_speed;
     o->critical_hit_chance = critical_hit_chance;
-    o->critcal_hit_multiplier = critcal_hit_multiplier;
+    o->critical_hit_multiplier = critcal_hit_multiplier;
     o->radius = radius;
     o->spread = spread;
     o->amount_of_projectiles = amount_of_projectiles;
@@ -66,8 +66,8 @@ void printObject(struct Object* o) {
         if(o->critical_hit_chance != 0){
             printf("crit hit chance :%.2f",o->critical_hit_chance);
         }
-        if(o->critcal_hit_multiplier != 0){
-            printf("Crit hit mult :%.2f",o->critcal_hit_multiplier);
+        if(o->critical_hit_multiplier != 0){
+            printf("Crit hit mult :%.2f",o->critical_hit_multiplier);
         }
         if(o->radius != 0){
             printf("Radius :%.2f",o->radius);

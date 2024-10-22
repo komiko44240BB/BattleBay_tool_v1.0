@@ -125,7 +125,7 @@ void parse_bonus(const char *bonus, char *value, char *name) {
         if (temp_value[value_len - 1] == '%') {
             // Convert percentage to decimal
             float percentage = atof(temp_value);
-            sprintf(value, "%.2f", percentage / 100.0);
+            sprintf(value, "%.3f", percentage / 100.0);
         } else {
             strncpy(value, temp_value, MAX_PATH);
         }
@@ -139,7 +139,7 @@ void parse_bonus(const char *bonus, char *value, char *name) {
         if (temp_value[strlen(temp_value) - 1] == '%') {
             // Convert percentage to decimal
             float percentage = atof(temp_value);
-            sprintf(value, "%.2f", percentage / 100.0);
+            sprintf(value, "%.3f", percentage / 100.0);
         } else {
             strncpy(value, temp_value, MAX_PATH);
         }

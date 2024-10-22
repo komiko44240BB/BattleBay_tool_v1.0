@@ -2,12 +2,15 @@
 #include <string.h>
 #include <stdbool.h>
 #include <unistd.h>
+
 #include "ships.h"
 #include "readobjects.h"
 #include "readtraining.h"
 #include "perks.h"
+#include "apply_training_and_perks.h"
 #include "clear_input.h"
 #include "menu.h"
+
 
 
 
@@ -403,6 +406,7 @@ void addObjects(struct Ship* s) {
                 printf("Object has been added\n");
                 struct Training* t = readTraining(o,object_name);
                 addPerks(o);
+                applytrainingAndPerks(o,t);
             }
         }
     }
