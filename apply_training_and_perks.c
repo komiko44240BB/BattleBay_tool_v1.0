@@ -36,7 +36,7 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 if (strcasecmp(t->type[i], "BASE_STAT") == 0) {
                     percent_base_stat += t->value[i];
                 } else if (strcasecmp(t->type[i], "COOL_DOWN") == 0) {
-                    percent_cool_down += t->value[i];
+                    percent_cool_down -= t->value[i];
                 } else if (strcasecmp(t->type[i], "RANGE") == 0) {
                     percent_range += t->value[i];
                 } else if (strcasecmp(t->type[i], "PROJECTILE_SPEED") == 0) {
@@ -54,7 +54,7 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 if (strcasecmp(t->type[i], "BASE_STAT") == 0) {
                     flat_base_stat  += t->value[i];
                 } else if (strcasecmp(t->type[i], "COOL_DOWN") == 0) {
-                    flat_cool_down += t->value[i];
+                    flat_cool_down -= t->value[i];
                 } else if (strcasecmp(t->type[i], "RANGE") == 0) {
                     flat_range += t->value[i];
                 } else if (strcasecmp(t->type[i], "PROJECTILE_SPEED") == 0) {
@@ -79,7 +79,7 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 if (strcasecmp(p->first_boost_type, "BASE_STAT") == 0) {
                     percent_base_stat += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "COOL_DOWN") == 0) {
-                    percent_cool_down += p->first_boost_value;
+                    percent_cool_down -= p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "RANGE") == 0) {
                     percent_range += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "PROJECTILE_SPEED") == 0) {
@@ -95,7 +95,7 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 }
             } else if(p->first_boost_value >= 1){
                 if (strcasecmp(p->first_boost_type, "BASE_STAT") == 0) {
-                    flat_base_stat  += p->first_boost_value;
+                    flat_base_stat  -= p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "COOL_DOWN") == 0) {
                     flat_cool_down += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "RANGE") == 0) {
@@ -116,7 +116,7 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 if (strcasecmp(p->second_boost_type, "BASE_STAT") == 0) {
                     percent_base_stat += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "COOL_DOWN") == 0) {
-                    percent_cool_down += p->second_boost_value;
+                    percent_cool_down -= p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "RANGE") == 0) {
                     percent_range += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "PROJECTILE_SPEED") == 0) {
@@ -134,7 +134,7 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 if (strcasecmp(p->second_boost_type, "BASE_STAT") == 0) {
                     flat_base_stat  += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "COOL_DOWN") == 0) {
-                    flat_cool_down += p->second_boost_value;
+                    flat_cool_down -= p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "RANGE") == 0) {
                     flat_range += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "PROJECTILE_SPEED") == 0) {
