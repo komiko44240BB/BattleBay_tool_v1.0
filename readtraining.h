@@ -6,6 +6,6 @@ struct Training {
     char** type;
     float* value;
 };
-
-struct Training* readTraining(struct Object* o,char* object_name);
+struct Training* createTraining(unsigned int training_lvl);
+struct Training* readTraining(char* object_name);
 #endif

@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdbool.h>
 #include <unistd.h>
-
 #include "ships.h"
 #include "readobjects.h"
 #include "readtraining.h"
@@ -11,7 +10,7 @@
 #include "clear_input.h"
 #include "menu.h"
 
-
+#include "objects.h"
 
 
 #define FILENAME_SIZE 40
@@ -404,7 +403,7 @@ void addObjects(struct Ship* s) {
                 i--;
             }else{
                 printf("Object has been added\n");
-                struct Training* t = readTraining(o,object_name);
+                struct Training* t = readTraining(o->name);
                 addPerks(o);
                 applytrainingAndPerks(o,t);
             }

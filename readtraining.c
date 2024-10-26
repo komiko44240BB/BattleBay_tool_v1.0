@@ -3,7 +3,6 @@
 #include<string.h>
 #include<stdbool.h>
 #include <unistd.h>
-#include "objects.h"
 #include "readtraining.h"
 #include "clear_input.h"
 #define MAX_LINE_SIZE 1024
@@ -52,13 +51,12 @@ struct Training* createTraining(unsigned int training_lvl) {
 /**
  * Reads training data from a CSV file for a specified object and returns a Training struct.
  *
- * @param o The object whose training data is being requested.
  * @param object_name The name of the object to locate its training data file.
  * @return A pointer to a Training struct, or NULL if an error occurs (e.g., object or file is not found).
  */
-struct Training* readTraining(struct Object* o, char* object_name) {
-    // Check if object or object name is null, return NULL in case of invalid input
-    if (o == NULL || object_name == NULL) {
+struct Training* readTraining(char* object_name) {
+    // Check if object name is null, return NULL in case of invalid input
+    if (object_name == NULL) {
         return NULL;
     }
     // Allocate memory for the training file name string, including the base path, object name, and extension
