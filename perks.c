@@ -87,7 +87,7 @@ void addPerks(struct Object* o) {
     bool perk_choice = true;  // Indicates if the user has chosen to add a perk.
     bool is_event = true;     // Indicates if the current perk is an event perk.
     int number_of_perks = numberOfPerks(o);  // Number of perks to add to the Object.
-
+    o->amount_of_perks = number_of_perks;
     for(int i = 0; i < number_of_perks; i++){
         while(perk_choice){
             printf("Is the perk an event perk\n");

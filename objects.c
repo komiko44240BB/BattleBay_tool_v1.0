@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include "objects.h"
+#include "perks.h"
 
 /**
  * Creates a new Object instance with specified parameters and allocates memory for it.
@@ -128,12 +129,19 @@ void printObject(struct Object* o) {
  * @param o Pointer to the Object to be deleted.
  */
 void deleteObject(struct Object* o) {
-    if (o == NULL){
-        return;
+    if (o) {
+        // Free dynamically allocated memory for rarity and name
+        free(o->rarity);
+        free(o->name);
+
+        // Free each Perk in the perk_list
+        for (unsigned int i = 0; i < o->amount_of_perks; i++) {
+            deletePerk(o->perk_list[i]);
+        }
+
+        // Free the object itself
+        free(o);
     }
-    free(o->rarity);  // Free dynamically allocated rarity string
-    free(o->name);    // Free dynamically allocated name string
-    free(o);          // Free the object itself
 }
 
 /**

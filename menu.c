@@ -406,6 +406,7 @@ void addObjects(struct Ship* s) {
                 struct Training* t = readTraining(o->name);
                 addPerks(o);
                 applytrainingAndPerks(o,t);
+                deleteTraining(t);
             }
         }
     }
