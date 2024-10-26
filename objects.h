@@ -48,5 +48,5 @@ void deleteObject(struct Object* o);
 void addPerk(struct Perk* p, struct Object* o);
 
 struct Slots* createSlots();
-
+void deleteSlots(struct Slots* slots);
 #endif

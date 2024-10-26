@@ -167,3 +167,31 @@ void addPerk(struct Perk* p, struct Object* o) {
     }
     printf("Perk could not be added, maximum perks reached.\n");
 }
+
+/**
+ * @brief Deletes all Objects in a linked list contained within a Slots structure.
+ *
+ * This function traverses the linked list of Objects pointed to by the head
+ * of the provided Slots structure. It frees each Object in the list and
+ * finally frees the Slots structure itself.
+ *
+ * @param slots A pointer to the Slots structure that contains the linked list
+ *              of Objects. If NULL, the function returns immediately.
+ */
+void deleteSlots(struct Slots* slots) {
+    if (slots == NULL) {
+        return; // Nothing to delete
+    }
+
+    struct Object* current = slots->head; // Pointer to the current Object in the list
+    struct Object* next; // Pointer to the next Object to be deleted
+
+    // Iterate through the linked list of Objects and free each one
+    while (current != NULL) {
+        next = current->next; // Store the next object to process
+        deleteObject(current); // Free the current object from memory
+        current = next; // Move to the next object in the list
+    }
+
+    free(slots); // Free the Slots structure itself to avoid memory leaks
+}

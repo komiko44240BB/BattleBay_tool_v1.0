@@ -152,3 +152,28 @@ struct Training* readTraining(char* object_name) {
     fclose(file); // Close the file once training data is successfully read
     return t; // Return the populated Training struct
 }
+
+/**
+ * @brief Deletes a Training struct and frees associated memory.
+ *
+ * This function checks if the given Training struct pointer is not NULL,
+ * then proceeds to free the memory allocated for its members and the struct itself.
+ * It is important to ensure that each member is freed only if it was previously allocated.
+ *
+ * @param t A pointer to the Training struct to be deleted.
+ */
+void deleteTraining(struct Training* t) {
+    // Check if the Training struct pointer is not NULL
+    if (t != NULL) {
+        // Free the memory allocated for the 'type' array, if it exists
+        if (t->type != NULL) {
+            free(t->type); // Free the type array
+        }
+        // Free the memory allocated for the 'value' array, if it exists
+        if (t->value != NULL) {
+            free(t->value); // Free the value array
+        }
+        // Free the memory allocated for the Training struct itself
+        free(t); // Free the Training struct
+    }
+}

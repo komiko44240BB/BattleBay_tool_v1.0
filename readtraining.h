@@ -8,4 +8,5 @@ struct Training {
 };
 struct Training* createTraining(unsigned int training_lvl);
 struct Training* readTraining(char* object_name);
+void deleteTraining(struct Training* t);
 #endif

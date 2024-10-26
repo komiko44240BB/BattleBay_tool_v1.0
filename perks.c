@@ -491,10 +491,33 @@ char* perk_to_string(struct Perk* p) {
  *
  * @param p Perk struct containing the details to be displayed.
  */
-void displayPerk(struct Perk p) {
-    printf("Is Event: %s\n", p.is_event ? "True" : "False");
-    printf("First Boost Value: %.2f\n", p.first_boost_value);
-    printf("First Boost Type: %s\n", p.first_boost_type);
-    printf("Second Boost Value: %.2f\n", p.second_boost_value);
-    printf("Second Boost Type: %s\n", p.second_boost_type);
+void displayPerk(struct Perk* p) {
+    printf("Is Event: %s\n", p->is_event ? "True" : "False");
+    printf("First Boost Value: %.2f\n", p->first_boost_value);
+    printf("First Boost Type: %s\n", p->first_boost_type);
+    printf("Second Boost Value: %.2f\n", p->second_boost_value);
+    printf("Second Boost Type: %s\n", p->second_boost_type);
 }
+
+/**
+ * Frees memory allocated for a Perk struct and its members.
+ *
+ * @param p Pointer to the Perk struct to be deleted. If p is NULL,
+ *          the function does nothing. Otherwise, it frees memory
+ *          for each allocated member before freeing the Perk itself.
+ */
+void deletePerk(struct Perk* p) {
+    if (p == NULL) { // Check if the pointer is NULL to avoid unnecessary operations.
+        return;
+    }
+    if (p->first_boost_type != NULL) { // Free first_boost_type if it has been allocated.
+        free(p->first_boost_type);
+        p->first_boost_type = NULL; // Set pointer to NULL to avoid dangling pointers.
+    }
+    if (p->second_boost_type != NULL) { // Free second_boost_type if it has been allocated.
+        free(p->second_boost_type);
+        p->second_boost_type = NULL; // Set pointer to NULL to avoid dangling pointers.
+    }
+    free(p); // Free the Perk struct itself.
+}
+

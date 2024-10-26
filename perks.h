@@ -20,5 +20,6 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
 bool perk_already_fited(bool is_event, struct Object* o, char* line);
 char* perk_to_string(struct Perk* p);
 void updateEvent(struct Perk* p,bool is_event);
-void displayPerk(struct Perk p );
+void displayPerk(struct Perk* p );
+void deletePerk(struct Perk* p);
 #endif
