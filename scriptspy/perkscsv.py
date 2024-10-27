@@ -3,7 +3,6 @@ import pandas as pd
 import tkinter as tk
 from tkinter import filedialog
 import re
-
 def select_output_folder():
     """Open a dialog to select the output folder."""
     root = tk.Tk()
