@@ -138,35 +138,35 @@ for i in range(0, 42):
             base_stat = base_stat_tab[i][j][0]
             ratio = ratio_tab[i][j][0]
             for level in range(1, 11):
-                rounded_base_stat = round(base_stat)
+                rounded_base_stat = round(base_stat,4)
                 writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             base_stat = base_stat_tab[i][j][1]
             ratio = ratio_tab[i][j][1]
             for level in range(11, 21):
-                rounded_base_stat = round(base_stat)
+                rounded_base_stat = round(base_stat,4)
                 writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             base_stat = base_stat_tab[i][j][2]
             ratio = ratio_tab[i][j][2]
             for level in range(21, 31):
-                rounded_base_stat = round(base_stat)
+                rounded_base_stat = round(base_stat,4)
                 writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             base_stat = base_stat_tab[i][j][3]
             ratio = ratio_tab[i][j][3]
             for level in range(31, 41):
-                rounded_base_stat = round(base_stat)
+                rounded_base_stat = round(base_stat,4)
                 writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 
             base_stat = base_stat_tab[i][j][4]
             ratio = ratio_tab[i][j][4]
             for level in range(41, 51):
-                rounded_base_stat = round(base_stat)
+                rounded_base_stat = round(base_stat,4)
                 writer.writerow([level, rounded_base_stat, cool_down[i], range_[i], projectile_speed[i], critical_hit_chance[i], critical_hit_multiplier[i], radius[i], spread[i], amount_of_projectiles[i], duration[i]])
                 base_stat += ratio
 

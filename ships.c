@@ -147,7 +147,7 @@ void printShipStats(struct Ship* s){
     printShipName(s);
     printf("Gear score :    unsuported    Health :    %d\n",s->hit_points);
     printf("Turret agility :    %.d      Speed :     %.2f\n",s->turret_agility,s->speed);
-    printf("Ship agility :      %.d      Defense :   %d\n",s->ship_agility,s->defence);
+    printf("Ship agility :      %.d      Defense :   %d\n\n",s->ship_agility,s->defence);
 }
 
 /**

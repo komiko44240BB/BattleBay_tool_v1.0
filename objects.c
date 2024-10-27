@@ -91,34 +91,34 @@ void printObject(struct Object* o) {
         printf("%s %s :",o->rarity,o->name);
         printf(" level %d\n",o->level);
         if(o->base_stat != 0){
-            printf("Base stat: %.2f\n",o->base_stat);
+            printf("\tBase stat: %.2f\n",o->base_stat);
         }
         if(o->cool_down != 0){
-            printf("Cooldown: %.2f\n",o->cool_down);
+            printf("\tCooldown: %.2f\n",o->cool_down);
         }
         if(o->range != 0){
-            printf("Range :%.2f\n",o->range);
+            printf("\tRange :%.2f\n",o->range);
         }
         if(o->projectile_speed != 0){
-            printf("Proj speed :%.2f\n",o->projectile_speed);
+            printf("\tProj speed :%.2f\n",o->projectile_speed);
         }
         if(o->critical_hit_chance != 0){
-            printf("crit hit chance :%.2f\n",o->critical_hit_chance);
+            printf("\tcrit hit chance :%.2f\n",o->critical_hit_chance);
         }
         if(o->critical_hit_multiplier != 0){
-            printf("Crit hit mult :%.2f\n",o->critical_hit_multiplier);
+            printf("\tCrit hit mult :%.2f\n",o->critical_hit_multiplier);
         }
         if(o->radius != 0){
-            printf("Radius :%.2f\n",o->radius);
+            printf("\tRadius :%.2f\n",o->radius);
         }
         if(o->spread != 0){
-            printf("Spread :%.2f\n",o->spread);
+            printf("\tSpread :%.2f\n",o->spread);
         }
         if(o->amount_of_projectiles > 1){
-            printf("Amnt of proj :%d\n",o->amount_of_projectiles);
+            printf("\tAmnt of proj :%d\n",o->amount_of_projectiles);
         }
         if(o->duration != 0){
-            printf("Duration :%.2f\n",o->duration);
+            printf("\tDuration :%.2f\n",o->duration);
         }
         for(int i = 0; i< o->amount_of_perks; i++){
             displayPerk(o->perk_list[i]);
@@ -136,12 +136,10 @@ void deleteObject(struct Object* o) {
         // Free dynamically allocated memory for rarity and name
         free(o->rarity);
         free(o->name);
-
         // Free each Perk in the perk_list
         for (unsigned int i = 0; i < o->amount_of_perks; i++) {
             deletePerk(o->perk_list[i]);
         }
-
         // Free the object itself
         free(o);
     }
