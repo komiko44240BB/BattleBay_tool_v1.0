@@ -90,7 +90,7 @@ void addPerks(struct Object* o) {
     o->amount_of_perks = number_of_perks;
     for(int i = 0; i < number_of_perks; i++){
         while(perk_choice){
-            printf("Is the perk an event perk\n");
+            printf("Is the perk an event perk ?\n");
             printf("------------------------\n");
             printf("1. Yes\n");
             printf("2. No\n");
@@ -148,7 +148,7 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
 
     // Prompt user to select perk rarity
     while (perk_rarity_choice) {
-        printf("What do you want to do\n");
+        printf("What rarity is your perk ?\n");
         printf("------------------------\n");
         printf("1.Uncommon\n");
         printf("2.Rare\n");
