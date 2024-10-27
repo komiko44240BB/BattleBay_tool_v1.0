@@ -88,7 +88,7 @@ void printObject(struct Object* o) {
         return;
     }
     if(o->level != 0){
-        printf("%s :",o->name);
+        printf("%s %s :",o->rarity,o->name);
         printf(" level %d\n",o->level);
         if(o->base_stat != 0){
             printf("Base stat: %.2f\n",o->base_stat);
@@ -119,6 +119,9 @@ void printObject(struct Object* o) {
         }
         if(o->duration != 0){
             printf("Duration :%.2f\n",o->duration);
+        }
+        for(int i = 0; i< o->amount_of_perks; i++){
+            displayPerk(o->perk_list[i]);
         }
     }
 }
