@@ -331,7 +331,6 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
     for (int i = 0; i < num_files; i++) {
         free(perks_full_path[i]);
     }
-
     return p;
 }
 
@@ -492,11 +491,13 @@ char* perk_to_string(struct Perk* p) {
  * @param p Perk struct containing the details to be displayed.
  */
 void displayPerk(struct Perk* p) {
-    printf("Is Event: %s\n", p->is_event ? "True" : "False");
-    printf("First Boost Value: %.2f\n", p->first_boost_value);
-    printf("First Boost Type: %s\n", p->first_boost_type);
-    printf("Second Boost Value: %.2f\n", p->second_boost_value);
-    printf("Second Boost Type: %s\n", p->second_boost_type);
+    if(p != NULL){
+        printf("Is Event: %s\n", p->is_event ? "True" : "False");
+        printf("First Boost Value: %.2f\n", p->first_boost_value);
+        printf("First Boost Type: %s\n", p->first_boost_type);
+        printf("Second Boost Value: %.2f\n", p->second_boost_value);
+        printf("Second Boost Type: %s\n", p->second_boost_type);
+    }
 }
 
 /**
