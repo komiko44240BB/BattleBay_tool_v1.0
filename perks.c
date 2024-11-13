@@ -104,8 +104,12 @@ void addPerks(struct Object* o) {
 
             switch (choice){
             case 1:
-                is_event = true;
-                perk_choice = false;
+                if(o->type < 4){
+                    is_event = true;
+                    perk_choice = false;
+                } else{
+                    printf("Teal objects can't have event perks\n");
+                }
                 break;
             case 2:
                 is_event = false;
@@ -181,13 +185,13 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
         }
     }
 
-    char* perks_full_path[3] = {NULL, NULL, NULL}; // Array to store file paths
+    char* perks_full_path[4] = {NULL, NULL, NULL, NULL}; // Array to store file paths
     int num_files = 0;
 
     // Allocate and build file paths based on event status and selected rarity
     if (is_event) {
-        perks_full_path[0] = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
-        perks_full_path[1] = malloc(19 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
+        perks_full_path[0] = malloc(25 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
+        perks_full_path[1] = malloc(25 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
         if (perks_full_path[0] == NULL || perks_full_path[1] == NULL) {
             free(perk_rarity);
             free(perks_full_path[0]);
@@ -195,13 +199,16 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
             printf("Error allocating memory for event perk file paths\n");
             return NULL; // Return NULL if memory allocation fails
         }
-        sprintf(perks_full_path[0], "../Perk_data/event_%s_%s.csv", perk_rarity, perk_list[0]);
-        sprintf(perks_full_path[1], "../Perk_data/event_%s_%s.csv", perk_rarity, perk_list[1]);
+        sprintf(perks_full_path[0], "../Perk_data/event/event_%s_%s.csv", perk_rarity, perk_list[0]);
+        sprintf(perks_full_path[1], "../Perk_data/event/event_%s_%s.csv", perk_rarity, perk_list[1]);
         num_files = 2;
     } else {
-        perks_full_path[0] = malloc(20 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
-        perks_full_path[1] = malloc(20 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
-        perks_full_path[2] = malloc(20 + strlen(perk_rarity) + 14 + 1);
+        perks_full_path[0] = malloc(29 + strlen(perk_rarity) + 1 + strlen(perk_list[0]) + 4 + 1);
+        perks_full_path[1] = malloc(29 + strlen(perk_rarity) + 1 + strlen(perk_list[1]) + 4 + 1);
+        perks_full_path[2] = malloc(29 + strlen(perk_rarity) + 14 + 1);
+        if(o->type == 0){
+            perks_full_path[3] = malloc(29 + strlen(perk_rarity) + 16 + 1);
+        }
         if (perks_full_path[0] == NULL || perks_full_path[1] == NULL || perks_full_path[2] == NULL) {
             free(perk_rarity);
             free(perks_full_path[0]);
@@ -210,9 +217,12 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
             printf("Error allocating memory for normal perk file paths\n");
             return NULL; // Return NULL if memory allocation fails
         }
-        sprintf(perks_full_path[0], "../Perk_data/normal_%s_%s.csv", perk_rarity, perk_list[0]);
-        sprintf(perks_full_path[1], "../Perk_data/normal_%s_%s.csv", perk_rarity, perk_list[1]);
-        sprintf(perks_full_path[2], "../Perk_data/normal_%s_all_items.csv", perk_rarity);
+        sprintf(perks_full_path[0], "../Perk_data/classic/classic_%s_%s.csv", perk_rarity, perk_list[0]);
+        sprintf(perks_full_path[1], "../Perk_data/classic/classic_%s_%s.csv", perk_rarity, perk_list[1]);
+        sprintf(perks_full_path[2], "../Perk_data/classic/classic_%s_all_items.csv", perk_rarity);
+        if(o->type == 0){
+            sprintf(perks_full_path[3], "../Perk_data/classic/classic_%s_all_weapons.csv", perk_rarity);
+        }
         num_files = 3;
     }
 
@@ -290,12 +300,12 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
         }
         perk_iter++;
     }
-    fgets(line, sizeof(line), file);
 
+    fgets(line, sizeof(line), file);
     if (line == NULL) {
-        printf("Error reading chosen perk line from file \"%s\"\n", perks_full_path[file_number]);
+        /*printf("Error reading chosen perk line from file \"%s\"\n", perks_full_path[file_number]);
         fclose(file);
-        return NULL;
+        return NULL;*/ // Commented because otherwise, if the "fgets(line, sizeof(line), file)" is in the if it crashes
     }
     char* copiedline = strdup(line);
     struct Perk* p = NULL;

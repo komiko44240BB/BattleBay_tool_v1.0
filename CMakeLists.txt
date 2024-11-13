@@ -27,7 +27,8 @@ add_executable(BattleBay_tool
         clear_input.c
         apply_training_and_perks.c
         apply_training_and_perks.h
-        #scriptspy/perks_.c
+        #scriptspy/perks_event.c
+        #scriptspy/perks_classic.c
 )
 
 include_directories("/usr/local/include/xlsxio")
