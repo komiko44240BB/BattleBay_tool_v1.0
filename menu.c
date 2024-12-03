@@ -9,9 +9,7 @@
 #include "apply_training_and_perks.h"
 #include "clear_input.h"
 #include "menu.h"
-
 #include "objects.h"
-
 
 #define FILENAME_SIZE 40
 

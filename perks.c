@@ -157,7 +157,9 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
         printf("1.Uncommon\n");
         printf("2.Rare\n");
         printf("3.Epic\n");
-        printf("4.Legendary\n");
+        if(is_event){
+            printf("4.Legendary\n");
+        }
         printf("------------------------\n");
         printf("Your choice: ");
         int choice = 0;
@@ -309,33 +311,48 @@ struct Perk* displayAndChooseAvailablePerks(char** perk_list, bool is_event, str
     }
     char* copiedline = strdup(line);
     struct Perk* p = NULL;
-
-    // Parse perk values and types from the selected line
-    char* token = strtok(copiedline, ",");
-    float first_boost_value = atof(token);
-    token = strtok(NULL, ",");
-    char* first_boost_type = strdup(token);
-    token = strtok(NULL, ",");
-    float second_boost_value = atof(token);
-    token = strtok(NULL, "\r");
-    char* second_boost_type = strdup(token);
-
+    float first_boost_value = 0;
+    float second_boost_value = 0;
+    char* first_boost_type = NULL;
+    char* second_boost_type = NULL;
+    if(is_event) {
+        // Parse perk values and types from the selected line
+        char* token = strtok(copiedline, ",");
+         first_boost_value = atof(token);
+        token = strtok(NULL, ",");
+        first_boost_type = strdup(token);
+        token = strtok(NULL, ",");
+        second_boost_value = atof(token);
+        token = strtok(NULL, "\r");
+        second_boost_type = strdup(token);
+    } else {
+        // Parse perk values and types from the selected line
+        char* token = strtok(copiedline, ",");
+        first_boost_value = atof(token);
+        token = strtok(NULL, "\r");
+        first_boost_type = strdup(token);
+    }
     free(copiedline); // Free copied line memory
     fclose(file); // Close file after reading
 
-    char* selected_perk = malloc((strlen(first_boost_type) + strlen(second_boost_type)) * sizeof(char));
-    snprintf(selected_perk, strlen(first_boost_type) + strlen(second_boost_type), "%s,%s", first_boost_type, second_boost_type);
-
-    // Check if selected perk is already applied; if not, create and update it
-    if (perk_already_fited(is_event, o, selected_perk) == false) {
-        p = createPerk(first_boost_type, second_boost_type, first_boost_value, second_boost_value);
-        updateEvent(p, is_event);
+    if(is_event) {
+        char* selected_perk = malloc((strlen(first_boost_type) + strlen(second_boost_type)) * sizeof(char));
+        snprintf(selected_perk, strlen(first_boost_type) + strlen(second_boost_type), "%s,%s", first_boost_type, second_boost_type);
+        // Check if selected perk is already applied; if not, create and update it
+        if (perk_already_fited(is_event, o, selected_perk) == false) {
+            p = createPerk(first_boost_type, second_boost_type, first_boost_value, second_boost_value);
+            updateEvent(p, is_event);
+        } else {
+            printf("You can't have multiple of the same event perks on an object");
+            p = displayAndChooseAvailablePerks(perk_list, is_event, o);
+        }
+        free(selected_perk);
     } else {
-        printf("You can't have multiple of the same event perks on an object");
-        p = displayAndChooseAvailablePerks(perk_list, is_event, o);
+        p = createPerk(first_boost_type, "NA", first_boost_value, second_boost_value);
+        updateEvent(p, is_event);
     }
-    free(selected_perk);
-
+    free(first_boost_type);
+    free(second_boost_type);
     // Free memory allocated for perk_rarity and perks_full_path
     free(perk_rarity);
     for (int i = 0; i < num_files; i++) {

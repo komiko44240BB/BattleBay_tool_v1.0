@@ -42,9 +42,9 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 } else if (strcasecmp(t->type[i], "PROJECTILE_SPEED") == 0) {
                     percent_projectile_speed += t->value[i];
                 } else if (strcasecmp(t->type[i], "CRITICAL_HIT_CHANCE") == 0) {
-                    percent_critical_hit_chance += t->value[i];
+                    flat_critical_hit_chance += t->value[i];
                 } else if (strcasecmp(t->type[i], "CRITICAL_HIT_MULTIPLIER") == 0) {
-                    percent_critical_hit_multiplier += t->value[i];
+                    flat_critical_hit_multiplier += t->value[i];
                 } else if (strcasecmp(t->type[i], "DURATION") == 0) {
                     percent_duration += t->value[i];
                 } else if (strcasecmp(t->type[i], "FROST_DAMAGE") == 0 || strcasecmp(t->type[i], "FIRE_DAMAGE")) {
@@ -85,9 +85,9 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 } else if (strcasecmp(p->first_boost_type, "PROJECTILE_SPEED") == 0) {
                     percent_projectile_speed += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "CRITICAL_HIT_CHANCE") == 0) {
-                    percent_critical_hit_chance += p->first_boost_value;
+                    flat_critical_hit_chance += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "CRITICAL_HIT_MULTIPLIER") == 0) {
-                    percent_critical_hit_multiplier += p->first_boost_value;
+                    flat_critical_hit_multiplier += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "DURATION") == 0) {
                     percent_duration += p->first_boost_value;
                 } else if (strcasecmp(p->first_boost_type, "FROST_DAMAGE") == 0 || strcasecmp(p->first_boost_type, "FIRE_DAMAGE")) {
@@ -122,9 +122,9 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
                 } else if (strcasecmp(p->second_boost_type, "PROJECTILE_SPEED") == 0) {
                     percent_projectile_speed += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "CRITICAL_HIT_CHANCE") == 0) {
-                    percent_critical_hit_chance += p->second_boost_value;
+                    flat_critical_hit_chance += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "CRITICAL_HIT_MULTIPLIER") == 0) {
-                    percent_critical_hit_multiplier += p->second_boost_value;
+                    flat_critical_hit_multiplier += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "DURATION") == 0) {
                     percent_duration += p->second_boost_value;
                 } else if (strcasecmp(p->second_boost_type, "FROST_DAMAGE") == 0 || strcasecmp(t->type[i], "FIRE_DAMAGE")) {
@@ -151,6 +151,24 @@ void applytrainingAndPerks(struct Object* o,const struct Training* t) {
             }
         }
     }
+
+    /*printf("%d\n",flat_base_stat);
+    printf("%d\n", flat_cool_down);
+    printf("%d\n", flat_range);
+    printf("%d\n", flat_projectile_speed);
+    printf("%d\n", flat_critical_hit_chance);
+    printf("%d\n", flat_critical_hit_multiplier);
+    printf("%d\n", flat_duration);
+    printf("%d\n", flat_combo_dmg_boost);
+
+    printf("%f\n", percent_base_stat);
+    printf("%f\n", percent_cool_down);
+    printf("%f\n", percent_range);
+    printf("%f\n", percent_projectile_speed);
+    printf("%f\n", percent_critical_hit_chance);
+    printf("%f\n", percent_critical_hit_multiplier);
+    printf("%f\n", percent_duration);
+    printf("%f\n", percent_combo_dmg_boost);*/
 
     o->base_stat = (flat_base_stat + o->base_stat) * (percent_base_stat);
     o->cool_down = (flat_cool_down + o->cool_down) * (percent_cool_down);
